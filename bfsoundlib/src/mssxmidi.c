@@ -1564,9 +1564,11 @@ void AIL2OAL_API_release_sequence_handle(SNDSEQUENCE *seq)
     if (seq->FOR_ptrs[0] != NULL)
         AIL_MEM_free_lock(seq->FOR_ptrs[0], SOUND_MAX_BUFSIZE);
 
-    if ((void *)seq->system_data[SeqSD_XMI_BUF_PTR] != NULL)
-        MEM_free((void *)seq->system_data[SeqSD_XMI_BUF_PTR]);
-
+    if ((void *)seq->system_data[SeqSD_XMI_BUF_PTR] != NULL) {
+        void *ptr = (void *)seq->system_data[SeqSD_XMI_BUF_PTR];
+        seq->system_data[SeqSD_XMI_BUF_PTR] = (uintptr_t)NULL;
+        MEM_free(ptr);
+    }
 }
 
 MDI_DRIVER *AIL2OAL_API_install_MDI_driver_file(const char *fname, SNDCARD_IO_PARMS *iop)
@@ -1730,6 +1732,12 @@ int32_t AIL2OAL_API_init_sequence(SNDSEQUENCE *seq, const void *start,  int32_t 
     // Release the previous WildMidi handle
     if (seq->ICA != NULL)
         WildMidi_Close(seq->ICA);
+    // Release the previous XMI buffer
+    if ((void *)seq->system_data[SeqSD_XMI_BUF_PTR] != NULL) {
+        void *ptr = (void *)seq->system_data[SeqSD_XMI_BUF_PTR];
+        seq->system_data[SeqSD_XMI_BUF_PTR] = (uintptr_t)NULL;
+        MEM_free(ptr);
+    }
 #endif
 
     // Initialize sequence callback and state data

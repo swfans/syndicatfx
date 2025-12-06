@@ -310,8 +310,11 @@ void AIL_release_sample_handle(SNDSAMPLE *s);
  *
  * @param seq Target Sound SEQUENCE struct instance.
  *   Sequence has to be allocated (not free), done playing, and stopped.
- * @param start Source file image buffer.
- * @param sequence_num
+ * @param start Source file image buffer. The buffer is expected to
+ *   exist throughout the use of the sequence (until handle release),
+ *   but its ownership is not taken by AIL - it has to be freed on user side.
+ * @param sequence_num Index of the sequence/song from the file which will
+ *   be played. Leave at 0 if multi-sequence XMI files are not in use.
  *
  * @result Gives 0 if sequence initialization failed,
  *        -1 if initialized OK but timbre was missing,
