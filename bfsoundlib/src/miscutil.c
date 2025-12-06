@@ -176,6 +176,7 @@ void *AIL_API_file_read(const char *fname, void *dest)
 
     disk_err = 0;
 
+    //TODO it would make sense to replace this with more independent fopen()/fread() API
 #if defined(WIN32)||defined(DOS)||defined(GO32)
     fh = _sopen(fname, O_RDONLY|O_BINARY, SH_DENYNO);
 #else

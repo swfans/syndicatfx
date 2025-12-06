@@ -364,9 +364,11 @@ enum SndSequenceSystemDataUseOAL {
 #if !defined(LBS_ENABLE_STRUCTS_EXPAND)
     SeqSD_OAL_BUFS_USE = 4,
     SeqSD_OAL_SOURCE   = 5,
+    SeqSD_XMI_BUF_PTR  = 6,
 #else
     SeqSD_OAL_BUFS_USE = 8, /**< Amount of already used buffers */
     SeqSD_OAL_SOURCE   = 9, /**< OpenAL Source created for the sequence */
+    SeqSD_XMI_BUF_PTR  = 10, /**< Internally allocated XMI data buffer */
 #endif
 };
 
@@ -602,6 +604,7 @@ struct MDI_CTRL_LOG {
 struct SNDSEQUENCE {
     MDI_DRIVER *driver;                      /**< offset=0   Driver for playback */
     uint32_t status;                         /**< offset=4   SNDSEQ_ flags: _FREE, _DONE, _PLAYING */
+    /* Every XMI sequence consists of up to 3 chunks of data; below are the references to them.*/
     void *TIMB;                              /**< offset=8   XMIDI IFF Timbre chunk pointer */
     void *RBRN;                              /**< offset=12  XMIDI IFF Branch target reference chunk pointer */
     void *EVNT;                              /**< offset=16  XMIDI IFF Playback events chunk pointer */

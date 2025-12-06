@@ -1563,6 +1563,10 @@ void AIL2OAL_API_release_sequence_handle(SNDSEQUENCE *seq)
 #endif
     if (seq->FOR_ptrs[0] != NULL)
         AIL_MEM_free_lock(seq->FOR_ptrs[0], SOUND_MAX_BUFSIZE);
+
+    if ((void *)seq->system_data[SeqSD_XMI_BUF_PTR] != NULL)
+        MEM_free((void *)seq->system_data[SeqSD_XMI_BUF_PTR]);
+
 }
 
 MDI_DRIVER *AIL2OAL_API_install_MDI_driver_file(const char *fname, SNDCARD_IO_PARMS *iop)
@@ -1636,7 +1640,9 @@ void AIL2OAL_API_close_XMIDI_driver(MDI_DRIVER *mdidrv)
 int32_t AIL2OAL_API_init_sequence(SNDSEQUENCE *seq, const void *start,  int32_t sequence_num)
 {
     const uint8_t *image;
+    const uint8_t *image_start;
     const uint8_t *end;
+    uint8_t *simg;
     uint32_t len;
     int32_t i;
 #if ENABLE_TIMBRE
@@ -1657,6 +1663,34 @@ int32_t AIL2OAL_API_init_sequence(SNDSEQUENCE *seq, const void *start,  int32_t 
     if (image == NULL) {
         AIL_set_error("Invalid XMIDI sequence, cannot find num.");
         return 0;
+    }
+
+    // Current XMIDI playback libraries have no ability to separate sequences
+    // Prepare a new image start, which contains only one sequence
+    {
+        uint32_t bebytes;
+
+        len = 8 + XMI_swap32(*(uint32_t*)(image + 4));
+        // New header len + data len + padding
+        simg = MEM_alloc(34 + len + 4);
+
+        memcpy(simg + 0, "FORM", 4);
+        bebytes = XMI_swap32(14);
+        memcpy(simg + 4, &bebytes, 4);
+        memcpy(simg + 8, "XDIR", 4);
+        memcpy(simg + 12, "INFO", 4);
+        bebytes = XMI_swap32(2); // unknown, always 2
+        memcpy(simg + 16, &bebytes, 4);
+        simg[20] = 1; // amount of sequences
+        simg[21] = 0; // unknown
+        memcpy(simg + 22, "CAT ", 4);
+        bebytes = XMI_swap32(len);
+        memcpy(simg + 26, &bebytes, 4);
+        memcpy(simg + 30, "XMID", 4);
+        memcpy(simg + 34, image, len);
+
+        image_start = simg;
+        image = simg + 34;
     }
 
     // Locate IFF chunks within FORM XMID:
@@ -1687,6 +1721,8 @@ int32_t AIL2OAL_API_init_sequence(SNDSEQUENCE *seq, const void *start,  int32_t 
     // Sequence must contain EVNT chunk
     if (seq->EVNT == NULL) {
         AIL_set_error("Invalid XMIDI sequence, EVNT missing.");
+        seq->TIMB = seq->RBRN = NULL;
+        MEM_free(simg);
         return 0;
     }
 
@@ -1718,24 +1754,32 @@ int32_t AIL2OAL_API_init_sequence(SNDSEQUENCE *seq, const void *start,  int32_t 
     seq->tempo_accum = 0;
     seq->tempo_error = 0;
 
-    len = XMI_whole_size(start);
+    len = XMI_whole_size(image_start);
 #if LBS_ENABLE_WILDMIDI
     // The (otherwise unused) ICA pointer will be our WildMIDI handle
-    seq->ICA = WildMidi_OpenBuffer(start, len);
+    seq->ICA = WildMidi_OpenBuffer(image_start, len + 4);
+    // WildMIDI parses the input buffer completely at start and never uses it again
     if (seq->ICA == NULL) {
         AIL_set_error("Could not init WildMIDI SNDSEQUENCE");
         AIL_set_error(WildMidi_GetError());
+        seq->EVNT = seq->TIMB = seq->RBRN = NULL;
+        MEM_free(simg);
         return 0;
     }
 #endif
 
-#if LBS_ENABLE_WILDMIDI
+    seq->system_data[SeqSD_XMI_BUF_PTR] = (uintptr_t)simg;
+
+    // Disabled - WildMIDI will not play selected XMI song only, so file is cut to only one song
+#if LBS_ENABLE_WILDMIDI && 0
     // Move to the selected sequence
     i = sequence_num;
     while (i > 0) {
         WildMidi_SongSeek(seq->ICA, 1);
         i--;
     }
+#else
+    (void) i; // ignore if unused
 #endif
 
     // Reuse one of (otherwise unused) FOR_ptrs for sw synth buffer
