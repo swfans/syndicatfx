@@ -1667,9 +1667,10 @@ int32_t AIL2OAL_API_init_sequence(SNDSEQUENCE *seq, const void *start,  int32_t 
         return 0;
     }
 
-    // Current XMIDI playback libraries have no ability to separate sequences
-    // Prepare a new image start, which contains only one sequence
+    if ((sequence_num > 0) || XMI_find_sequence(start, 1) != NULL)
     {
+        // Current XMIDI playback libraries have no ability to separate sequences
+        // Prepare a new image start, which contains only one sequence
         uint32_t bebytes;
 
         len = 8 + XMI_swap32(*(uint32_t*)(image + 4));
@@ -1693,6 +1694,11 @@ int32_t AIL2OAL_API_init_sequence(SNDSEQUENCE *seq, const void *start,  int32_t 
 
         image_start = simg;
         image = simg + 34;
+    }
+    else
+    {
+        simg = NULL;
+        image_start = start;
     }
 
     // Locate IFF chunks within FORM XMID:
