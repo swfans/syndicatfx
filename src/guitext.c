@@ -76,10 +76,12 @@ static TbBool create_strings_list(char **strings, char *strings_data, char *stri
         *text_arr = text_ptr;
         text_arr++;
         //TODO store each string one time instead of 3
-        *text_arr = text_ptr;
-        text_arr++;
-        *text_arr = text_ptr;
-        text_arr++;
+        if (text_arr < &strings[270*3]) {
+            *text_arr = text_ptr;
+            text_arr++;
+            *text_arr = text_ptr;
+            text_arr++;
+        }
         char chr_prev;
         do {
             chr_prev = *text_ptr;

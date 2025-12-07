@@ -83375,7 +83375,7 @@ gui_strings_p549:	/* 0x54a38 */
 		.long   aBrainV3
 		.long   aCerveauV3
 		.long   aCervelloV3
-		.fill   0x600 /* TODO integrate more entries from below */
+		.fill   0x24
 gui_strings_p603:	/* 0x54b10 */
 		.long   aPersuadertron
 		.long   aPersuadotron
@@ -83437,6 +83437,7 @@ gui_strings_p603:	/* 0x54b10 */
 		.long   data_53388
 		.long   data_53388
 		.long   data_53388
+		.fill   0x30
 gui_strings_p663:	/* 0x54c00 */
 		.long   aConfigureCompa
 		.long   aConfigurerSoci
@@ -83456,6 +83457,79 @@ gui_strings_p663:	/* 0x54c00 */
 		.long   aQuitToDos
 		.long   aRetourAuDos
 		.long   aEsciAlDos
+		.fill   0x0AC
+text_cyborg_names:	/* 0x5b844 */
+		.long   aAfshar
+		.long   aArnold
+		.long   aBaird
+		.long   aBaldwin
+		.long   aBlack
+		.long   aBoyd
+		.long   aBoyesen
+		.long   aBrazier
+		.long   aBrown
+		.long   aBush
+		.long   aCarr
+		.long   aChrismas
+		.long   aClinton
+		.long   aCooper
+		.long   aCorpes
+		.long   aCox
+		.long   aDawson
+		.long   aDonkin
+		.long   aDiskett
+		.long   aDunne
+		.long   aEdgar
+		.long   aEvans
+		.long   aFairley
+		.long   aFawcett
+		.long   aFlint
+		.long   aFloyd
+		.long   aGriffiths
+		.long   aHarris
+		.long   aHastings
+		.long   aHerbert
+		.long   aHickman
+		.long   aHicks
+		.long   aHill
+		.long   aJames
+		.long   aJeffery
+		.long   aJoeseph
+		.long   aJohnson
+		.long   aJohnston
+		.long   aJones
+		.long   aLewis
+		.long   aLindsell
+		.long   aLockley
+		.long   aMartin
+		.long   aMcentee
+		.long   aMclaughin
+		.long   aMolyneux
+		.long   aMunro
+		.long   aMorris
+		.long   aMumford
+		.long   aNixon
+		.long   aParker
+		.long   aPratt
+		.long   aReid
+		.long   aRennie
+		.long   aRice
+		.long   aRipley
+		.long   aRobertson
+		.long   aRomano
+		.long   aSeat
+		.long   aSen
+		.long   aShaw
+		.long   aSimmons
+		.long   aSnelling
+		.long   aTaylor
+		.long   aTrowers
+		.long   aWebley
+		.long   aWellesley
+		.long   aWild
+		.long   aWillis
+		.fill   0x100
+
 data_54c48:
 		.ascii  "\x00\x00"
 data_54c4a:
@@ -84883,76 +84957,6 @@ data_5b830:
 		.ascii  "\x00\x00\x02\x00\x01\x01\x02\x03"
 		.ascii  "\x03\x04\x00\x03\x04\x04\x04\x00"
 		.ascii  "\x04\x04\x04\x04"
-text_cyborg_names:	/* 0x5b844 */
-		.long   aAfshar
-		.long   aArnold
-		.long   aBaird
-		.long   aBaldwin
-		.long   aBlack
-		.long   aBoyd
-		.long   aBoyesen
-		.long   aBrazier
-		.long   aBrown
-		.long   aBush
-		.long   aCarr
-		.long   aChrismas
-		.long   aClinton
-		.long   aCooper
-		.long   aCorpes
-		.long   aCox
-		.long   aDawson
-		.long   aDonkin
-		.long   aDiskett
-		.long   aDunne
-		.long   aEdgar
-		.long   aEvans
-		.long   aFairley
-		.long   aFawcett
-		.long   aFlint
-		.long   aFloyd
-		.long   aGriffiths
-		.long   aHarris
-		.long   aHastings
-		.long   aHerbert
-		.long   aHickman
-		.long   aHicks
-		.long   aHill
-		.long   aJames
-		.long   aJeffery
-		.long   aJoeseph
-		.long   aJohnson
-		.long   aJohnston
-		.long   aJones
-		.long   aLewis
-		.long   aLindsell
-		.long   aLockley
-		.long   aMartin
-		.long   aMcentee
-		.long   aMclaughin
-		.long   aMolyneux
-		.long   aMunro
-		.long   aMorris
-		.long   aMumford
-		.long   aNixon
-		.long   aParker
-		.long   aPratt
-		.long   aReid
-		.long   aRennie
-		.long   aRice
-		.long   aRipley
-		.long   aRobertson
-		.long   aRomano
-		.long   aSeat
-		.long   aSen
-		.long   aShaw
-		.long   aSimmons
-		.long   aSnelling
-		.long   aTaylor
-		.long   aTrowers
-		.long   aWebley
-		.long   aWellesley
-		.long   aWild
-		.long   aWillis
 
 sound_array:	/* 0x5b958 */
 		.ascii  "\xff\xff\x00\x00"

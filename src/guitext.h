@@ -25,7 +25,7 @@
 extern "C" {
 #endif
 /******************************************************************************/
-#define STRINGS_MAX 681
+#define STRINGS_MAX 800
 
 #pragma pack(1)
 
