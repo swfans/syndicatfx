@@ -33,9 +33,9 @@ GFX_VERSION="0.0.1.14"
 GFX_PACKAGE="syndicatfx-gfx-0_0_1_14"
 GFX_PKG_MD5="20bfa8bdecf691e43e3acf4246622e3c"
 
-SFX_VERSION="0.1.0.7"
-SFX_PACKAGE="syndicatfx-sfx-0_1_0_7"
-SFX_PKG_MD5="e691526436910cb4e4bed7e65480ebd1"
+SFX_VERSION="0.1.0.9"
+SFX_PACKAGE="syndicatfx-sfx-0_1_0_9"
+SFX_PKG_MD5="c3574cac1f580c391179522812a3f9dc"
 
 OPTS="f:t:l:h"
 
@@ -262,6 +262,8 @@ copy_data()
     install_file "data/${fn}" || return 1
   done
 
+  install_dir "sound/Tone_000" || return 1
+
   # these folders, the game will create automatically when needed
   #install_dir "save" || return 1
   #install_dir "screenshots" || return 1
@@ -282,6 +284,10 @@ extract_packages()
   find "$TARGET/syndicatfx/sound" -mindepth 1 -maxdepth 1 -type f -iname '*.*' \
     | while read file; do
         mv -vn "$file" -t "${TARGET}/sound" || return 1
+      done
+  find "$TARGET/syndicatfx/sound/Tone_000" -mindepth 1 -maxdepth 1 -type f -iname '*.*' \
+    | while read file; do
+        mv -vn "$file" -t "${TARGET}/sound/Tone_000" || return 1
       done
   rm -rf "${TARGET}/syndicatfx" || return 1
 
