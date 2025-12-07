@@ -21,7 +21,7 @@ msgstr ""
 "Project-Id-Version: GUI text for SyndicatFX\n"
 "Report-Msgid-Bugs-To: https://github.com/swfans/syndicatfx/issues\n"
 "POT-Creation-Date: 2025-09-20 22:19+0200\n"
-"PO-Revision-Date: 2025-12-05 20:41+0100\n"
+"PO-Revision-Date: 2025-12-07 02:58+0100\n"
 "Last-Translator: Mefistotelis <mefistotelis@gmail.com>\n"
 "Language-Team: Syndicate Wars Fans <github.com/swfans>\n"
 "Language: it_IT\n"
@@ -599,89 +599,95 @@ msgstr "Piano"
 #. Button text within menu screen.
 #: guitext:105
 msgctxt "Button"
+msgid "Research"
+msgstr "Ricerca"
+
+#. Button text within menu screen.
+#: guitext:106
+msgctxt "Button"
 msgid "Team"
 msgstr "Squadra"
 
 #. Button text within menu screen.
-#: guitext:106
+#: guitext:107
 msgctxt "Button"
 msgid "Mods"
 msgstr "Modif."
 
 #. Button text within menu screen.
-#: guitext:107
+#: guitext:108
 msgctxt "Button"
 msgid "Equip"
 msgstr "Equipag."
 
 #. Button text within menu screen.
-#: guitext:108
+#: guitext:109
 msgctxt "Button"
 msgid "Sell"
 msgstr "Vendi"
 
 #. Button text within menu screen.
-#: guitext:109
+#: guitext:110
 msgctxt "Button"
 msgid "Purchase"
 msgstr "Compra"
 
 #. Button text within menu screen.
-#: guitext:110
+#: guitext:111
 msgctxt "Button"
 msgid "Reload"
 msgstr "Ricar."
 
 #. Button text within menu screen.
-#: guitext:111
+#: guitext:112
 msgctxt "Button"
 msgid "Funding+"
 msgstr "+ Fondi"
 
 #. Button text within menu screen.
-#: guitext:112
+#: guitext:113
 msgctxt "Button"
 msgid "Funding-"
 msgstr "- Fondi"
 
 #. Button text within menu screen.
-#: guitext:113
+#: guitext:114
 msgctxt "Button"
 msgid "Info"
 msgstr "Info"
 
 #. Button text within menu screen.
-#: guitext:114
+#: guitext:115
 msgctxt "Button"
 msgid "Enhance"
 msgstr "Dettagli"
 
 #. Button text within menu screen.
-#: guitext:115
+#: guitext:116
 msgctxt "Button"
 msgid "Load"
 msgstr "Carica"
 
 #. Button text within menu screen.
-#: guitext:116
+#: guitext:117
 msgctxt "Button"
 msgid "Save"
 msgstr "Salva"
 
 #. Button text within menu screen.
-#: guitext:117
+#: guitext:118
 msgctxt "Button"
 msgid "Map"
 msgstr "Mappa"
 
 #. Button text within menu screen.
-#: guitext:118
+#: guitext:119
 msgctxt "Button"
 msgid "Replay"
 msgstr "Replay"
 
 #. Button text within menu screen.
-#: guitext:119 guitext:120
+#: guitext:120
 msgctxt "Button"
 msgid "N"
 msgstr ""
@@ -701,65 +707,71 @@ msgstr "Stat"
 #. Label text within world map screen.
 #: guitext:123
 msgctxt "Territory label"
+msgid "Stat"
+msgstr ""
+
+#. Label text within world map screen.
+#: guitext:124
+msgctxt "Territory label"
 msgid "Tax"
 msgstr "Tass"
 
 #. Label text within world map screen.
-#: guitext:124
+#: guitext:125
 msgctxt "Territory label"
 msgid "Own"
 msgstr "Prop"
 
 #. Futute Label text.
-#: guitext:125
+#: guitext:126
 msgctxt "Territory label"
 msgid "N"
 msgstr ""
 
 #. People's attitude towards the governing organization.
-#: guitext:126
+#: guitext:127
 msgctxt "Loyalty"
 msgid "Unknown"
 msgstr "Sconosciuto"
 
 #. People's attitude towards the governing organization.
-#: guitext:127
+#: guitext:128
 msgctxt "Loyalty"
 msgid "Very Happy"
 msgstr "Molto Felice"
 
 #. People's attitude towards the governing organization.
-#: guitext:128
+#: guitext:129
 msgctxt "Loyalty"
 msgid "Happy"
 msgstr "Felice"
 
 #. People's attitude towards the governing organization.
-#: guitext:129
+#: guitext:130
 msgctxt "Loyalty"
 msgid "Content"
 msgstr "Soddisfatto"
 
 #. People's attitude towards the governing organization.
-#: guitext:130
+#: guitext:131
 msgctxt "Loyalty"
 msgid "Unhappy"
 msgstr "Infelice"
 
 #. People's attitude towards the governing organization.
-#: guitext:131
+#: guitext:132
 msgctxt "Loyalty"
 msgid "Discontent"
 msgstr "Insoddisfatto"
 
 #. People's attitude towards the governing organization.
-#: guitext:132
+#: guitext:133
 msgctxt "Loyalty"
 msgid "Rebellious"
 msgstr "Ribelle"
 
 #. People's attitude towards the governing organization.
-#: guitext:133 guitext:134
+#: guitext:134
 msgctxt "Loyalty"
 msgid "N"
 msgstr ""
@@ -855,7 +867,13 @@ msgid "Shot"
 msgstr "Colpo"
 
 #. Label text within equip screen.
-#: guitext:150 guitext:151
+#: guitext:150
+msgctxt "Equipment label"
+msgid "Reload"
+msgstr "Ricar."
+
+#. Label text within equip screen.
+#: guitext:151
 msgctxt "Equipment label"
 msgid "N"
 msgstr ""
@@ -1679,13 +1697,13 @@ msgctxt "Agent names pool"
 msgid "Clinton"
 msgstr ""
 
-#. Syndicate agents are called by their surnames.
+#. Syndicate agents are called by their surnames; one based on Bullfrog employee, Sean.
 #: guitext:300
 msgctxt "Agent names pool"
 msgid "Cooper"
 msgstr ""
 
-#. Syndicate agents are called by their surnames.
+#. Syndicate agents are called by their surnames; one based on Bullfrog employee, Glenn.
 #: guitext:301
 msgctxt "Agent names pool"
 msgid "Corpes"
@@ -1703,13 +1721,13 @@ msgctxt "Agent names pool"
 msgid "Dawson"
 msgstr ""
 
-#. Syndicate agents are called by their surnames.
+#. Syndicate agents are called by their surnames; one based on Bullfrog employee, Kevin.
 #: guitext:304
 msgctxt "Agent names pool"
 msgid "Donkin"
 msgstr ""
 
-#. Syndicate agents are called by their surnames.
+#. Syndicate agents are called by their surnames; one based on Bullfrog employee, Mike.
 #: guitext:305
 msgctxt "Agent names pool"
 msgid "Diskett"
@@ -1721,7 +1739,7 @@ msgctxt "Agent names pool"
 msgid "Dunne"
 msgstr ""
 
-#. Syndicate agents are called by their surnames.
+#. Syndicate agents are called by their surnames; one based on Bullfrog founder, Les.
 #: guitext:307
 msgctxt "Agent names pool"
 msgid "Edgar"
@@ -1793,7 +1811,7 @@ msgctxt "Agent names pool"
 msgid "Hicks"
 msgstr ""
 
-#. Syndicate agents are called by their surnames.
+#. Syndicate agents are called by their surnames; one based on Bullfrog employee, Chris.
 #: guitext:319
 msgctxt "Agent names pool"
 msgid "Hill"
@@ -1829,7 +1847,7 @@ msgctxt "Agent names pool"
 msgid "Johnston"
 msgstr ""
 
-#. Syndicate agents are called by their surnames.
+#. Syndicate agents are called by their surnames; one based on Bullfrog employee, Andy.
 #: guitext:325
 msgctxt "Agent names pool"
 msgid "Jones"
@@ -1871,7 +1889,7 @@ msgctxt "Agent names pool"
 msgid "Mclaughin"
 msgstr ""
 
-#. Syndicate agents are called by their surnames.
+#. Syndicate agents are called by their surnames; one based on Bullfrog founder, Peter.
 #: guitext:332
 msgctxt "Agent names pool"
 msgid "Molyneux"
@@ -1961,7 +1979,7 @@ msgctxt "Agent names pool"
 msgid "Sen"
 msgstr ""
 
-#. Syndicate agents are called by their surnames.
+#. Syndicate agents are called by their surnames; one based on Bullfrog employee, Russell.
 #: guitext:347
 msgctxt "Agent names pool"
 msgid "Shaw"
@@ -1985,13 +2003,13 @@ msgctxt "Agent names pool"
 msgid "Taylor"
 msgstr ""
 
-#. Syndicate agents are called by their surnames.
+#. Syndicate agents are called by their surnames; one based on Bullfrog employee, Alex.
 #: guitext:351
 msgctxt "Agent names pool"
 msgid "Trowers"
 msgstr ""
 
-#. Syndicate agents are called by their surnames.
+#. Syndicate agents are called by their surnames; one based on Bullfrog employee, Mark.
 #: guitext:352
 msgctxt "Agent names pool"
 msgid "Webley"

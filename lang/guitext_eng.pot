@@ -598,89 +598,95 @@ msgstr ""
 #. Button text within menu screen.
 #: guitext:105
 msgctxt "Button"
-msgid "Team"
+msgid "Research"
 msgstr ""
 
 #. Button text within menu screen.
 #: guitext:106
 msgctxt "Button"
-msgid "Mods"
+msgid "Team"
 msgstr ""
 
 #. Button text within menu screen.
 #: guitext:107
 msgctxt "Button"
-msgid "Equip"
+msgid "Mods"
 msgstr ""
 
 #. Button text within menu screen.
 #: guitext:108
 msgctxt "Button"
-msgid "Sell"
+msgid "Equip"
 msgstr ""
 
 #. Button text within menu screen.
 #: guitext:109
 msgctxt "Button"
-msgid "Purchase"
+msgid "Sell"
 msgstr ""
 
 #. Button text within menu screen.
 #: guitext:110
 msgctxt "Button"
-msgid "Reload"
+msgid "Purchase"
 msgstr ""
 
 #. Button text within menu screen.
 #: guitext:111
 msgctxt "Button"
-msgid "Funding+"
+msgid "Reload"
 msgstr ""
 
 #. Button text within menu screen.
 #: guitext:112
 msgctxt "Button"
-msgid "Funding-"
+msgid "Funding+"
 msgstr ""
 
 #. Button text within menu screen.
 #: guitext:113
 msgctxt "Button"
-msgid "Info"
+msgid "Funding-"
 msgstr ""
 
 #. Button text within menu screen.
 #: guitext:114
 msgctxt "Button"
-msgid "Enhance"
+msgid "Info"
 msgstr ""
 
 #. Button text within menu screen.
 #: guitext:115
 msgctxt "Button"
-msgid "Load"
+msgid "Enhance"
 msgstr ""
 
 #. Button text within menu screen.
 #: guitext:116
 msgctxt "Button"
-msgid "Save"
+msgid "Load"
 msgstr ""
 
 #. Button text within menu screen.
 #: guitext:117
 msgctxt "Button"
-msgid "Map"
+msgid "Save"
 msgstr ""
 
 #. Button text within menu screen.
 #: guitext:118
 msgctxt "Button"
+msgid "Map"
+msgstr ""
+
+#. Button text within menu screen.
+#: guitext:119
+msgctxt "Button"
 msgid "Replay"
 msgstr ""
 
 #. Button text within menu screen.
-#: guitext:119 guitext:120
+#: guitext:120
 msgctxt "Button"
 msgid "N"
 msgstr ""
@@ -700,65 +706,71 @@ msgstr ""
 #. Label text within world map screen.
 #: guitext:123
 msgctxt "Territory label"
-msgid "Tax"
+msgid "Stat"
 msgstr ""
 
 #. Label text within world map screen.
 #: guitext:124
 msgctxt "Territory label"
+msgid "Tax"
+msgstr ""
+
+#. Label text within world map screen.
+#: guitext:125
+msgctxt "Territory label"
 msgid "Own"
 msgstr ""
 
 #. Futute Label text.
-#: guitext:125
+#: guitext:126
 msgctxt "Territory label"
 msgid "N"
 msgstr ""
 
 #. People's attitude towards the governing organization.
-#: guitext:126
+#: guitext:127
 msgctxt "Loyalty"
 msgid "Unknown"
 msgstr ""
 
 #. People's attitude towards the governing organization.
-#: guitext:127
+#: guitext:128
 msgctxt "Loyalty"
 msgid "Very Happy"
 msgstr ""
 
 #. People's attitude towards the governing organization.
-#: guitext:128
+#: guitext:129
 msgctxt "Loyalty"
 msgid "Happy"
 msgstr ""
 
 #. People's attitude towards the governing organization.
-#: guitext:129
+#: guitext:130
 msgctxt "Loyalty"
 msgid "Content"
 msgstr ""
 
 #. People's attitude towards the governing organization.
-#: guitext:130
+#: guitext:131
 msgctxt "Loyalty"
 msgid "Unhappy"
 msgstr ""
 
 #. People's attitude towards the governing organization.
-#: guitext:131
+#: guitext:132
 msgctxt "Loyalty"
 msgid "Discontent"
 msgstr ""
 
 #. People's attitude towards the governing organization.
-#: guitext:132
+#: guitext:133
 msgctxt "Loyalty"
 msgid "Rebellious"
 msgstr ""
 
 #. People's attitude towards the governing organization.
-#: guitext:133 guitext:134
+#: guitext:134
 msgctxt "Loyalty"
 msgid "N"
 msgstr ""
@@ -854,7 +866,13 @@ msgid "Shot"
 msgstr ""
 
 #. Label text within equip screen.
-#: guitext:150 guitext:151
+#: guitext:150
+msgctxt "Equipment label"
+msgid "Reload"
+msgstr ""
+
+#. Label text within equip screen.
+#: guitext:151
 msgctxt "Equipment label"
 msgid "N"
 msgstr ""
