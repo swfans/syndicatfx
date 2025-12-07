@@ -40,6 +40,11 @@ enum GuiStrings {
 extern char *gui_strings[STRINGS_MAX];
 extern ubyte language;
 
+/** Read file with all the language-specific texts.
+ */
+void read_gui_strings_file(void);
+TbBool create_gui_strings_list(void);
+
 /******************************************************************************/
 #ifdef __cplusplus
 }

@@ -37,6 +37,8 @@
 
 /******************************************************************************/
 
+char language_3str[4];
+
 static char data_path_user[DISKPATH_SIZE] = "";
 static char data_path_hdd[DISKPATH_SIZE] = "";
 static char game_dir_savegame[] = "save";

@@ -57,6 +57,12 @@ extern ubyte *pointer_data;
 extern struct TbLoadFiles load_files_vres16[];
 extern struct TbLoadFiles load_files_mcga[];
 
+const char *langs_str[] = {
+    "eng",
+    "fre",
+    "ita",
+};
+
 // ASM imports with matching call convention
 int * _cdecl ApSpriteSetup_ForceHeight(struct TbSprite *p_start, struct TbSprite *p_end, ubyte *data);
 void _cdecl syndicate(void);
@@ -198,6 +204,8 @@ process_options (int *argc, char ***argv)
       }
     }
 
+  strcpy(language_3str, langs_str[language]);
+
   *argc -= optind - 1;
   *argv += optind - 1;
 
@@ -271,6 +279,9 @@ int main (int argc, char **argv)
     }
     ApSpriteSetup_ForceHeight(pointer_sprites, pointer_sprites_end, pointer_data);
     MouseSwap = 1;
+
+    read_gui_strings_file();
+    create_gui_strings_list();
 
     lbMouseAutoReset = false;
     mouse_sprite = &pointer_sprites[1]; // used only for non-bflib mouse cursor; remove pending

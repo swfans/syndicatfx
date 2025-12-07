@@ -48,6 +48,7 @@ struct CPObjective
 /******************************************************************************/
 extern ushort level__Seed;
 extern struct CPObjective level__CPObjectives[128];
+extern char language_3str[4];
 
 
 const char *GetDirectoryUser(void);

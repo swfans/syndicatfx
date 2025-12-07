@@ -80331,6 +80331,7 @@ int2hexstr:	/* 0x4fdcb */
 		loopw  jump_4fdcf
 		ret
 .data
+
 hex2char:	/* 0x4fde4 */
 		.ascii   "0123456789ABCDEF"
 data_50000:
@@ -82792,6 +82793,7 @@ GLOBAL (gui_strings)	/* 0x541a4 */
 		.long   aAtlanticAccele
 		.long   aAccelerateurDe
 		.long   aAcceleratoreAt
+		.fill   0x60
 gui_strings_p150:
 		.long   aCryoChamber
 		.long   aLeChambreCryo
@@ -82828,6 +82830,7 @@ gui_strings_p174:
 		.long   aEliminateAgent
 		.long   aEliminerAgents
 		.long   aEliminaAgenti
+		.fill   0x18
 gui_strings_p177:
 		.long   aMissionComplet
 		.long   aMissionTermine
@@ -82904,6 +82907,7 @@ gui_strings_p231:
 		.long   aChipRemoved
 		.long   aPuceRetiree
 		.long   aChipRimosso
+		.fill   0x24
 gui_strings_p234:
 		.long   aMainMenu
 		.long   aMenuPrincipal
@@ -82932,6 +82936,7 @@ gui_strings_p252:
 		.long   aMissionDebrief
 		.long   aDebriefingMiss
 		.long   aResocontoMissi
+		.fill   0x0C
 gui_strings_p255:
 		.long   aAccept
 		.long   aAccepter
@@ -83012,6 +83017,7 @@ gui_strings_p312:	/* 0x54684 */
 		.long   aReplay
 		.long   aRejouer
 		.long   aReplay
+		.fill   0x0C
 		.long   aName
 		.long   aNom
 		.long   aNome
@@ -83031,6 +83037,7 @@ gui_strings_p327:
 		.long   aOwn
 		.long   aProp
 		.long   aProp
+		.fill   0x0C
 gui_strings_p330:
 		.long   aUnknown
 		.long   aInconnue
@@ -83059,6 +83066,7 @@ gui_strings_p348:	/* 0x54714 */
 		.long   aRebellious
 		.long   aRebelle
 		.long   aRibelle
+		.fill   0x0C
 gui_strings_p351:	/* 0x54720 */
 		.long   aEmpty
 		.long   aVide
@@ -83123,6 +83131,7 @@ gui_strings_p396:	/* 0x547d4 */
 		.long   aReload
 		.long   aCharg
 		.long   aRicar
+		.fill   0x0C
 gui_strings_p399:	/* 0x547e0 */
 		.long   aAutomatic
 		.long   aAutomatique
@@ -83139,6 +83148,7 @@ gui_strings_p408:	/* 0x54804 */
 		.long   aMiscellaneous
 		.long   aDivers
 		.long   aVarioTipo
+		.fill   0x0C
 gui_strings_p411:	/* 0x54810 */
 		.long   aMinFunding
 		.long   aBudgetMini
@@ -83151,6 +83161,7 @@ gui_strings_p417:	/* 0x54828 */
 		.long   aResearching
 		.long   aRecherche
 		.long   aInRicerca
+		.fill   0x0C
 gui_strings_p420:	/* 0x54834 */
 		.long   aLoggingOut
 		.long   aFinDuJeu
@@ -83179,6 +83190,7 @@ gui_strings_p438:	/* 0x5487c */
 		.long   aFailed
 		.long   aEchouee
 		.long   aFallita
+		.fill   0x0C
 gui_strings_p441:	/* 0x54888 */
 		.long   aAgentsUsed
 		.long   aAgentsUtilises
@@ -83199,6 +83211,7 @@ gui_strings_p453:
 		.long   aDays
 		.long   aJours
 		.long   aGiorni
+		.fill   0x0C
 		.long   aValueOfDamage
 		.long   aDegatsSubis
 		.long   aAmmontareDeiDa
@@ -83250,6 +83263,7 @@ gui_strings_p492:
 		.long   aMissionStatist
 		.long   aStatistiquesMi
 		.long   aDatiStatistici
+		.fill   0x18
 gui_strings_p495:	/* 0x54960 */
 		.long   aReplacementMet
 		.long   aJambesDeRempla
@@ -83305,6 +83319,7 @@ gui_strings_p495:	/* 0x54960 */
 		.long   aCerebralMultip
 		.long   aMultiplicateur
 		.long   aMoltiplicatore
+		.fill   0x24
 gui_strings_p549:	/* 0x54a38 */
 		.long   aLegsV1
 		.long   aJambesV1
@@ -83360,6 +83375,7 @@ gui_strings_p549:	/* 0x54a38 */
 		.long   aBrainV3
 		.long   aCerveauV3
 		.long   aCervelloV3
+		.fill   0x600 /* TODO integrate more entries from below */
 gui_strings_p603:	/* 0x54b10 */
 		.long   aPersuadertron
 		.long   aPersuadotron
