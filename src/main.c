@@ -61,6 +61,9 @@ const char *langs_str[] = {
     "eng",
     "fre",
     "ita",
+    "ger",
+    "pol",
+    "spa",
 };
 
 // ASM imports with matching call convention
@@ -165,7 +168,7 @@ process_options (int *argc, char ***argv)
 
       case 'c':
           language = atoi(optarg);
-          if (language >= 3)
+          if (language >= 6)
               language = 0;
           break;
 
@@ -205,6 +208,9 @@ process_options (int *argc, char ***argv)
     }
 
   strcpy(language_3str, langs_str[language]);
+  // have to restrict to 3 due to language being used as index
+  if (language >= 3)
+       language = 0;
 
   *argc -= optind - 1;
   *argv += optind - 1;
