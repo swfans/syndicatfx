@@ -1699,7 +1699,7 @@ mission_briefing:	/* 0x10e60 */
 		lea    0x0(,%edx,4),%eax
 		sub    %edx,%eax
 		lea    (%eax,%eax,1),%edx
-		mov    m_sprites,%eax
+		mov    EXPORT_SYMBOL(m_sprites),%eax
 		add    %edx,%eax
 		push   %eax
 		push   $0x13c
@@ -1726,7 +1726,7 @@ mission_briefing:	/* 0x10e60 */
 		mov    %bx,%dx
 		lea    0x0(,%edx,4),%eax
 		sub    %edx,%eax
-		mov    m_sprites,%edx
+		mov    EXPORT_SYMBOL(m_sprites),%edx
 		add    %eax,%eax
 		add    %edx,%eax
 		push   %eax
@@ -10221,7 +10221,7 @@ configure_company:	/* 0x175c0 */
 		push   $0x0
 		push   $0x8
 		push   $0xfffffffe
-		mov    m_sprites,%ecx
+		mov    EXPORT_SYMBOL(m_sprites),%ecx
 		push   %ecx
 		push   $0x54
 		push   $0x10
@@ -10247,7 +10247,7 @@ configure_company:	/* 0x175c0 */
 		push   $0x0
 		push   $0x8
 		push   $0xfffffffe
-		mov    m_sprites,%esi
+		mov    EXPORT_SYMBOL(m_sprites),%esi
 		push   %esi
 		push   $0x54
 		push   $0x10
@@ -10293,7 +10293,7 @@ configure_company:	/* 0x175c0 */
 		push   $0xf
 		push   $0x1
 		push   $0x166
-		mov    m_sprites,%ebp
+		mov    EXPORT_SYMBOL(m_sprites),%ebp
 		push   %ebp
 		lea    0xa8(%esp),%eax
 		push   %eax
@@ -10331,7 +10331,7 @@ configure_company:	/* 0x175c0 */
 		push   $0xf
 		push   $0x1
 		push   $0x166
-		mov    m_sprites,%edi
+		mov    EXPORT_SYMBOL(m_sprites),%edi
 		push   %edi
 		lea    0x80(%esp),%eax
 		push   %eax
@@ -10369,7 +10369,7 @@ configure_company:	/* 0x175c0 */
 		jbe    jump_17a15
 		cmpw   $0x4c,EXPORT_SYMBOL(lbDisplay__MMouseY_400)
 		jae    jump_17a15
-		mov    m_sprites,%eax
+		mov    EXPORT_SYMBOL(m_sprites),%eax
 		add    $0x30,%eax
 		push   %eax
 		push   $0x38
@@ -10384,7 +10384,7 @@ configure_company:	/* 0x175c0 */
 		jbe    jump_17a4f
 		cmpw   $0x4c,EXPORT_SYMBOL(lbDisplay__MMouseY_400)
 		jae    jump_17a4f
-		mov    m_sprites,%eax
+		mov    EXPORT_SYMBOL(m_sprites),%eax
 		add    $0x36,%eax
 		push   %eax
 		push   $0x38
@@ -10398,7 +10398,7 @@ configure_company:	/* 0x175c0 */
 		jbe    jump_17a8b
 		cmpw   $0x6e,EXPORT_SYMBOL(lbDisplay__MMouseY_400)
 		jae    jump_17a8b
-		mov    m_sprites,%eax
+		mov    EXPORT_SYMBOL(m_sprites),%eax
 		add    $0x30,%eax
 		push   %eax
 		push   $0x5a
@@ -10413,7 +10413,7 @@ configure_company:	/* 0x175c0 */
 		jbe    jump_17acd
 		cmpw   $0x6e,EXPORT_SYMBOL(lbDisplay__MMouseY_400)
 		jae    jump_17acd
-		mov    m_sprites,%eax
+		mov    EXPORT_SYMBOL(m_sprites),%eax
 		add    $0x36,%eax
 		push   %eax
 		push   $0x5a
@@ -10437,7 +10437,7 @@ configure_company:	/* 0x175c0 */
 		push   $0x0
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%edi
+		mov    EXPORT_SYMBOL(m_sprites),%edi
 		push   %edi
 		push   $0x166
 		push   $0x10
@@ -10448,7 +10448,7 @@ configure_company:	/* 0x175c0 */
 		mov    gui_strings_p360(,%eax,4),%ebp
 		push   %ebp
 		call   new_show_text
-		mov    m_sprites,%eax
+		mov    EXPORT_SYMBOL(m_sprites),%eax
 		add    $0x28,%esp
 		add    $0x3c,%eax
 		push   %eax
@@ -10463,7 +10463,7 @@ configure_company:	/* 0x175c0 */
 		push   $0x0
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%ecx
+		mov    EXPORT_SYMBOL(m_sprites),%ecx
 		push   %ecx
 		push   $0x166
 		push   $0x10
@@ -10474,7 +10474,7 @@ configure_company:	/* 0x175c0 */
 		mov    gui_strings_p363(,%eax,4),%esi
 		push   %esi
 		call   new_show_text
-		mov    m_sprites,%eax
+		mov    EXPORT_SYMBOL(m_sprites),%eax
 		add    $0x28,%esp
 		add    $0x3c,%eax
 		push   %eax
@@ -10489,7 +10489,7 @@ configure_company:	/* 0x175c0 */
 		push   $0x0
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%eax
+		mov    EXPORT_SYMBOL(m_sprites),%eax
 		push   %eax
 		push   $0x166
 		push   $0x10
@@ -10500,7 +10500,7 @@ configure_company:	/* 0x175c0 */
 		mov    gui_strings_p366(,%eax,4),%edx
 		push   %edx
 		call   new_show_text
-		mov    m_sprites,%eax
+		mov    EXPORT_SYMBOL(m_sprites),%eax
 		add    $0x28,%esp
 		add    $0x3c,%eax
 		push   %eax
@@ -10945,7 +10945,7 @@ func_18278:
 		push   $0x0
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%esi
+		mov    EXPORT_SYMBOL(m_sprites),%esi
 		push   %esi
 		push   $0x166
 		push   $0x10
@@ -10961,7 +10961,7 @@ func_18278:
 		push   $0x0
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%eax
+		mov    EXPORT_SYMBOL(m_sprites),%eax
 		push   %eax
 		push   $0x1ef
 		push   $0x10
@@ -10972,7 +10972,7 @@ func_18278:
 		mov    gui_strings_p360(,%eax,4),%edx
 		push   %edx
 		call   new_show_text
-		mov    m_sprites,%eax
+		mov    EXPORT_SYMBOL(m_sprites),%eax
 		add    $0x28,%esp
 		add    $0x2a,%eax
 		push   %eax
@@ -10984,7 +10984,7 @@ func_18278:
 		push   $0x0
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%ecx
+		mov    EXPORT_SYMBOL(m_sprites),%ecx
 		push   %ecx
 		push   $0x1ef
 		push   $0x10
@@ -10995,7 +10995,7 @@ func_18278:
 		mov    gui_strings_p363(,%eax,4),%esi
 		push   %esi
 		call   new_show_text
-		mov    m_sprites,%eax
+		mov    EXPORT_SYMBOL(m_sprites),%eax
 		add    $0x28,%esp
 		add    $0x2a,%eax
 		push   %eax
@@ -11007,7 +11007,7 @@ func_18278:
 		push   $0x0
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%edi
+		mov    EXPORT_SYMBOL(m_sprites),%edi
 		push   %edi
 		push   $0x1ef
 		push   $0x10
@@ -11018,7 +11018,7 @@ func_18278:
 		mov    gui_strings_p366(,%eax,4),%edx
 		push   %edx
 		call   new_show_text
-		mov    m_sprites,%eax
+		mov    EXPORT_SYMBOL(m_sprites),%eax
 		add    $0x28,%esp
 		add    $0x2a,%eax
 		push   %eax
@@ -11034,7 +11034,7 @@ func_18394:
 		push   $0x0
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%eax
+		mov    EXPORT_SYMBOL(m_sprites),%eax
 		push   %eax
 		push   $0x166
 		push   $0x10
@@ -11050,7 +11050,7 @@ func_18394:
 		push   $0x0
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%ecx
+		mov    EXPORT_SYMBOL(m_sprites),%ecx
 		push   %ecx
 		push   $0x166
 		push   $0x10
@@ -11066,7 +11066,7 @@ func_18394:
 		push   $0x0
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%edi
+		mov    EXPORT_SYMBOL(m_sprites),%edi
 		push   %edi
 		push   $0x166
 		push   $0x10
@@ -11091,28 +11091,28 @@ func_18394:
 		mov    0x18(%ebp),%al
 		push   %eax
 		call   draw_logo
-		mov    m_sprites,%eax
+		mov    EXPORT_SYMBOL(m_sprites),%eax
 		add    $0x1c,%esp
 		add    $0x1e,%eax
 		push   %eax
 		push   $0x38
 		push   $0x198
 		call   LbSpriteDrawMCGA
-		mov    m_sprites,%eax
+		mov    EXPORT_SYMBOL(m_sprites),%eax
 		add    $0xc,%esp
 		add    $0x24,%eax
 		push   %eax
 		push   $0x38
 		push   $0x1b6
 		call   LbSpriteDrawMCGA
-		mov    m_sprites,%eax
+		mov    EXPORT_SYMBOL(m_sprites),%eax
 		add    $0xc,%esp
 		add    $0x1e,%eax
 		push   %eax
 		push   $0x5a
 		push   $0x198
 		call   LbSpriteDrawMCGA
-		mov    m_sprites,%eax
+		mov    EXPORT_SYMBOL(m_sprites),%eax
 		add    $0xc,%esp
 		add    $0x24,%eax
 		push   %eax
@@ -11128,7 +11128,7 @@ func_184ba:
 		push   $0x0
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%esi
+		mov    EXPORT_SYMBOL(m_sprites),%esi
 		push   %esi
 		push   $0x166
 		push   $0x10
@@ -11146,7 +11146,7 @@ func_184e8:
 		push   $0x0
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%edx
+		mov    EXPORT_SYMBOL(m_sprites),%edx
 		push   %edx
 		push   $0x166
 		push   $0x10
@@ -12101,7 +12101,7 @@ ShowGameTime:	/* 0x18f30 */
 		push   $0x0
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%edx
+		mov    EXPORT_SYMBOL(m_sprites),%edx
 		push   %edx
 		push   $0x166
 		push   $0x10
@@ -12683,7 +12683,7 @@ debrief:	/* 0x18ff0 */
 		push   $0x0
 		push   $0x8
 		push   $0xfffffffe
-		mov    m_sprites,%ecx
+		mov    EXPORT_SYMBOL(m_sprites),%ecx
 		push   %ecx
 		push   $0x54
 		push   $0x10
@@ -12699,7 +12699,7 @@ debrief:	/* 0x18ff0 */
 		push   $0xfc
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%esi
+		mov    EXPORT_SYMBOL(m_sprites),%esi
 		push   %esi
 		push   $0x166
 		push   $0x10
@@ -12715,7 +12715,7 @@ debrief:	/* 0x18ff0 */
 		push   $0x0
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%ecx
+		mov    EXPORT_SYMBOL(m_sprites),%ecx
 		push   %ecx
 		push   $0x166
 		push   $0x10
@@ -12735,7 +12735,7 @@ debrief:	/* 0x18ff0 */
 		push   $0x0
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%eax
+		mov    EXPORT_SYMBOL(m_sprites),%eax
 		push   %eax
 		push   $0x166
 		push   $0x10
@@ -12752,7 +12752,7 @@ debrief:	/* 0x18ff0 */
 		push   $0x0
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%ecx
+		mov    EXPORT_SYMBOL(m_sprites),%ecx
 		push   %ecx
 		push   $0x166
 		push   $0x10
@@ -12770,7 +12770,7 @@ debrief:	/* 0x18ff0 */
 		push   $0x0
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%eax
+		mov    EXPORT_SYMBOL(m_sprites),%eax
 		push   %eax
 		push   $0x166
 		push   $0x10
@@ -12789,7 +12789,7 @@ debrief:	/* 0x18ff0 */
 		push   $0x0
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%ecx
+		mov    EXPORT_SYMBOL(m_sprites),%ecx
 		push   %ecx
 		push   $0x166
 		add    $0xe,%ebx
@@ -12815,7 +12815,7 @@ debrief:	/* 0x18ff0 */
 		push   $0x0
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%ecx
+		mov    EXPORT_SYMBOL(m_sprites),%ecx
 		push   %ecx
 		push   $0x166
 		push   $0x10
@@ -12829,7 +12829,7 @@ debrief:	/* 0x18ff0 */
 		push   $0x0
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%esi
+		mov    EXPORT_SYMBOL(m_sprites),%esi
 		push   %esi
 		push   $0x166
 		add    $0xe,%ebx
@@ -12855,7 +12855,7 @@ debrief:	/* 0x18ff0 */
 		push   $0x0
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%ecx
+		mov    EXPORT_SYMBOL(m_sprites),%ecx
 		push   %ecx
 		push   $0x166
 		push   $0x10
@@ -12869,7 +12869,7 @@ debrief:	/* 0x18ff0 */
 		push   $0x0
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%esi
+		mov    EXPORT_SYMBOL(m_sprites),%esi
 		push   %esi
 		push   $0x166
 		add    $0xe,%ebx
@@ -12905,7 +12905,7 @@ debrief:	/* 0x18ff0 */
 		push   $0x0
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%ecx
+		mov    EXPORT_SYMBOL(m_sprites),%ecx
 		push   %ecx
 		push   $0x166
 		push   $0x10
@@ -12919,7 +12919,7 @@ debrief:	/* 0x18ff0 */
 		push   $0x0
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%esi
+		mov    EXPORT_SYMBOL(m_sprites),%esi
 		push   %esi
 		push   $0x166
 		add    $0xe,%ebx
@@ -12945,7 +12945,7 @@ debrief:	/* 0x18ff0 */
 		push   $0x0
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%ecx
+		mov    EXPORT_SYMBOL(m_sprites),%ecx
 		push   %ecx
 		push   $0x166
 		push   $0x10
@@ -12959,7 +12959,7 @@ debrief:	/* 0x18ff0 */
 		push   $0x0
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%esi
+		mov    EXPORT_SYMBOL(m_sprites),%esi
 		push   %esi
 		push   $0x166
 		add    $0xe,%ebx
@@ -12985,7 +12985,7 @@ debrief:	/* 0x18ff0 */
 		push   $0x0
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%ecx
+		mov    EXPORT_SYMBOL(m_sprites),%ecx
 		push   %ecx
 		push   $0x166
 		push   $0x10
@@ -12999,7 +12999,7 @@ debrief:	/* 0x18ff0 */
 		push   $0x0
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%esi
+		mov    EXPORT_SYMBOL(m_sprites),%esi
 		push   %esi
 		push   $0x166
 		add    $0xe,%ebx
@@ -13025,7 +13025,7 @@ debrief:	/* 0x18ff0 */
 		push   $0x0
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%ecx
+		mov    EXPORT_SYMBOL(m_sprites),%ecx
 		push   %ecx
 		push   $0x166
 		push   $0x10
@@ -13039,7 +13039,7 @@ debrief:	/* 0x18ff0 */
 		push   $0x0
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%esi
+		mov    EXPORT_SYMBOL(m_sprites),%esi
 		push   %esi
 		push   $0x166
 		add    $0xe,%ebx
@@ -13065,7 +13065,7 @@ debrief:	/* 0x18ff0 */
 		push   $0x0
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%ecx
+		mov    EXPORT_SYMBOL(m_sprites),%ecx
 		push   %ecx
 		push   $0x166
 		push   $0x10
@@ -13079,7 +13079,7 @@ debrief:	/* 0x18ff0 */
 		push   $0x0
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%esi
+		mov    EXPORT_SYMBOL(m_sprites),%esi
 		push   %esi
 		push   $0x166
 		add    $0xe,%ebx
@@ -13105,7 +13105,7 @@ debrief:	/* 0x18ff0 */
 		push   $0x0
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%ecx
+		mov    EXPORT_SYMBOL(m_sprites),%ecx
 		push   %ecx
 		push   $0x166
 		push   $0x10
@@ -13119,7 +13119,7 @@ debrief:	/* 0x18ff0 */
 		push   $0x0
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%esi
+		mov    EXPORT_SYMBOL(m_sprites),%esi
 		push   %esi
 		push   $0x166
 		add    $0xe,%ebx
@@ -13145,7 +13145,7 @@ debrief:	/* 0x18ff0 */
 		push   $0x0
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%ecx
+		mov    EXPORT_SYMBOL(m_sprites),%ecx
 		push   %ecx
 		push   $0x166
 		push   $0x10
@@ -13159,7 +13159,7 @@ debrief:	/* 0x18ff0 */
 		push   $0x0
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%esi
+		mov    EXPORT_SYMBOL(m_sprites),%esi
 		push   %esi
 		push   $0x166
 		add    $0xe,%ebx
@@ -13201,7 +13201,7 @@ debrief:	/* 0x18ff0 */
 		push   $0x0
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%esi
+		mov    EXPORT_SYMBOL(m_sprites),%esi
 		push   %esi
 		push   $0x166
 		xor    %eax,%eax
@@ -13217,7 +13217,7 @@ debrief:	/* 0x18ff0 */
 		push   %ecx
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%eax
+		mov    EXPORT_SYMBOL(m_sprites),%eax
 		push   %eax
 		push   $0x166
 		push   $0x10
@@ -13283,7 +13283,7 @@ debrief:	/* 0x18ff0 */
 		push   $0x0
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%esi
+		mov    EXPORT_SYMBOL(m_sprites),%esi
 		push   %esi
 		push   $0x166
 		push   $0x10
@@ -13300,7 +13300,7 @@ debrief:	/* 0x18ff0 */
 		push   $0x0
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%eax
+		mov    EXPORT_SYMBOL(m_sprites),%eax
 		push   %eax
 		push   $0x166
 		push   $0x10
@@ -13316,7 +13316,7 @@ debrief:	/* 0x18ff0 */
 		push   $0x0
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%ebx
+		mov    EXPORT_SYMBOL(m_sprites),%ebx
 		push   %ebx
 		push   $0x166
 		push   $0x10
@@ -21841,7 +21841,7 @@ equip_team:	/* 0x1fbc0 */
 		lea    0x0(,%edx,4),%eax
 		sub    %edx,%eax
 		lea    (%eax,%eax,1),%edx
-		mov    m_sprites,%eax
+		mov    EXPORT_SYMBOL(m_sprites),%eax
 		add    %edx,%eax
 		push   %eax
 		xor    %eax,%eax
@@ -21979,7 +21979,7 @@ equip_team:	/* 0x1fbc0 */
 		push   $0x0
 		push   $0xa
 		push   $0xfffffffe
-		mov    m_sprites,%ebx
+		mov    EXPORT_SYMBOL(m_sprites),%ebx
 		push   %ebx
 		push   $0x166
 		push   $0xe
@@ -22014,7 +22014,7 @@ equip_team:	/* 0x1fbc0 */
 		lea    0x0(,%edx,4),%eax
 		sub    %edx,%eax
 		lea    (%eax,%eax,1),%edx
-		mov    m_sprites,%eax
+		mov    EXPORT_SYMBOL(m_sprites),%eax
 		add    $0x28,%esp
 		add    %edx,%eax
 		push   %eax
@@ -22050,7 +22050,7 @@ equip_team:	/* 0x1fbc0 */
 		lea    0x0(,%edx,4),%eax
 		sub    %edx,%eax
 		lea    (%eax,%eax,1),%edx
-		mov    m_sprites,%eax
+		mov    EXPORT_SYMBOL(m_sprites),%eax
 		add    $0xc,%esp
 		add    %edx,%eax
 		push   %eax
@@ -22085,7 +22085,7 @@ equip_team:	/* 0x1fbc0 */
 		add    %eax,%edx
 		lea    0x0(,%edx,4),%eax
 		sub    %edx,%eax
-		mov    m_sprites,%edx
+		mov    EXPORT_SYMBOL(m_sprites),%edx
 		add    %eax,%eax
 		add    %edx,%eax
 		push   %eax
@@ -22126,7 +22126,7 @@ equip_team:	/* 0x1fbc0 */
 		push   $0x6
 		xor    %edx,%edx
 		push   $0xfffffffe
-		mov    m_sprites,%ecx
+		mov    EXPORT_SYMBOL(m_sprites),%ecx
 		mov    EXPORT_SYMBOL(cybmods)(%eax),%dl
 		push   %ecx
 		lea    0x0(,%edx,4),%eax
@@ -22173,7 +22173,7 @@ equip_team:	/* 0x1fbc0 */
 		push   $0x6
 		xor    %edx,%edx
 		push   $0xfffffffe
-		mov    m_sprites,%edi
+		mov    EXPORT_SYMBOL(m_sprites),%edi
 		mov    EXPORT_SYMBOL(cybmods)(%eax),%dl
 		push   %edi
 		lea    0x0(,%edx,4),%eax
@@ -22216,7 +22216,7 @@ equip_team:	/* 0x1fbc0 */
 		lea    0x3b(%eax),%edx
 		lea    0x0(,%edx,4),%eax
 		sub    %edx,%eax
-		mov    m_sprites,%edx
+		mov    EXPORT_SYMBOL(m_sprites),%edx
 		add    %eax,%eax
 		add    %edx,%eax
 		push   %eax
@@ -22234,7 +22234,7 @@ equip_team:	/* 0x1fbc0 */
 		push   $0x0
 		push   $0x0
 		push   $0x6
-		mov    m_sprites,%ecx
+		mov    EXPORT_SYMBOL(m_sprites),%ecx
 		push   $0xfffffffe
 		movswl EXPORT_SYMBOL(Network__Slot),%edx
 		push   %ecx
@@ -22302,7 +22302,7 @@ equip_team:	/* 0x1fbc0 */
 		lea    0x0(,%edx,4),%eax
 		sub    %edx,%eax
 		lea    (%eax,%eax,1),%edx
-		mov    m_sprites,%eax
+		mov    EXPORT_SYMBOL(m_sprites),%eax
 		add    %edx,%eax
 		push   %eax
 		xor    %eax,%eax
@@ -22342,7 +22342,7 @@ equip_team:	/* 0x1fbc0 */
 		push   $0x6
 		push   $0xfffffffe
 		xor    %edx,%edx
-		mov    m_sprites,%edi
+		mov    EXPORT_SYMBOL(m_sprites),%edi
 		mov    EXPORT_SYMBOL(cybmods)(%eax),%dl
 		push   %edi
 		lea    0x0(,%edx,4),%eax
@@ -22389,7 +22389,7 @@ equip_team:	/* 0x1fbc0 */
 		add    %eax,%ebx
 		lea    0x0(,%ebx,4),%eax
 		sub    %ebx,%eax
-		mov    m_sprites,%ebx
+		mov    EXPORT_SYMBOL(m_sprites),%ebx
 		add    %eax,%eax
 		add    %ebx,%eax
 		push   %eax
@@ -22427,7 +22427,7 @@ equip_team:	/* 0x1fbc0 */
 		push   $0x6
 		push   $0xfffffffe
 		xor    %edx,%edx
-		mov    m_sprites,%ecx
+		mov    EXPORT_SYMBOL(m_sprites),%ecx
 		mov    EXPORT_SYMBOL(cybmods)(%eax),%dl
 		push   %ecx
 		lea    0x0(,%edx,4),%eax
@@ -22470,7 +22470,7 @@ equip_team:	/* 0x1fbc0 */
 		lea    0x35(%eax),%edx
 		lea    0x0(,%edx,4),%eax
 		sub    %edx,%eax
-		mov    m_sprites,%edx
+		mov    EXPORT_SYMBOL(m_sprites),%edx
 		add    %eax,%eax
 		add    %edx,%eax
 		push   %eax
@@ -22509,7 +22509,7 @@ equip_team:	/* 0x1fbc0 */
 		push   $0x6
 		push   $0xfffffffe
 		xor    %edx,%edx
-		mov    m_sprites,%edi
+		mov    EXPORT_SYMBOL(m_sprites),%edi
 		mov    EXPORT_SYMBOL(cybmods)(%eax),%dl
 		push   %edi
 		lea    0x0(,%edx,4),%eax
@@ -22596,7 +22596,7 @@ equip_team:	/* 0x1fbc0 */
 		je     jump_20e8a
 		cmp    $0x11,%di
 		jne    jump_20dbf
-		mov    m_sprites,%eax
+		mov    EXPORT_SYMBOL(m_sprites),%eax
 		add    $0xa8,%eax
 		jmp    jump_20dda
 	jump_20dbf:
@@ -22605,7 +22605,7 @@ equip_team:	/* 0x1fbc0 */
 		add    $0xd,%edx
 		lea    0x0(,%edx,4),%eax
 		sub    %edx,%eax
-		mov    m_sprites,%edx
+		mov    EXPORT_SYMBOL(m_sprites),%edx
 		add    %eax,%eax
 		add    %edx,%eax
 	jump_20dda:
@@ -22685,7 +22685,7 @@ equip_team:	/* 0x1fbc0 */
 		push   $0xfc
 		push   $0xa
 		push   $0xfffffffe
-		mov    m_sprites,%esi
+		mov    EXPORT_SYMBOL(m_sprites),%esi
 		push   %esi
 		push   $0x54
 		push   $0xe
@@ -22726,7 +22726,7 @@ equip_team:	/* 0x1fbc0 */
 		push   %edi
 		push   $0x6
 		push   $0xfffffffe
-		mov    m_sprites,%eax
+		mov    EXPORT_SYMBOL(m_sprites),%eax
 		push   %eax
 		push   $0xdd
 		xor    %eax,%eax
@@ -22763,7 +22763,7 @@ equip_team:	/* 0x1fbc0 */
 		push   %edi
 		push   $0x6
 		push   $0xfffffffe
-		mov    m_sprites,%ecx
+		mov    EXPORT_SYMBOL(m_sprites),%ecx
 		push   %ecx
 		push   $0xdd
 		xor    %edx,%edx
@@ -22781,7 +22781,7 @@ equip_team:	/* 0x1fbc0 */
 		push   %edi
 		push   $0x6
 		push   $0xfffffffe
-		mov    m_sprites,%edx
+		mov    EXPORT_SYMBOL(m_sprites),%edx
 		push   %edx
 		push   $0xdd
 		xor    %eax,%eax
@@ -22844,7 +22844,7 @@ equip_team:	/* 0x1fbc0 */
 		push   %edi
 		push   $0x6
 		push   $0xfffffffe
-		mov    m_sprites,%ecx
+		mov    EXPORT_SYMBOL(m_sprites),%ecx
 		push   %ecx
 		push   $0x54
 		xor    %eax,%eax
@@ -22882,7 +22882,7 @@ equip_team:	/* 0x1fbc0 */
 		push   $0x0
 		push   $0x6
 		push   $0xfffffffe
-		mov    m_sprites,%esi
+		mov    EXPORT_SYMBOL(m_sprites),%esi
 		push   %esi
 		push   $0x54
 		add    $0x7c,%dx
@@ -23079,7 +23079,7 @@ equip_team:	/* 0x1fbc0 */
 		push   $0x0
 		push   $0x8
 		push   $0xfffffffe
-		mov    m_sprites,%edi
+		mov    EXPORT_SYMBOL(m_sprites),%edi
 		push   %edi
 		push   $0x54
 		push   $0xf
@@ -23127,7 +23127,7 @@ equip_team:	/* 0x1fbc0 */
 		push   $0x0
 		push   $0x6
 		push   $0xfffffffe
-		mov    m_sprites,%ecx
+		mov    EXPORT_SYMBOL(m_sprites),%ecx
 		push   %ecx
 		push   $0x54
 		push   $0xe
@@ -23272,7 +23272,7 @@ equip_team:	/* 0x1fbc0 */
 		add    $0xc,%esp
 		push   $0xfffffffe
 		push   $0x166
-		mov    m_sprites,%ebx
+		mov    EXPORT_SYMBOL(m_sprites),%ebx
 		push   %ebx
 		lea    -0x68(%ebp),%eax
 		push   %eax
@@ -23290,7 +23290,7 @@ equip_team:	/* 0x1fbc0 */
 		push   $0x0
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%ecx
+		mov    EXPORT_SYMBOL(m_sprites),%ecx
 		push   %ecx
 		push   $0x166
 		add    $0x1f4,%eax
@@ -23307,7 +23307,7 @@ equip_team:	/* 0x1fbc0 */
 		add    $0x28,%esp
 		test   %cl,%cl
 		je     jump_217aa
-		mov    m_sprites,%eax
+		mov    EXPORT_SYMBOL(m_sprites),%eax
 		add    $0x1ce,%eax
 		push   %eax
 		push   $0x98
@@ -23322,7 +23322,7 @@ equip_team:	/* 0x1fbc0 */
 		mov    -0x10(%ebp),%bl
 		cmp    $0x11,%bl
 		jne    jump_217d5
-		mov    m_sprites,%eax
+		mov    EXPORT_SYMBOL(m_sprites),%eax
 		add    $0xa8,%eax
 		jmp    jump_217ef
 	jump_217d5:
@@ -23331,7 +23331,7 @@ equip_team:	/* 0x1fbc0 */
 		add    $0xd,%edx
 		lea    0x0(,%edx,4),%eax
 		sub    %edx,%eax
-		mov    m_sprites,%edx
+		mov    EXPORT_SYMBOL(m_sprites),%edx
 		add    %eax,%eax
 		add    %edx,%eax
 	jump_217ef:
@@ -24710,7 +24710,7 @@ ShowInfoOnEquipItem:	/* 0x22a10 */
 		mov    0x40(%esp),%dl
 		cmp    $0x11,%dl
 		jne    jump_22a37
-		mov    m_sprites,%eax
+		mov    EXPORT_SYMBOL(m_sprites),%eax
 		add    $0x1d4,%eax
 		jmp    jump_22a51
 	jump_22a37:
@@ -24719,7 +24719,7 @@ ShowInfoOnEquipItem:	/* 0x22a10 */
 		add    $0x3f,%ebx
 		lea    0x0(,%ebx,4),%eax
 		sub    %ebx,%eax
-		mov    m_sprites,%ebx
+		mov    EXPORT_SYMBOL(m_sprites),%ebx
 		add    %eax,%eax
 		add    %ebx,%eax
 	jump_22a51:
@@ -24748,7 +24748,7 @@ ShowInfoOnEquipItem:	/* 0x22a10 */
 		push   $0x0
 		push   $0x6
 		push   $0xfffffffe
-		mov    m_sprites,%eax
+		mov    EXPORT_SYMBOL(m_sprites),%eax
 		push   %eax
 		push   $0x54
 		push   $0xe
@@ -24762,7 +24762,7 @@ ShowInfoOnEquipItem:	/* 0x22a10 */
 		push   $0x0
 		push   $0x8
 		push   $0xfffffffe
-		mov    m_sprites,%edx
+		mov    EXPORT_SYMBOL(m_sprites),%edx
 		push   %edx
 		push   $0x54
 		push   $0xf
@@ -24785,7 +24785,7 @@ ShowInfoOnEquipItem:	/* 0x22a10 */
 		push   $0x0
 		push   $0x6
 		push   $0xfffffffe
-		mov    m_sprites,%edi
+		mov    EXPORT_SYMBOL(m_sprites),%edi
 		push   %edi
 		push   $0x54
 		push   $0xe
@@ -24803,7 +24803,7 @@ ShowInfoOnEquipItem:	/* 0x22a10 */
 		push   $0x0
 		push   $0x8
 		push   $0xfffffffe
-		mov    m_sprites,%ebp
+		mov    EXPORT_SYMBOL(m_sprites),%ebp
 		push   %ebp
 		push   $0x54
 		push   $0xf
@@ -24827,7 +24827,7 @@ ShowInfoOnEquipItem:	/* 0x22a10 */
 		push   $0x0
 		push   $0x6
 		push   $0xfffffffe
-		mov    m_sprites,%ebx
+		mov    EXPORT_SYMBOL(m_sprites),%ebx
 		push   %ebx
 		push   $0x54
 		push   $0xe
@@ -24843,7 +24843,7 @@ ShowInfoOnEquipItem:	/* 0x22a10 */
 		push   $0x0
 		push   $0x8
 		push   $0xfffffffe
-		mov    m_sprites,%ecx
+		mov    EXPORT_SYMBOL(m_sprites),%ecx
 		push   %ecx
 		push   $0x54
 		xor    %esi,%esi
@@ -24872,7 +24872,7 @@ ShowInfoOnEquipItem:	/* 0x22a10 */
 		push   $0x0
 		push   $0x6
 		push   $0xfffffffe
-		mov    m_sprites,%eax
+		mov    EXPORT_SYMBOL(m_sprites),%eax
 		push   %eax
 		push   $0x54
 		push   $0xe
@@ -24890,7 +24890,7 @@ ShowInfoOnEquipItem:	/* 0x22a10 */
 		push   $0x0
 		push   $0x8
 		push   $0xfffffffe
-		mov    m_sprites,%edx
+		mov    EXPORT_SYMBOL(m_sprites),%edx
 		push   %edx
 		push   $0x54
 		xor    %ebx,%ebx
@@ -24915,7 +24915,7 @@ ShowInfoOnEquipItem:	/* 0x22a10 */
 		push   $0x0
 		push   $0x6
 		push   $0xfffffffe
-		mov    m_sprites,%edi
+		mov    EXPORT_SYMBOL(m_sprites),%edi
 		push   %edi
 		push   $0x54
 		push   $0xe
@@ -24939,7 +24939,7 @@ ShowInfoOnEquipItem:	/* 0x22a10 */
 		push   $0x0
 		push   $0x0
 		push   $0x6
-		mov    m_sprites,%edx
+		mov    EXPORT_SYMBOL(m_sprites),%edx
 		push   $0xfffffffe
 		movzbl EXPORT_SYMBOL(cybmods)(%ebx),%esi
 		push   %edx
@@ -24960,7 +24960,7 @@ ShowInfoOnEquipItem:	/* 0x22a10 */
 		push   $0x0
 		push   $0x8
 		push   $0xfffffffe
-		mov    m_sprites,%esi
+		mov    EXPORT_SYMBOL(m_sprites),%esi
 		push   %esi
 		push   $0x54
 		push   $0xf
@@ -24983,7 +24983,7 @@ ShowInfoOnEquipItem:	/* 0x22a10 */
 		push   $0x0
 		push   $0x6
 		push   $0xfffffffe
-		mov    m_sprites,%eax
+		mov    EXPORT_SYMBOL(m_sprites),%eax
 		push   %eax
 		push   $0x54
 		push   $0xe
@@ -25006,7 +25006,7 @@ ShowInfoOnEquipItem:	/* 0x22a10 */
 		push   $0xfffffffe
 		push   $0xc
 		push   $0x54
-		mov    m_sprites,%edx
+		mov    EXPORT_SYMBOL(m_sprites),%edx
 		push   %edx
 		push   $0xea
 		push   $0x78
@@ -25099,7 +25099,7 @@ ShowAvailableParts:	/* 0x22eb0 */
 		push   $0x0
 		push   $0x6
 		push   $0xfffffffe
-		mov    m_sprites,%edi
+		mov    EXPORT_SYMBOL(m_sprites),%edi
 		push   %edi
 		push   $0xdd
 		xor    %edx,%edx
@@ -25147,7 +25147,7 @@ ShowAvailableParts:	/* 0x22eb0 */
 		push   $0x0
 		push   $0x6
 		push   $0xfffffffe
-		mov    m_sprites,%ebx
+		mov    EXPORT_SYMBOL(m_sprites),%ebx
 		push   %ebx
 		imul   $0xc,0x14(%esp),%ax
 		push   $0x54
@@ -25203,7 +25203,7 @@ ShowAvailableEquipment:	/* 0x22fe0 */
 		push   $0x0
 		push   $0x6
 		push   $0xfffffffe
-		mov    m_sprites,%edi
+		mov    EXPORT_SYMBOL(m_sprites),%edi
 		push   %edi
 		push   $0xdd
 		xor    %eax,%eax
@@ -25251,7 +25251,7 @@ ShowAvailableEquipment:	/* 0x22fe0 */
 		push   $0x0
 		push   $0x6
 		push   $0xfffffffe
-		mov    m_sprites,%ebx
+		mov    EXPORT_SYMBOL(m_sprites),%ebx
 		push   %ebx
 		imul   $0xc,0x14(%esp),%ax
 		push   $0x54
@@ -30482,7 +30482,7 @@ LoadSaveGame:	/* 0x26ef0 */
 		push   $0x0
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%eax
+		mov    EXPORT_SYMBOL(m_sprites),%eax
 		push   %eax
 		xor    %eax,%eax
 		xor    %edx,%edx
@@ -30521,7 +30521,7 @@ LoadSaveGame:	/* 0x26ef0 */
 		push   $0x1
 		mov    savegame_slot,%dl
 		push   $0x166
-		mov    m_sprites,%ecx
+		mov    EXPORT_SYMBOL(m_sprites),%ecx
 		lea    0x0(,%edx,8),%eax
 		push   %ecx
 		mov    data_54c4c(%eax),%esi
@@ -32278,7 +32278,7 @@ show_city_info:	/* 0x28610 */
 		push   $0x0
 		push   $0x8
 		push   $0xfffffffe
-		mov    m_sprites,%edx
+		mov    EXPORT_SYMBOL(m_sprites),%edx
 		push   %edx
 		push   $0x54
 		mov    %edx,%ebx
@@ -32332,7 +32332,7 @@ show_city_info:	/* 0x28610 */
 		push   $0x0
 		push   $0x8
 		push   $0xfffffffe
-		mov    m_sprites,%edi
+		mov    EXPORT_SYMBOL(m_sprites),%edi
 		push   %edi
 		push   $0x166
 		push   $0xf
@@ -32358,7 +32358,7 @@ show_city_info:	/* 0x28610 */
 		push   $0x0
 		push   $0x8
 		push   $0xfffffffe
-		mov    m_sprites,%edi
+		mov    EXPORT_SYMBOL(m_sprites),%edi
 		push   %edi
 		push   $0x54
 		push   $0xf
@@ -32372,7 +32372,7 @@ show_city_info:	/* 0x28610 */
 		push   $0x0
 		push   $0x8
 		push   $0xfffffffe
-		mov    m_sprites,%eax
+		mov    EXPORT_SYMBOL(m_sprites),%eax
 		push   %eax
 		push   $0x166
 		push   $0xf
@@ -32401,7 +32401,7 @@ show_city_info:	/* 0x28610 */
 		push   $0x0
 		push   $0x8
 		push   $0xfffffffe
-		mov    m_sprites,%ecx
+		mov    EXPORT_SYMBOL(m_sprites),%ecx
 		push   %ecx
 		push   $0x166
 		push   $0xf
@@ -32449,7 +32449,7 @@ show_city_info:	/* 0x28610 */
 		push   $0x0
 		push   $0x8
 		push   $0xfffffffe
-		mov    m_sprites,%ecx
+		mov    EXPORT_SYMBOL(m_sprites),%ecx
 		push   %ecx
 		push   $0x54
 		push   $0xf
@@ -32465,7 +32465,7 @@ show_city_info:	/* 0x28610 */
 		push   $0x0
 		push   $0x8
 		push   $0xfffffffe
-		mov    m_sprites,%edi
+		mov    EXPORT_SYMBOL(m_sprites),%edi
 		push   %edi
 		push   $0x166
 		push   $0xf
@@ -32622,7 +32622,7 @@ show_city_info:	/* 0x28610 */
 		push   $0x0
 		push   $0x8
 		push   $0xfffffffe
-		mov    m_sprites,%ebx
+		mov    EXPORT_SYMBOL(m_sprites),%ebx
 		push   %ebx
 		push   $0x54
 		push   $0xf
@@ -32986,7 +32986,7 @@ show_tax_and_revenue:	/* 0x28e90 */
 		push   $0x0
 		push   $0x8
 		push   $0xfffffffe
-		mov    m_sprites,%edx
+		mov    EXPORT_SYMBOL(m_sprites),%edx
 		push   %edx
 		push   $0x54
 		push   $0xf
@@ -33007,7 +33007,7 @@ show_tax_and_revenue:	/* 0x28e90 */
 		push   $0x0
 		push   $0x8
 		push   $0xfffffffe
-		mov    m_sprites,%ecx
+		mov    EXPORT_SYMBOL(m_sprites),%ecx
 		push   %ecx
 		push   $0x54
 		push   $0xf
@@ -33021,7 +33021,7 @@ show_tax_and_revenue:	/* 0x28e90 */
 		push   $0x0
 		push   $0x8
 		push   $0xfffffffe
-		mov    m_sprites,%esi
+		mov    EXPORT_SYMBOL(m_sprites),%esi
 		push   %esi
 		push   $0x54
 		push   $0xf
@@ -33037,13 +33037,13 @@ show_tax_and_revenue:	/* 0x28e90 */
 		jne    jump_28fd5
 		cmpw   $0xff,EXPORT_SYMBOL(country_states)(%ebx)
 		je     jump_28fd5
-		mov    m_sprites,%eax
+		mov    EXPORT_SYMBOL(m_sprites),%eax
 		add    $0x42,%eax
 		push   %eax
 		push   $0x15a
 		push   $0x176
 		call   LbSpriteDrawMCGA
-		mov    m_sprites,%eax
+		mov    EXPORT_SYMBOL(m_sprites),%eax
 		add    $0xc,%esp
 		add    $0x48,%eax
 		push   %eax
@@ -33865,7 +33865,7 @@ func_29818:
 		push   $0x0
 		push   $0x0
 		push   $0xe
-		mov    m_sprites,%ecx
+		mov    EXPORT_SYMBOL(m_sprites),%ecx
 		push   $0xfffffffe
 		xor    %eax,%eax
 		xor    %edx,%edx
@@ -50634,7 +50634,7 @@ ResearchAndDevelop:	/* 0x34ad0 */
 		add    $0xc,%esp
 		push   $0xfffffffe
 		push   $0x166
-		mov    m_sprites,%eax
+		mov    EXPORT_SYMBOL(m_sprites),%eax
 		push   %eax
 		lea    -0x16(%ebp),%eax
 		push   %eax
@@ -50652,7 +50652,7 @@ ResearchAndDevelop:	/* 0x34ad0 */
 		push   $0x0
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%edx
+		mov    EXPORT_SYMBOL(m_sprites),%edx
 		push   %edx
 		push   $0x166
 		add    $0x1f4,%eax
@@ -50687,7 +50687,7 @@ ResearchAndDevelop:	/* 0x34ad0 */
 		add    $0xc,%esp
 		push   $0xfffffffe
 		push   $0x166
-		mov    m_sprites,%ebx
+		mov    EXPORT_SYMBOL(m_sprites),%ebx
 		push   %ebx
 		lea    -0x16(%ebp),%eax
 		push   %eax
@@ -50705,7 +50705,7 @@ ResearchAndDevelop:	/* 0x34ad0 */
 		push   $0x0
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%ecx
+		mov    EXPORT_SYMBOL(m_sprites),%ecx
 		push   %ecx
 		push   $0x166
 		add    $0x10,%eax
@@ -50761,7 +50761,7 @@ ResearchAndDevelop:	/* 0x34ad0 */
 		push   $0x0
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%ebx
+		mov    EXPORT_SYMBOL(m_sprites),%ebx
 		push   %ebx
 		push   $0x166
 		push   $0x10
@@ -50981,7 +50981,7 @@ ResearchAndDevelop:	/* 0x34ad0 */
 		push   $0x0
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%edi
+		mov    EXPORT_SYMBOL(m_sprites),%edi
 		push   %edi
 		push   $0xdd
 		push   $0x10
@@ -50997,7 +50997,7 @@ ResearchAndDevelop:	/* 0x34ad0 */
 		push   $0x0
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%ebx
+		mov    EXPORT_SYMBOL(m_sprites),%ebx
 		push   %ebx
 		push   $0xdd
 		push   $0x10
@@ -51024,7 +51024,7 @@ ResearchAndDevelop:	/* 0x34ad0 */
 		push   $0x0
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%ecx
+		mov    EXPORT_SYMBOL(m_sprites),%ecx
 		push   %ecx
 		push   $0x54
 		push   $0x10
@@ -51047,7 +51047,7 @@ ResearchAndDevelop:	/* 0x34ad0 */
 		push   $0x0
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%esi
+		mov    EXPORT_SYMBOL(m_sprites),%esi
 		push   %esi
 		push   $0x54
 		push   $0x10
@@ -51073,7 +51073,7 @@ ResearchAndDevelop:	/* 0x34ad0 */
 		push   $0x0
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%edi
+		mov    EXPORT_SYMBOL(m_sprites),%edi
 		push   %edi
 		jmp    jump_354b2
 	jump_353d9:
@@ -51085,7 +51085,7 @@ ResearchAndDevelop:	/* 0x34ad0 */
 		push   $0xe
 		xor    %edx,%edx
 		push   $0xfffffffe
-		mov    m_sprites,%esi
+		mov    EXPORT_SYMBOL(m_sprites),%esi
 		mov    EXPORT_SYMBOL(cybmods)(%ebx),%dl
 		push   %esi
 		lea    0x0(,%edx,4),%eax
@@ -51115,7 +51115,7 @@ ResearchAndDevelop:	/* 0x34ad0 */
 		push   $0x0
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%eax
+		mov    EXPORT_SYMBOL(m_sprites),%eax
 		push   %eax
 		push   $0x54
 		push   $0x10
@@ -51142,7 +51142,7 @@ ResearchAndDevelop:	/* 0x34ad0 */
 		push   $0x0
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%edx
+		mov    EXPORT_SYMBOL(m_sprites),%edx
 		push   %edx
 	jump_354b2:
 		push   $0x54
@@ -51279,7 +51279,7 @@ ResearchAndDevelop:	/* 0x34ad0 */
 		push   %edi
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%eax
+		mov    EXPORT_SYMBOL(m_sprites),%eax
 		push   %eax
 		push   $0xdd
 		xor    %eax,%eax
@@ -51334,7 +51334,7 @@ ResearchAndDevelop:	/* 0x34ad0 */
 		push   $0x0
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%esi
+		mov    EXPORT_SYMBOL(m_sprites),%esi
 		push   %esi
 		imul   $0xc,0x42(%ebp),%ax
 		push   $0x54
@@ -51364,7 +51364,7 @@ ResearchAndDevelop:	/* 0x34ad0 */
 		push   %edi
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%edx
+		mov    EXPORT_SYMBOL(m_sprites),%edx
 		push   %edx
 		push   $0xdd
 		xor    %edx,%edx
@@ -51419,7 +51419,7 @@ ResearchAndDevelop:	/* 0x34ad0 */
 		push   $0x0
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%ecx
+		mov    EXPORT_SYMBOL(m_sprites),%ecx
 		push   %ecx
 		imul   $0xc,0x42(%ebp),%dx
 		push   $0x54
@@ -54138,8 +54138,8 @@ select:	/* 0x37600 */
 		xor    %edx,%edx
 		mov    %ah,0x10(%esp)
 		mov    %edx,m_spr_data
-		mov    %edx,m_sprites
-		mov    %edx,m_sprites_end
+		mov    %edx,EXPORT_SYMBOL(m_sprites)
+		mov    %edx,EXPORT_SYMBOL(m_sprites_end)
 		call   ac_LbDataLoadAll
 		mov    EXPORT_SYMBOL(SoundAble),%dl
 		add    $0x4,%esp
@@ -54168,8 +54168,8 @@ select:	/* 0x37600 */
 		add    $0x6,%edx
 		mov    %bh,0x5(%eax)
 	jump_37699:
-		mov    m_sprites,%eax
-		mov    m_sprites_end,%ebx
+		mov    EXPORT_SYMBOL(m_sprites),%eax
+		mov    EXPORT_SYMBOL(m_sprites_end),%ebx
 		add    %edx,%eax
 		cmp    %ebx,%eax
 		jne    jump_3767a
@@ -54177,7 +54177,7 @@ select:	/* 0x37600 */
 		mov    %edi,EXPORT_SYMBOL(MouseSwap)
 		xor    %ebp,%ebp
 		mov    %ebp,MouseOldW
-		mov    m_sprites,%eax
+		mov    EXPORT_SYMBOL(m_sprites),%eax
 		add    $0x17a,%eax
 #if defined(USE_BFLIB_MOUSE_CURSOR) /* moved as sprites need to be set up before use for mouse */
 		push   %eax
@@ -54405,7 +54405,7 @@ func_378c3:
 		push   $0x0
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%edx
+		mov    EXPORT_SYMBOL(m_sprites),%edx
 		push   %edx
 		push   $0x278
 		jmp    jump_3795e
@@ -54414,7 +54414,7 @@ func_378c3:
 		push   $0x0
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%ebx
+		mov    EXPORT_SYMBOL(m_sprites),%ebx
 		push   %ebx
 		push   $0x301
 	jump_3795e:
@@ -54623,7 +54623,7 @@ func_37bb8:
 
 
 func_37bbf:
-		mov    m_sprites,%ebx
+		mov    EXPORT_SYMBOL(m_sprites),%ebx
 		push   %ebx
 		xor    %cl,%cl
 		push   $brief_text
@@ -54695,7 +54695,7 @@ func_37bdd:
 		push   $0x0
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%ecx
+		mov    EXPORT_SYMBOL(m_sprites),%ecx
 		push   %ecx
 		push   $0x38a
 		push   $0x10
@@ -54732,7 +54732,7 @@ func_37bdd:
 		push   $0x0
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%ebp
+		mov    EXPORT_SYMBOL(m_sprites),%ebp
 		push   %ebp
 		push   $0x38a
 		push   $0x10
@@ -54768,7 +54768,7 @@ func_37bdd:
 		push   $0x0
 		push   $0xe
 		push   $0xfffffffe
-		mov    m_sprites,%ebx
+		mov    EXPORT_SYMBOL(m_sprites),%ebx
 		push   %ebx
 		push   $0x38a
 		push   $0x10
@@ -55661,7 +55661,7 @@ ASM_ClearBFSampleStatus:	/* 0x38790 */
 		mov    %dl,data_61bde(%eax)
 		mov    %dl,m_logos(%eax)
 		mov    %dl,data_61be2(%eax)
-		mov    %dl,m_sprites(%eax)
+		mov    %dl,EXPORT_SYMBOL(m_sprites)(%eax)
 		mov    %dl,data_61be6(%eax)
 		mov    %dl,data_61be8(%eax)
 		mov    %dl,data_61bea(%eax)
@@ -55909,7 +55909,7 @@ DisplayScreenTitle:	/* 0x38a60 */
 		push   $0x0
 		push   $0xc
 		push   $0xfffffffe
-		mov    m_sprites,%edx
+		mov    EXPORT_SYMBOL(m_sprites),%edx
 		push   %edx
 		push   $0x413
 		push   $0x10
@@ -55952,7 +55952,7 @@ DrawScreenGadget:	/* 0x38ac0 */
 		push   %ebx
 		movsbl 0x2c(%esp),%eax
 		push   %eax
-		mov    m_sprites,%edx
+		mov    EXPORT_SYMBOL(m_sprites),%edx
 		push   %edx
 		xor    %edx,%edx
 		mov    0x30(%esp),%dx
@@ -55965,7 +55965,7 @@ DrawScreenGadget:	/* 0x38ac0 */
 		push   %ebx
 		push   %eax
 		push   %edx
-		mov    m_sprites,%ebx
+		mov    EXPORT_SYMBOL(m_sprites),%ebx
 		push   %ebx
 		mov    0x3c(%esp),%ecx
 		push   %ecx
@@ -84976,8 +84976,8 @@ unk984_load_files:	/* 0x5b984 */
 		.fill   0xc
 		.string "data/mspr-0.tab"
 		.fill   0xc
-		.long   m_sprites
-		.long   m_sprites_end
+		.long   EXPORT_SYMBOL(m_sprites)
+		.long   EXPORT_SYMBOL(m_sprites_end)
 		.fill   0x8
 		.string "data/mfnt-0.dat"
 		.fill   0xc
@@ -85568,7 +85568,7 @@ data_60b60:
 		.fill   0xc8
 brief_text:	/* 0x60c28 */
 		.fill   0xfa0
-m_sprites_end:	/* 0x61bc8 */
+GLOBAL (m_sprites_end)	/* 0x61bc8 */
 		.fill   0x4
 m_font_data:	/* 0x61bcc */
 		.fill   0x4
@@ -85586,7 +85586,7 @@ m_logos:	/* 0x61be0 */
 		.ascii  "\x00\x00"
 data_61be2:
 		.ascii  "\x00\x00"
-m_sprites:	/* 0x61be4 */
+GLOBAL (m_sprites)	/* 0x61be4 */
 		.ascii  "\x00\x00"
 data_61be6:
 		.ascii  "\x00\x00"
