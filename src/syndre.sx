@@ -54154,25 +54154,35 @@ select:	/* 0x37600 */
 		call   ac_sound_bank_setup
 	jump_37654:
 		xor    %edx,%edx
+
+	/* inlined LbSpriteSetup() but with W&H doubling */
 		jmp    jump_37699
 	jump_3767a:
 		mov    m_spr_data,%ebx
 		mov    (%eax),%ecx
 		add    %ebx,%ecx
+		mov    %ecx,(%eax)
+#if 1 /* double width and height - old sprite drawing function requires that */
+        /* but skip doubling mouse cursor - uses new drawing already */
+		cmp    $378,%edx
+        je     jump_skip_doubling
 		mov    0x4(%eax),%bl
 		mov    0x5(%eax),%bh
-		mov    %ecx,(%eax)
 		add    %bl,%bl
 		add    %bh,%bh
 		mov    %bl,0x4(%eax)
-		add    $0x6,%edx
 		mov    %bh,0x5(%eax)
+	jump_skip_doubling:
+#endif
+		add    $0x6,%edx
 	jump_37699:
 		mov    EXPORT_SYMBOL(m_sprites),%eax
 		mov    EXPORT_SYMBOL(m_sprites_end),%ebx
 		add    %edx,%eax
 		cmp    %ebx,%eax
 		jne    jump_3767a
+	/* inlined LbSpriteSetup() ends */
+
 		mov    $0x1,%edi
 		mov    %edi,EXPORT_SYMBOL(MouseSwap)
 		xor    %ebp,%ebp
