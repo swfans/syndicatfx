@@ -2,7 +2,7 @@
 #  Syndicate Fan Expansion, source port of the classic game from Bullfrog.
 # *****************************************************************************
 #   @file guitext_ita.po
-#      GUI text for SyndicatFX translation template file
+#      GUI text for SyndicatFX italian translation file
 #  @par Purpose:
 #      Contains translation of the national text in the game.
 #  @par Comment:

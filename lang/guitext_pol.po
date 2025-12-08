@@ -1,219 +1,1966 @@
+# *****************************************************************************
+#  Syndicate Fan Expansion, source port of the classic game from Bullfrog.
+# *****************************************************************************
+#   @file guitext_pol.po
+#      GUI text for SyndicatFX polish translation file
+#  @par Purpose:
+#      Contains translation of the national text in the game.
+#  @par Comment:
+#      Use this file to improve the translation for specific language.
+#  @author   Syndicate Wars Fans
+#  @date     01 Sep 2025 - 04 Dec 2025
+#  @par  Copying and copyrights:
+#      This program is free software; you can redistribute it and/or modify
+#      it under the terms of the GNU General Public License as published by
+#      the Free Software Foundation; either version 2 of the License, or
+#      (at your option) any later version.
+#
+# *****************************************************************************
+msgid ""
+msgstr ""
+"Project-Id-Version: GUI text for SyndicatFX\n"
+"Report-Msgid-Bugs-To: https://github.com/swfans/syndicatfx/issues\n"
+"POT-Creation-Date: 2025-09-20 22:19+0200\n"
+"PO-Revision-Date: 2025-12-07 02:58+0100\n"
+"Last-Translator: Mefistotelis <mefistotelis@gmail.com>\n"
+"Language-Team: Syndicate Wars Fans <github.com/swfans>\n"
+"Language: pl_PL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Generator: Poedit 3.0.1\n"
+
+#. Name of a territory on World Map.
+#: guitext:1
+msgctxt "Territory"
+msgid "Algeria"
 msgstr "Algieria"
+
+#. Name of a territory on World Map.
+#: guitext:2
+msgctxt "Territory"
+msgid "Lybia"
 msgstr "Libia"
+
+#. Name of a territory on World Map.
+#: guitext:3
+msgctxt "Territory"
+msgid "Mauritania"
 msgstr "Mauretania"
+
+#. Name of a territory on World Map.
+#: guitext:4
+msgctxt "Territory"
+msgid "Nigeria"
 msgstr "Nigeria"
+
+#. Name of a territory on World Map.
+#: guitext:5
+msgctxt "Territory"
+msgid "Iraq"
 msgstr "Irak"
+
+#. Name of a territory on World Map.
+#: guitext:6
+msgctxt "Territory"
+msgid "Arabia"
 msgstr "Arabia"
+
+#. Name of a territory on World Map.
+#: guitext:7
+msgctxt "Territory"
+msgid "Sudan"
 msgstr "Sudan"
+
+#. Name of a territory on World Map.
+#: guitext:8
+msgctxt "Territory"
+msgid "Zaire"
 msgstr "Zair"
+
+#. Name of a territory on World Map.
+#: guitext:9
+msgctxt "Territory"
+msgid "Kenya"
 msgstr "Kenia"
+
+#. Name of a territory on World Map.
+#: guitext:10
+msgctxt "Territory"
+msgid "Mozambique"
 msgstr "Mozambik"
+
+#. Name of a territory on World Map.
+#: guitext:11
+msgctxt "Territory"
+msgid "South Africa"
 msgstr "Południowa Afryka"
+
+#. Name of a territory on World Map.
+#: guitext:12
+msgctxt "Territory"
+msgid "Western Europe"
 msgstr "Europa Zachodnia"
+
+#. Name of a territory on World Map.
+#: guitext:13
+msgctxt "Territory"
+msgid "Scandinavia"
 msgstr "Skandynawia"
+
+#. Name of a territory on World Map.
+#: guitext:14
+msgctxt "Territory"
+msgid "Central Europe"
 msgstr "Europa Środkowa"
+
+#. Name of a territory on World Map.
+#: guitext:15
+msgctxt "Territory"
+msgid "Eastern Europe"
 msgstr "Europa Wschodnia"
+
+#. Name of a territory on World Map.
+#: guitext:16
+msgctxt "Territory"
+msgid "Iran"
 msgstr "Iran"
+
+#. Name of a territory on World Map.
+#: guitext:17
+msgctxt "Territory"
+msgid "India"
 msgstr "Indie"
+
+#. Name of a territory on World Map.
+#: guitext:18
+msgctxt "Territory"
+msgid "Pacific Rim"
 msgstr "Wybrzeże Pacyfiku"
+
+#. Name of a territory on World Map.
+#: guitext:19
+msgctxt "Territory"
+msgid "Indonesia"
 msgstr "Indonezja"
+
+#. Name of a territory on World Map.
+#: guitext:20
+msgctxt "Territory"
+msgid "China"
 msgstr "Chiny"
+
+#. Name of a territory on World Map.
+#: guitext:21
+msgctxt "Territory"
+msgid "Far East"
 msgstr "Daleki Wschód"
+
+#. Name of a territory on World Map.
+#: guitext:22
+msgctxt "Territory"
+msgid "Kazakhstan"
 msgstr "Kazachstan"
+
+#. Name of a territory on World Map.
+#: guitext:23
+msgctxt "Territory"
+msgid "Siberia"
 msgstr "Syberia"
+
+#. Name of a territory on World Map.
+#: guitext:24
+msgctxt "Territory"
+msgid "Urals"
 msgstr "Ural"
+
+#. Name of a territory on World Map.
+#: guitext:25
+msgctxt "Territory"
+msgid "Mongolia"
 msgstr "Mongolia"
+
+#. Name of a territory on World Map.
+#: guitext:26
+msgctxt "Territory"
+msgid "Greenland"
 msgstr "Grenlandia"
+
+#. Name of a territory on World Map.
+#: guitext:27
+msgctxt "Territory"
+msgid "Northeast Territories"
 msgstr "Obszary Północno-Wschodnie "
+
+#. Name of a territory on World Map.
+#: guitext:28
+msgctxt "Territory"
+msgid "Yukon"
 msgstr "Jukon"
+
+#. Name of a territory on World Map.
+#: guitext:29
+msgctxt "Territory"
+msgid "Alaska"
 msgstr "Alaska"
+
+#. Name of a territory on World Map.
+#: guitext:30
+msgctxt "Territory"
+msgid "Northwest Territories"
 msgstr "Obszary Północno-Zachodnie"
+
+#. Name of a territory on World Map.
+#: guitext:31
+msgctxt "Territory"
+msgid "Newfoundland"
 msgstr "Nowa Funlandia"
+
+#. Name of a territory on World Map.
+#: guitext:32
+msgctxt "Territory"
+msgid "Kamchatka"
 msgstr "Kamczatka"
+
+#. Name of a territory on World Map.
+#: guitext:33
+msgctxt "Territory"
+msgid "Western Australia"
 msgstr "Australia Zachodnia"
+
+#. Name of a territory on World Map.
+#: guitext:34
+msgctxt "Territory"
+msgid "Northern Territories"
 msgstr "Obszary Północne"
+
+#. Name of a territory on World Map.
+#: guitext:35
+msgctxt "Territory"
+msgid "New South Wales"
 msgstr "Nowa Południowa Walia"
+
+#. Name of a territory on World Map.
+#: guitext:36
+msgctxt "Territory"
+msgid "Colombia"
 msgstr "Kolumbia"
+
+#. Name of a territory on World Map.
+#: guitext:37
+msgctxt "Territory"
+msgid "Peru"
 msgstr "Peru"
+
+#. Name of a territory on World Map.
+#: guitext:38
+msgctxt "Territory"
+msgid "Argentina"
 msgstr "Argentyna"
+
+#. Name of a territory on World Map.
+#: guitext:39
+msgctxt "Territory"
+msgid "Uruguay"
 msgstr "Urugwaj"
+
+#. Name of a territory on World Map.
+#: guitext:40
+msgctxt "Territory"
+msgid "Paraguay"
 msgstr "Paragwaj"
+
+#. Name of a territory on World Map.
+#: guitext:41
+msgctxt "Territory"
+msgid "Brazil"
 msgstr "Brazylia"
+
+#. Name of a territory on World Map.
+#: guitext:42
+msgctxt "Territory"
+msgid "Venezuala"
 msgstr "Wenezuela"
+
+#. Name of a territory on World Map.
+#: guitext:43
+msgctxt "Territory"
+msgid "Mexico"
 msgstr "Meksyk"
+
+#. Name of a territory on World Map.
+#: guitext:44
+msgctxt "Territory"
+msgid "Southern States"
 msgstr "Stany Południowe"
+
+#. Name of a territory on World Map.
+#: guitext:45
+msgctxt "Territory"
+msgid "California"
 msgstr "Kalifornia"
+
+#. Name of a territory on World Map.
+#: guitext:46
+msgctxt "Territory"
+msgid "Colorado"
 msgstr "Kolorado"
+
+#. Name of a territory on World Map.
+#: guitext:47
+msgctxt "Territory"
+msgid "New England"
 msgstr "Nowa Anglia"
+
+#. Name of a territory on World Map.
+#: guitext:48
+msgctxt "Territory"
+msgid "Mid West"
 msgstr "Środkowy Zachód"
+
+#. Name of a territory on World Map.
+#: guitext:49
+msgctxt "Territory"
+msgid "Rockies"
 msgstr "Góry Skaliste"
+
+#. Name of a territory on World Map.
+#: guitext:50
+msgctxt "Territory"
+msgid "Atlantic Accelerator"
 msgstr "Stacja Na Atlantyku"
+
+#. Name of a territory on World Map.
+#: guitext:51 guitext:52 guitext:53 guitext:54 guitext:55 guitext:56 guitext:57 guitext:58
+msgctxt "Territory"
+msgid "N"
+msgstr ""
+
+#. Unrecognized string.
+#: guitext:59
+msgctxt "Uncommented"
+msgid "Cryo Chamber"
 msgstr "Hibernator"
+
+#. Mission objective representad as short text.
+#: guitext:60
+msgctxt "Objective"
+msgid "Take Weapon"
 msgstr "Weź Broń"
+
+#. Mission objective representad as short text.
+#: guitext:61
+msgctxt "Objective"
+msgid "Destroy Car"
 msgstr "Zniszczyć Samochód"
+
+#. Mission objective representad as short text.
+#: guitext:62
+msgctxt "Objective"
+msgid "Use Vehicle"
 msgstr "Użyć Pojazd"
+
+#. Mission objective representad as short text.
+#: guitext:63
+msgctxt "Objective"
+msgid "Evacuate"
 msgstr "Ewakuacja"
+
+#. Mission objective representad as short text.
+#: guitext:64
+msgctxt "Objective"
+msgid "Persuade"
 msgstr "Perswazja"
+
+#. Mission objective representad as short text.
+#: guitext:65
+msgctxt "Objective"
+msgid "Protect"
 msgstr "Osłaniać"
+
+#. Mission objective representad as short text.
+#: guitext:66
+msgctxt "Objective"
+msgid "Assassinate"
 msgstr "Zabójstwo"
+
+#. Mission objective representad as short text.
+#: guitext:67
+msgctxt "Objective"
+msgid "Eliminate Agents"
 msgstr "Elimnować Agentów"
+
+#. Mission objective representad as short text.
+#: guitext:68 guitext:69
+msgctxt "Objective"
+msgid "N"
+msgstr ""
+
+#. Resolution status of a mission.
+#: guitext:70
+msgctxt "Miss. status"
+msgid "Mission Complete"
 msgstr "Misja Wypełniona"
+
+#. Resolution status of a mission.
+#: guitext:71
+msgctxt "Miss. status"
+msgid "Press Space"
 msgstr "Przyciśnij Sapcję"
+
+#. Resolution status of a mission.
+#: guitext:72
+msgctxt "Miss. status"
+msgid "Mission Failed"
 msgstr "Przegrałeś"
+
+#. Short text representation of an action performed by a person.
+#: guitext:73
+msgctxt "Person state"
+msgid "Going"
 msgstr "Marsz"
+
+#. Short text representation of an action performed by a person.
+#: guitext:74
+msgctxt "Person state"
+msgid "Pickup Weapon"
 msgstr "Podnieść Broń"
+
+#. Short text representation of an action performed by a person.
+#: guitext:75
+msgctxt "Person state"
+msgid "Follow"
 msgstr "Śledzić"
+
+#. Short text representation of an action performed by a person.
+#: guitext:76
+msgctxt "Person state"
+msgid "Drop Weapon"
 msgstr "Porzucić Broń"
+
+#. Short text representation of an action performed by a person.
+#: guitext:77
+msgctxt "Person state"
+msgid "Hit By Bullet"
 msgstr "Postrzelony"
+
+#. Short text representation of an action performed by a person.
+#: guitext:78
+msgctxt "Person state"
+msgid "Hit By Car"
 msgstr "Przejechany"
+
+#. Short text representation of an action performed by a person.
+#: guitext:79
+msgctxt "Person state"
+msgid "On Fire"
 msgstr "Spalony"
+
+#. Short text representation of an action performed by a person.
+#: guitext:80
+msgctxt "Person state"
+msgid "Energy Drain"
 msgstr "Brak Zasilania"
+
+#. Short text representation of an action performed by a person.
+#: guitext:81
+msgctxt "Person state"
+msgid "Dead"
 msgstr "Martwy"
+
+#. Short text representation of an action performed by a person.
+#: guitext:82
+msgctxt "Person state"
+msgid "Observing"
 msgstr "Obserwacja"
+
+#. Short text representation of an action performed by a person.
+#: guitext:83
+msgctxt "Person state"
+msgid "Awol"
 msgstr "Dezercja"
+
+#. Short text representation of an action performed by a person.
+#: guitext:84
+msgctxt "Person state"
+msgid "Running Away"
 msgstr "Ucieczka"
+
+#. Short text representation of an action performed by a person.
+#: guitext:85
+msgctxt "Person state"
+msgid "Drowning"
 msgstr "Zatopienie"
+
+#. Short text representation of an action performed by a person.
+#: guitext:86
+msgctxt "Person state"
+msgid "Danger Car"
 msgstr "Uwaga!Samochód"
+
+#. Short text representation of an action performed by a person.
+#: guitext:87
+msgctxt "Person state"
+msgid "Using Weapon"
 msgstr "Użyć Broń"
+
+#. Short text representation of an action performed by a person.
+#: guitext:88
+msgctxt "Person state"
+msgid "Chip Removed"
 msgstr "Chip Usunięty"
+
+#. Short text representation of an action performed by a person.
+#: guitext:89 guitext:90 guitext:91
+msgctxt "Person state"
+msgid "N"
+msgstr ""
+
+#. Main menu screen title.
+#: guitext:92
+msgctxt "Title"
+msgid "Main Menu"
 msgstr "Menu"
+
+#. Load and save screen title.
+#: guitext:93
+msgctxt "Title"
+msgid "Load-Save Game"
 msgstr "Wgraj/Zapisz"
+
+#. Multiplayer screen title.
+#: guitext:94
+msgctxt "Title"
+msgid "Multi Player"
 msgstr "Kilku Graczy"
+
+#. Mission Brief screen title.
+#: guitext:95
+msgctxt "Title"
+msgid "Mission Brief"
 msgstr "Dane Misji"
+
+#. Team Selection screen title.
+#: guitext:96
+msgctxt "Title"
+msgid "Team Selection"
 msgstr "Wybór Oddziału"
+
+#. Research screen title.
+#: guitext:97
+msgctxt "Title"
+msgid "Research"
 msgstr "Badania"
+
+#. Debriefing screen title.
+#: guitext:98
+msgctxt "Title"
+msgid "Mission Debriefing"
 msgstr "Podsumowanie Misji"
+
+#. Future screen title.
+#: guitext:99
+msgctxt "Title"
+msgid "N"
+msgstr ""
+
+#. Button text within menu screen.
+#: guitext:100
+msgctxt "Button"
+msgid "Accept"
 msgstr "Akceptuj"
+
+#. Button text within menu screen.
+#: guitext:101
+msgctxt "Button"
+msgid "Menu"
+msgstr "Menu"
+
+#. Button text within menu screen.
+#: guitext:102
+msgctxt "Button"
+msgid "Ok"
 msgstr "Ok"
+
+#. Button text within menu screen.
+#: guitext:103
+msgctxt "Button"
+msgid "Cancel"
 msgstr "Anuluj"
+
+#. Button text within menu screen.
+#: guitext:104
+msgctxt "Button"
+msgid "Brief"
 msgstr "Dane"
+
+#. Button text within menu screen.
+#: guitext:105
+msgctxt "Button"
+msgid "Research"
+msgstr "Badania"
+
+#. Button text within menu screen.
+#: guitext:106
+msgctxt "Button"
+msgid "Team"
 msgstr "Oddział"
+
+#. Button text within menu screen.
+#: guitext:107
+msgctxt "Button"
+msgid "Mods"
 msgstr "Korpus"
+
+#. Button text within menu screen.
+#: guitext:108
+msgctxt "Button"
+msgid "Equip"
 msgstr "Ekwipunek"
+
+#. Button text within menu screen.
+#: guitext:109
+msgctxt "Button"
+msgid "Sell"
 msgstr "Sprzedaj"
+
+#. Button text within menu screen.
+#: guitext:110
+msgctxt "Button"
+msgid "Purchase"
 msgstr "Kup"
+
+#. Button text within menu screen.
+#: guitext:111
+msgctxt "Button"
+msgid "Reload"
 msgstr "Załaduj"
+
+#. Button text within menu screen.
+#: guitext:112
+msgctxt "Button"
+msgid "Funding+"
 msgstr "Budżet +"
+
+#. Button text within menu screen.
+#: guitext:113
+msgctxt "Button"
+msgid "Funding-"
 msgstr "Budżet -"
+
+#. Button text within menu screen.
+#: guitext:114
+msgctxt "Button"
+msgid "Info"
 msgstr "Info"
+
+#. Button text within menu screen.
+#: guitext:115
+msgctxt "Button"
+msgid "Enhance"
 msgstr "Detale"
+
+#. Button text within menu screen.
+#: guitext:116
+msgctxt "Button"
+msgid "Load"
 msgstr "Wgraj"
+
+#. Button text within menu screen.
+#: guitext:117
+msgctxt "Button"
+msgid "Save"
 msgstr "Zapisz"
+
+#. Button text within menu screen.
+#: guitext:118
+msgctxt "Button"
+msgid "Map"
 msgstr "Mapa"
+
+#. Button text within menu screen.
+#: guitext:119
+msgctxt "Button"
+msgid "Replay"
 msgstr "Powtórz"
+
+#. Button text within menu screen.
+#: guitext:120
+msgctxt "Button"
+msgid "N"
+msgstr ""
+
+#. Label text within world map screen.
+#: guitext:121
+msgctxt "Territory label"
+msgid "Name"
 msgstr "Imię"
+
+#. Label text within world map screen.
+#: guitext:122
+msgctxt "Territory label"
+msgid "Pop"
 msgstr "Pop."
+
+#. Label text within world map screen.
+#: guitext:123
+msgctxt "Territory label"
+msgid "Stat"
 msgstr "Stan"
+
+#. Label text within world map screen.
+#: guitext:124
+msgctxt "Territory label"
+msgid "Tax"
 msgstr "Pod."
+
+#. Label text within world map screen.
+#: guitext:125
+msgctxt "Territory label"
+msgid "Own"
 msgstr "Wł."
+
+#. Futute Label text.
+#: guitext:126
+msgctxt "Territory label"
+msgid "N"
+msgstr ""
+
+#. People's attitude towards the governing organization.
+#: guitext:127
+msgctxt "Loyalty"
+msgid "Unknown"
 msgstr "Nieznany"
+
+#. People's attitude towards the governing organization.
+#: guitext:128
+msgctxt "Loyalty"
+msgid "Very Happy"
 msgstr "Bardzo Szczęśliwi"
+
+#. People's attitude towards the governing organization.
+#: guitext:129
+msgctxt "Loyalty"
+msgid "Happy"
 msgstr "Szczęśliwi"
+
+#. People's attitude towards the governing organization.
+#: guitext:130
+msgctxt "Loyalty"
+msgid "Content"
 msgstr "Zadowoleni"
+
+#. People's attitude towards the governing organization.
+#: guitext:131
+msgctxt "Loyalty"
+msgid "Unhappy"
 msgstr "Nieszczęśliwi"
+
+#. People's attitude towards the governing organization.
+#: guitext:132
+msgctxt "Loyalty"
+msgid "Discontent"
 msgstr "Niezadowoleni"
+
+#. People's attitude towards the governing organization.
+#: guitext:133
+msgctxt "Loyalty"
+msgid "Rebellious"
 msgstr "Rebelia"
+
+#. People's attitude towards the governing organization.
+#: guitext:134
+msgctxt "Loyalty"
+msgid "N"
+msgstr ""
+
+#. Unrecognized string.
+#: guitext:135
+msgctxt "Uncommented"
+msgid "Empty"
 msgstr "Pusty"
+
+#. Unrecognized string.
+#: guitext:136
+msgctxt "Uncommented"
+msgid "Special Agent"
 msgstr "Agent Specjalny"
+
+#. Label text within configure company screen.
+#: guitext:137
+msgctxt "Conf.comp. label"
+msgid "Select Detail To Change"
 msgstr "Wskaż, Co Chcesz Zmienić"
+
+#. Label text within configure company screen.
+#: guitext:138
+msgctxt "Conf.comp. label"
+msgid "Colour And Logo"
 msgstr "Kolor I Logo"
+
+#. Label text within configure company screen.
+#: guitext:139
+msgctxt "Conf.comp. label"
+msgid "Company Name"
 msgstr "Nazwa Firmy"
+
+#. Label text within configure company screen.
+#: guitext:140
+msgctxt "Conf.comp. label"
+msgid "Your Name"
 msgstr "Imię Gracza"
+
+#. Label text within configure company screen.
+#: guitext:141
+msgctxt "Conf.comp. label"
+msgid "Change Colour And Logo"
 msgstr "Zmień Kolor I Logo"
+
+#. Label text within configure company screen.
+#: guitext:142
+msgctxt "Conf.comp. label"
+msgid "Colour"
 msgstr "Kolor"
+
+#. Label text within configure company screen.
+#: guitext:143
+msgctxt "Conf.comp. label"
+msgid "Logo"
 msgstr "Logo"
+
+#. Label text within configure company screen.
+#: guitext:144
+msgctxt "Conf.comp. label"
+msgid "Change Company Name"
 msgstr "Zmień Nazwę Firmy"
+
+#. Label text within configure company screen.
+#: guitext:145
+msgctxt "Conf.comp. label"
+msgid "Enter Your Name"
 msgstr "Wpisz Swoje Imie"
+
+#. Label text within equip screen.
+#: guitext:146
+msgctxt "Equipment label"
+msgid "Cost"
 msgstr "Cena"
+
+#. Label text within equip screen.
+#: guitext:147
+msgctxt "Equipment label"
+msgid "Ammo"
 msgstr "Amun."
+
+#. Label text within equip screen.
+#: guitext:148
+msgctxt "Equipment label"
+msgid "Range"
 msgstr "Krąg"
+
+#. Label text within equip screen.
+#: guitext:149
+msgctxt "Equipment label"
+msgid "Shot"
 msgstr "Koszt"
+
+#. Label text within equip screen.
+#: guitext:150
+msgctxt "Equipment label"
+msgid "Reload"
+msgstr "Załaduj"
+
+#. Label text within equip screen.
+#: guitext:151
+msgctxt "Equipment label"
+msgid "N"
+msgstr ""
+
+#. Weapon category, used for research thread selection.
+#: guitext:152
+msgctxt "Wep. category"
+msgid "Automatic"
 msgstr "Automaty"
+
+#. Weapon category, used for research thread selection.
+#: guitext:153
+msgctxt "Wep. category"
+msgid "Heavy"
 msgstr "Broń Ciężka"
+
+#. Weapon category, used for research thread selection.
+#: guitext:154
+msgctxt "Wep. category"
+msgid "Assault"
 msgstr "Broń Szturmowa"
+
+#. Weapon category, used for research thread selection.
+#: guitext:155
+msgctxt "Wep. category"
+msgid "Miscellaneous"
 msgstr "Pozostałe"
+
+#. Weapon category, used for research thread selection.
+#: guitext:156
+msgctxt "Wep. category"
+msgid "N"
+msgstr ""
+
+#. Label text within research screen.
+#: guitext:157
+msgctxt "Research label"
+msgid "Min Funding"
 msgstr "Budżet Min."
+
+#. Label text within research screen.
+#: guitext:158
+msgctxt "Research label"
+msgid "Max Funding"
 msgstr "Budżet Max."
+
+#. Label text within research screen.
+#: guitext:159
+msgctxt "Research label"
+msgid "Researching"
+msgstr "Badania"
+
+#. Future use Label.
+#: guitext:160
+msgctxt "Research label"
+msgid "N"
+msgstr ""
+
+#. Label showing on screen while exiting game.
+#: guitext:161
+msgctxt "Fullscr. Message"
+msgid "Logging Out"
 msgstr "Koniec Gry"
+
+#. Label showing on screen while starting multiplayer mission.
+#: guitext:162
+msgctxt "Fullscr. Message"
+msgid "Loading Multiplayer"
+msgstr "Kilku Graczy"
+
+#. Label showing on screen while starting mission.
+#: guitext:163
+msgctxt "Fullscr. Message"
+msgid "Loading Game"
 msgstr "Uruchomienie Gry"
+
+#. Label for a metric shown in debrief screen.
+#: guitext:164
+msgctxt "Debrief metric"
+msgid "Mission Status:"
 msgstr "Raport Z Misji:"
+
+#. Mission status value in debrief screen.
+#: guitext:165
+msgctxt "Mission status"
+msgid "Completed"
 msgstr "Zadanie Wykonane"
+
+#. Mission status value in debrief screen.
+#: guitext:166
+msgctxt "Mission status"
+msgid "Withdrew From Mission"
 msgstr "Wycofanie Z Akcji"
+
+#. Mission status value in debrief screen.
+#: guitext:167
+msgctxt "Mission status"
+msgid "Failed"
 msgstr "Nie Wykonano Zadania"
+
+#. Future use status.
+#: guitext:168
+msgctxt "Mission status"
+msgid "N"
+msgstr ""
+
+#. Label for a metric shown in debrief screen.
+#: guitext:169
+msgctxt "Debrief metric"
+msgid "Agents Used:"
 msgstr "Aktywni Agenci"
+
+#. Label for a metric shown in debrief screen.
+#: guitext:170
+msgctxt "Debrief metric"
+msgid "New Agents Gained:"
 msgstr "Zwerbowani Agenci"
+
+#. Label for a metric shown in debrief screen.
+#: guitext:171
+msgctxt "Debrief metric"
+msgid "Time In Mission:"
 msgstr "Czas Trwania Misji"
+
+#. String after amount of hours when formating time delta.
+#: guitext:172
+msgctxt "Time format"
+msgid "Hours"
 msgstr "Godzin"
+
+#. String after amount of days when formating time delta.
+#: guitext:173
+msgctxt "Time format"
+msgid "Days"
 msgstr "Dni"
+
+#. For future use.
+#: guitext:174
+msgctxt "Time format"
+msgid "N"
+msgstr ""
+
+#. Label for a metric shown in debrief screen.
+#: guitext:175
+msgctxt "Debrief metric"
+msgid "Value Of Damage:"
 msgstr "Wyrządzone Szkody"
+
+#. Label for a metric shown in debrief screen.
+#: guitext:176
+msgctxt "Debrief metric"
+msgid "Enemy Agents Killed:"
 msgstr "Zabici Agenci Wroga"
+
+#. Label for a metric shown in debrief screen.
+#: guitext:177
+msgctxt "Debrief metric"
+msgid "Criminals Killed:"
 msgstr "Zabici Przestępcy"
+
+#. Label for a metric shown in debrief screen.
+#: guitext:178
+msgctxt "Debrief metric"
+msgid "Civilians Killed"
 msgstr "Zabici Cywile"
+
+#. Label for a metric shown in debrief screen.
+#: guitext:179
+msgctxt "Debrief metric"
+msgid "Police Killed:"
 msgstr "Zabici Policjanci"
+
+#. Label for a metric shown in debrief screen.
+#: guitext:180
+msgctxt "Debrief metric"
+msgid "Guards Killed:"
 msgstr "Zabici Ochroniarze"
+
+#. Label for a metric shown in debrief screen.
+#: guitext:181
+msgctxt "Debrief metric"
+msgid "People Persuaded:"
 msgstr "Ulegli Perswazji"
+
+#. Label for a metric shown in debrief screen.
+#: guitext:182
+msgctxt "Debrief metric"
+msgid "Hit Accuracy:"
 msgstr "Celność"
+
+#. Message about no possibility to compute shot accuracy in debrief screen.
+#: guitext:183
+msgctxt "Debrief info"
+msgid "No Bullets Fired"
 msgstr "Nie Oddano Strzału"
+
+#. Label for a metric shown in debrief screen.
+#: guitext:184
+msgctxt "Debrief metric"
+msgid "Research On"
 msgstr "Badania:"
+
+#. Message about weapon taken from agents inventory in debrief screen, line 1/2.
+#: guitext:185
+msgctxt "Debrief info"
+msgid "New Weaponry Has Been Submitted"
 msgstr "Przekazano Nową Broń"
+
+#. Message about weapon taken from agents inventory in debrief screen, line 2/2.
+#: guitext:186
+msgctxt "Debrief info"
+msgid "To The Research Department"
 msgstr "Do Wydziału Badawczego"
+
+#. Label above mession metrics in debrief screen.
+#: guitext:187
+msgctxt "Debrief label"
+msgid "Mission Statistics"
 msgstr "Statystyka Misji"
+
+#. Future Label.
+#: guitext:188 guitext:189
+msgctxt "Debrief label"
+msgid "N"
+msgstr ""
+
+#. Cybernetic modification description in Team and Research menus.
+#: guitext:190
+msgctxt "Cyborg mod desc"
+msgid "Replacement Metal Legs. Servo Assisted Hydraulics Allow Quicker Movement."
 msgstr "Zastępcze Nogi Z Metalu. System Hydrauliczny Znacznie Zwiększa Prędkość."
+
+#. Cybernetic modification description in Team and Research menus.
+#: guitext:191
+msgctxt "Cyborg mod desc"
+msgid "Plasteel Legs. Lighter And Tougher Than Metal Legs. Enhanced Hydraulic System And Balance Control."
 msgstr "Nogi Z Plastali. Lżejsze I Mocniejsze Niż Metalowe. Ulepszenia W Systemie Hydraulicznym I Kontroli Równowagi."
+
+#. Cybernetic modification description in Team and Research menus.
+#: guitext:192
+msgctxt "Cyborg mod desc"
+msgid "Cybermesh Legs. Plasteel Core With Synthetic Muscle Fibre. Superb Response And Balance Coupled With High Speed."
 msgstr "Cyber-Nogi. Plastal Pokryta Syntetycznymi Włóknami Mięśniowymi. Niezwykle Sprawne, Dobrze Zbalansowane, Bardzo Szybkie."
+
+#. Cybernetic modification description in Team and Research menus.
+#: guitext:193
+msgctxt "Cyborg mod desc"
+msgid "Replacement Metal Arms. Servo Assisted Hydraulics Allow The Carrying Of Heavier Items."
 msgstr "Zastępcze Ramiona Z Metalu. System Hydrauliczny Pozwala Przenosić Cięższe Obiekty."
+
+#. Cybernetic modification description in Team and Research menus.
+#: guitext:194
+msgctxt "Cyborg mod desc"
+msgid "Plasteel Arms. Lighter And Tougher Than Metal Arms. Enhanced Hydraulic System And Pressure Control."
 msgstr "Ramiona Z Plastali. Lżejsze I Stabilniejsze Niż Metalowe, Ulepszenia W Systemie Hydraulicznym I Kontroli Nacisku."
+
+#. Cybernetic modification description in Team and Research menus.
+#: guitext:195
+msgctxt "Cyborg mod desc"
+msgid "Cybermesh Arms. Plasteel Core With Synthetic Muscle Fibre. Excellent Tactile Control And Weight Loading."
 msgstr "Cyber-Ramiona. Plastal Pokryta Syntetycznymi Włóknami Mięśniowymi. Świetna Kontrola Dotyku, Bardzo Silne."
+
+#. Cybernetic modification description in Team and Research menus.
+#: guitext:196
+msgctxt "Cyborg mod desc"
+msgid "Metal Chest Cage. All Internal Organs Are Shielded By Heavy Metal Casing."
 msgstr "Osłona Metalowa. Wszystkie Organy Wewnętrzne Są Chronione Mocną Metalową Powłoką."
+
+#. Cybernetic modification description in Team and Research menus.
+#: guitext:197
+msgctxt "Cyborg mod desc"
+msgid "Plasteel Chest Cage. Lighter And Tougher Than The Metal Version With Better Mobility."
 msgstr "Osłona Z Plastali. Lżejsza I Mocniejsza Niż Wersja Metalowa."
+
+#. Cybernetic modification description in Team and Research menus.
+#: guitext:198
+msgctxt "Cyborg mod desc"
+msgid "Cybermesh Chest Cage With Power Shielding. All Internal Organs Are Shielded By A Low Power Field Generator."
 msgstr "Cyber-Osłona Z Polem Siłowym. Wszystkie Organy Wewnętrzne Są Dodatkowo Chronione Polem Siłowym Emitowanym Przez Wewnętrzny Generator."
+
+#. Cybernetic modification description in Team and Research menus.
+#: guitext:199
+msgctxt "Cyborg mod desc"
+msgid "Heart Stimulator. Monitors And Maintains The Heart Rate Of The Individual."
 msgstr "Stymulator Pracy Serca. Kontroluje I Stymuluje Wydajność Pracy Serca Cyborga."
+
+#. Cybernetic modification description in Team and Research menus.
+#: guitext:200
+msgctxt "Cyborg mod desc"
+msgid "Heart Accelerator And Monitor. Heart Rate Is Almost Doubled Allowing The Quicker Distribution Of Hormones."
 msgstr "Rozrusznik Serca. Niemal Dwukrotnie Zwiększa Wydolność Serca, Tym Samym Przyspiesza Rozprowadzanie Hormonów W Ciele Cyborga."
+
+#. Cybernetic modification description in Team and Research menus.
+#: guitext:201
+msgctxt "Cyborg mod desc"
+msgid "Cybernetic Heart. Powerful Pump With In Built System Analysis And Overide Facilities. Triples Output Of A Standard Human Heart."
 msgstr "Cyber-Serce. Niezwykle Wydajna Pompa Z Wbudowanym Systemem Analizy Pracy I Urządzń Wspomagających. Przetacza Trzykrotnie Więcej Krwi Niż Serce Normalnego Człowieka."
+
+#. Cybernetic modification description in Team and Research menus.
+#: guitext:202
+msgctxt "Cyborg mod desc"
+msgid "Vision Enhancer With Limited Zoom Facility. Allows Near Perfect Sight Even At Night."
 msgstr "Poprawa Widzialności Z Ograniczoną Możliwością Powiększania Obrazu. Umożliwia Niemal Perfekcyjne Widzenie Nocą."
+
+#. Cybernetic modification description in Team and Research menus.
+#: guitext:203
+msgctxt "Cyborg mod desc"
+msgid "Enhanced Model Of The V1 Incorporating A Target Aquisition Facility And Range Finder."
 msgstr "Ulepszony Model Wer.1 Z Możliwością Auto-Naprowadzania I Pomiaru Odległości."
+
+#. Cybernetic modification description in Team and Research menus.
+#: guitext:204
+msgctxt "Cyborg mod desc"
+msgid "Latest Neurocybernetic Implants. Gives Perfect Night Vision With The Aid Of Targeters Range Finders And Threat Identifier."
 msgstr "Najnowsze Implanty Cybernetyczne. Pozwalają Na Perfekcyjne Widzenie Nocą, Auto-Namierzanie Oraz Automatyczne Rozpoznanie Wrogów."
+
+#. Cybernetic modification description in Team and Research menus.
+#: guitext:205
+msgctxt "Cyborg mod desc"
+msgid "Neural Enhancer That Speeds Up Brain Stem Response Time."
 msgstr "Wzmacniacz Przewodzenia Synaptycznego, Skraca Czas Reakcji."
+
+#. Cybernetic modification description in Team and Research menus.
+#: guitext:206
+msgctxt "Cyborg mod desc"
+msgid "Neuro CNS Device That Intercepts Most Low Level Functions Leaving The Brain Free To Deal With High End Desicions."
 msgstr "Sztuczna Inteligencja. Przejmuje Kontrolę Nad Niższymi Ośrodkami Nerwowymi, Odciąża Ośrodki Decyzyjne Mózgu."
+
+#. Cybernetic modification description in Team and Research menus.
+#: guitext:207
+msgctxt "Cyborg mod desc"
+msgid "Cerebral Multiplier. Connected To A Compunet Giving Access To A Mass Of Tactical Info. Adapted From The Military Version."
 msgstr "Mózgowy Odtwarzacz. Podłączony Do Sieci Komputerowej Daje Dostęp Do Wszystkich Danych Taktycznych. Adaptacja Wersji Wojskowej."
+
+#. Cybernetic modification description in Team and Research menus.
+#: guitext:208 guitext:209 guitext:210
+msgctxt "Cyborg mod desc"
+msgid "N"
+msgstr ""
+
+#. Cybernetic modification names in Team and Research menus.
+#: guitext:211
+msgctxt "Cyborg mod part"
+msgid "Legs V1"
 msgstr "Nogi Wer.1"
+
+#. Cybernetic modification names in Team and Research menus.
+#: guitext:212
+msgctxt "Cyborg mod part"
+msgid "Legs V2"
 msgstr "Nogi Wer.2"
+
+#. Cybernetic modification names in Team and Research menus.
+#: guitext:213
+msgctxt "Cyborg mod part"
+msgid "Legs V3"
 msgstr "Nogi Wer.3"
+
+#. Cybernetic modification names in Team and Research menus.
+#: guitext:214
+msgctxt "Cyborg mod part"
+msgid "Arms V1"
 msgstr "Ramiona Wer.1"
+
+#. Cybernetic modification names in Team and Research menus.
+#: guitext:215
+msgctxt "Cyborg mod part"
+msgid "Arms V2"
 msgstr "Ramiona Wer.2"
+
+#. Cybernetic modification names in Team and Research menus.
+#: guitext:216
+msgctxt "Cyborg mod part"
+msgid "Arms V3"
 msgstr "Ramiona Wer.3"
+
+#. Cybernetic modification names in Team and Research menus.
+#: guitext:217
+msgctxt "Cyborg mod part"
+msgid "Chest V1"
 msgstr "Osłona Wer.1"
+
+#. Cybernetic modification names in Team and Research menus.
+#: guitext:218
+msgctxt "Cyborg mod part"
+msgid "Chest V2"
 msgstr "Osłona Wer.2"
+
+#. Cybernetic modification names in Team and Research menus.
+#: guitext:219
+msgctxt "Cyborg mod part"
+msgid "Chest V3"
 msgstr "Osłona Wer.3"
+
+#. Cybernetic modification names in Team and Research menus.
+#: guitext:220
+msgctxt "Cyborg mod part"
+msgid "Heart V1"
 msgstr "Serce Wer.1"
+
+#. Cybernetic modification names in Team and Research menus.
+#: guitext:221
+msgctxt "Cyborg mod part"
+msgid "Heart V2"
 msgstr "Serce Wer.2"
+
+#. Cybernetic modification names in Team and Research menus.
+#: guitext:222
+msgctxt "Cyborg mod part"
+msgid "Heart V3"
 msgstr "Serce Wer.3"
+
+#. Cybernetic modification names in Team and Research menus.
+#: guitext:223
+msgctxt "Cyborg mod part"
+msgid "Eyes V1"
 msgstr "Oczy Wer.1"
+
+#. Cybernetic modification names in Team and Research menus.
+#: guitext:224
+msgctxt "Cyborg mod part"
+msgid "Eyes V2"
 msgstr "Oczy Wer.2"
+
+#. Cybernetic modification names in Team and Research menus.
+#: guitext:225
+msgctxt "Cyborg mod part"
+msgid "Eyes V3"
 msgstr "Oczy Wer.3"
+
+#. Cybernetic modification names in Team and Research menus.
+#: guitext:226
+msgctxt "Cyborg mod part"
+msgid "Brain V1"
 msgstr "Mózg Wer.1"
+
+#. Cybernetic modification names in Team and Research menus.
+#: guitext:227
+msgctxt "Cyborg mod part"
+msgid "Brain V2"
 msgstr "Mózg Wer.2"
+
+#. Cybernetic modification names in Team and Research menus.
+#: guitext:228
+msgctxt "Cyborg mod part"
+msgid "Brain V3"
 msgstr "Mózg Wer.3"
+
+#. Cybernetic modification names in Team and Research menus.
+#: guitext:229 guitext:230 guitext:231
+msgctxt "Cyborg mod part"
+msgid "N"
+msgstr ""
+
+#. Weapon name visible in Equip and Research menus, and within Missions.
+#: guitext:232
+msgctxt "Weapon name"
+msgid "Persuadertron"
 msgstr "Perswadotron"
+
+#. Weapon name visible in Equip and Research menus, and within Missions.
+#: guitext:233
+msgctxt "Weapon name"
+msgid "Pistol"
 msgstr "Pistolet"
+
+#. Weapon name visible in Equip and Research menus, and within Missions.
+#: guitext:234
+msgctxt "Weapon name"
+msgid "Gauss Gun"
 msgstr "Broń Gaussa"
+
+#. Weapon name visible in Equip and Research menus, and within Missions.
+#: guitext:235
+msgctxt "Weapon name"
+msgid "Shotgun"
 msgstr "Karabin"
+
+#. Weapon name visible in Equip and Research menus, and within Missions.
+#: guitext:236
+msgctxt "Weapon name"
+msgid "Uzi"
 msgstr "Uzi"
+
+#. Weapon name visible in Equip and Research menus, and within Missions.
+#: guitext:237
+msgctxt "Weapon name"
+msgid "Mini-Gun"
 msgstr "Lekkie Działko"
+
+#. Weapon name visible in Equip and Research menus, and within Missions.
+#: guitext:238
+msgctxt "Weapon name"
+msgid "Laser"
 msgstr "Laser"
+
+#. Weapon name visible in Equip and Research menus, and within Missions.
+#: guitext:239
+msgctxt "Weapon name"
+msgid "Flamer"
 msgstr "Miotacz Ognia"
+
+#. Weapon name visible in Equip and Research menus, and within Missions.
+#: guitext:240
+msgctxt "Weapon name"
+msgid "Long Range"
 msgstr "B.Snajperska"
+
+#. Weapon name visible in Equip and Research menus, and within Missions.
+#: guitext:241
+msgctxt "Weapon name"
+msgid "Scanner"
 msgstr "Skaner"
+
+#. Weapon name visible in Equip and Research menus, and within Missions.
+#: guitext:242
+msgctxt "Weapon name"
+msgid "Medikit"
 msgstr "Zest.Medyczny"
+
+#. Weapon name visible in Equip and Research menus, and within Missions.
+#: guitext:243
+msgctxt "Weapon name"
+msgid "Time Bomb"
 msgstr "Bomba Zegarowa"
+
+#. Weapon name visible in Equip and Research menus, and within Missions.
+#: guitext:244
+msgctxt "Weapon name"
+msgid "Access Card"
 msgstr "Karta Wstępu"
+
+#. Weapon name visible in Equip and Research menus, and within Missions.
+#: guitext:245
+msgctxt "Weapon name"
+msgid "Access Card1"
 msgstr "Karta Wstępu 1"
+
+#. Weapon name visible in Equip and Research menus, and within Missions.
+#: guitext:246
+msgctxt "Weapon name"
+msgid "Access Card2"
 msgstr "Karta Wstępu 2"
+
+#. Weapon name visible in Equip and Research menus, and within Missions.
+#: guitext:247
+msgctxt "Weapon name"
+msgid "Auto Mapper"
 msgstr "Auto-Mapownik"
+
+#. Weapon name visible in Equip and Research menus, and within Missions.
+#: guitext:248
+msgctxt "Weapon name"
+msgid "Energy Shield"
 msgstr "Pole Siłowe"
+
+#. Weapon name visible in Equip and Research menus, and within Missions.
+#: guitext:249
+msgctxt "Weapon name"
+msgid "Shield1."
 msgstr "Pole Siłowe 1"
+
+#. Weapon name visible in Equip and Research menus, and within Missions.
+#: guitext:250
+msgctxt "Weapon name"
+msgid "Shield2."
 msgstr "Pole Siłowe 2"
+
+#. Weapon name visible in Equip and Research menus, and within Missions.
+#: guitext:251 guitext:252 guitext:253 guitext:254 guitext:255
+msgctxt "Weapon name"
+msgid "N. Wep."
+msgstr ""
+
+#. Button text within first menu screen.
+#: guitext:256
+msgctxt "First menu"
+msgid "Configure Company"
 msgstr "Dane Firmy"
+
+#. Button text within first menu screen.
+#: guitext:257
+msgctxt "First menu"
+msgid "Begin Mission"
 msgstr "Start Misji"
+
+#. Button text within first menu screen.
+#: guitext:258
+msgctxt "First menu"
+msgid "Load and Save Game"
+msgstr "Wgraj/Zapisz"
+
+#. Button text within first menu screen.
+#: guitext:259
+msgctxt "First menu"
+msgid "Multiplayer Game"
+msgstr "Kilku Graczy"
+
+#. Button text within first menu screen.
+#: guitext:260
+msgctxt "First menu"
+msgid "Restart Game"
 msgstr "Nowa Gra"
+
+#. Button text within first menu screen.
+#: guitext:261
+msgctxt "First menu"
+msgid "Quit To DOS"
 msgstr "Koniec Gry (Do DOS)"
+
+#. Name for a level available in multiplayer games.
+#: guitext:262
+msgctxt "Level name"
+msgid "Multiplayer Level 1"
+msgstr "Plansza Wieloosobowa 1"
+
+#. Name for a level available in multiplayer games.
+#: guitext:263
+msgctxt "Level name"
+msgid "Multiplayer Level 2"
+msgstr "Plansza Wieloosobowa 2"
+
+#. Name for a level available in multiplayer games.
+#: guitext:264
+msgctxt "Level name"
+msgid "Multiplayer Level 3"
+msgstr "Plansza Wieloosobowa 3"
+
+#. Name for a level available in multiplayer games.
+#: guitext:265
+msgctxt "Level name"
+msgid "Multiplayer Level 4"
+msgstr "Plansza Wieloosobowa 4"
+
+#. Name for a level available in multiplayer games.
+#: guitext:266
+msgctxt "Level name"
+msgid "Multiplayer Level 5"
+msgstr "Plansza Wieloosobowa 5"
+
+#. Name for a level available in multiplayer games.
+#: guitext:267
+msgctxt "Level name"
+msgid "Multiplayer Level 6"
+msgstr "Plansza Wieloosobowa 6"
+
+#. Name for a level available in multiplayer games.
+#: guitext:268
+msgctxt "Level name"
+msgid "Multiplayer Level 7"
+msgstr "Plansza Wieloosobowa 7"
+
+#. Name for a level available in multiplayer games.
+#: guitext:269
+msgctxt "Level name"
+msgid "Multiplayer Level 8"
+msgstr "Plansza Wieloosobowa 8"
+
+#. Name for a level available in multiplayer games.
+#: guitext:270
+msgctxt "Level name"
+msgid "Multiplayer Level 9"
+msgstr "Plansza Wieloosobowa 9"
+
+#. Name for a level available in multiplayer games.
+#: guitext:271
+msgctxt "Level name"
+msgid "Multiplayer Level 10"
+msgstr "Plansza Wieloosobowa 10"
+
+#. For future use.
+#: guitext:272 guitext:273 guitext:274 guitext:275 guitext:276 guitext:277
+#: guitext:278 guitext:279 guitext:280 guitext:281 guitext:282 guitext:283
+#: guitext:284 guitext:285 guitext:286
+msgctxt "Unused"
+msgid "N"
+msgstr ""
+
+#. Syndicate agents are called by their surnames.
+#: guitext:287
+msgctxt "Agent names pool"
+msgid "Afshar"
+msgstr ""
+
+#. Syndicate agents are called by their surnames.
+#: guitext:288
+msgctxt "Agent names pool"
+msgid "Arnold"
+msgstr ""
+
+#. Syndicate agents are called by their surnames.
+#: guitext:289
+msgctxt "Agent names pool"
+msgid "Baird"
+msgstr ""
+
+#. Syndicate agents are called by their surnames.
+#: guitext:290
+msgctxt "Agent names pool"
+msgid "Baldwin"
+msgstr ""
+
+#. Syndicate agents are called by their surnames.
+#: guitext:291
+msgctxt "Agent names pool"
+msgid "Black"
+msgstr ""
+
+#. Syndicate agents are called by their surnames.
+#: guitext:292
+msgctxt "Agent names pool"
+msgid "Boyd"
+msgstr ""
+
+#. Syndicate agents are called by their surnames.
+#: guitext:293
+msgctxt "Agent names pool"
+msgid "Boyesen"
+msgstr ""
+
+#. Syndicate agents are called by their surnames.
+#: guitext:294
+msgctxt "Agent names pool"
+msgid "Brazier"
+msgstr ""
+
+#. Syndicate agents are called by their surnames.
+#: guitext:295
+msgctxt "Agent names pool"
+msgid "Brown"
+msgstr ""
+
+#. Syndicate agents are called by their surnames.
+#: guitext:296
+msgctxt "Agent names pool"
+msgid "Bush"
+msgstr ""
+
+#. Syndicate agents are called by their surnames.
+#: guitext:297
+msgctxt "Agent names pool"
+msgid "Carr"
+msgstr ""
+
+#. Syndicate agents are called by their surnames.
+#: guitext:298
+msgctxt "Agent names pool"
+msgid "Chrismas"
+msgstr ""
+
+#. Syndicate agents are called by their surnames.
+#: guitext:299
+msgctxt "Agent names pool"
+msgid "Clinton"
+msgstr ""
+
+#. Syndicate agents are called by their surnames; one based on Bullfrog employee, Sean.
+#: guitext:300
+msgctxt "Agent names pool"
+msgid "Cooper"
+msgstr ""
+
+#. Syndicate agents are called by their surnames; one based on Bullfrog employee, Glenn.
+#: guitext:301
+msgctxt "Agent names pool"
+msgid "Corpes"
+msgstr ""
+
+#. Syndicate agents are called by their surnames.
+#: guitext:302
+msgctxt "Agent names pool"
+msgid "Cox"
+msgstr ""
+
+#. Syndicate agents are called by their surnames.
+#: guitext:303
+msgctxt "Agent names pool"
+msgid "Dawson"
+msgstr ""
+
+#. Syndicate agents are called by their surnames; one based on Bullfrog employee, Kevin.
+#: guitext:304
+msgctxt "Agent names pool"
+msgid "Donkin"
+msgstr ""
+
+#. Syndicate agents are called by their surnames; one based on Bullfrog employee, Mike.
+#: guitext:305
+msgctxt "Agent names pool"
+msgid "Diskett"
+msgstr ""
+
+#. Syndicate agents are called by their surnames.
+#: guitext:306
+msgctxt "Agent names pool"
+msgid "Dunne"
+msgstr ""
+
+#. Syndicate agents are called by their surnames; one based on Bullfrog founder, Les.
+#: guitext:307
+msgctxt "Agent names pool"
+msgid "Edgar"
+msgstr ""
+
+#. Syndicate agents are called by their surnames.
+#: guitext:308
+msgctxt "Agent names pool"
+msgid "Evans"
+msgstr ""
+
+#. Syndicate agents are called by their surnames.
+#: guitext:309
+msgctxt "Agent names pool"
+msgid "Fairley"
+msgstr ""
+
+#. Syndicate agents are called by their surnames.
+#: guitext:310
+msgctxt "Agent names pool"
+msgid "Fawcett"
+msgstr ""
+
+#. Syndicate agents are called by their surnames.
+#: guitext:311
+msgctxt "Agent names pool"
+msgid "Flint"
+msgstr ""
+
+#. Syndicate agents are called by their surnames.
+#: guitext:312
+msgctxt "Agent names pool"
+msgid "Floyd"
+msgstr ""
+
+#. Syndicate agents are called by their surnames.
+#: guitext:313
+msgctxt "Agent names pool"
+msgid "Griffiths"
+msgstr ""
+
+#. Syndicate agents are called by their surnames.
+#: guitext:314
+msgctxt "Agent names pool"
+msgid "Harris"
+msgstr ""
+
+#. Syndicate agents are called by their surnames.
+#: guitext:315
+msgctxt "Agent names pool"
+msgid "Hastings"
+msgstr ""
+
+#. Syndicate agents are called by their surnames.
+#: guitext:316
+msgctxt "Agent names pool"
+msgid "Herbert"
+msgstr ""
+
+#. Syndicate agents are called by their surnames.
+#: guitext:317
+msgctxt "Agent names pool"
+msgid "Hickman"
+msgstr ""
+
+#. Syndicate agents are called by their surnames.
+#: guitext:318
+msgctxt "Agent names pool"
+msgid "Hicks"
+msgstr ""
+
+#. Syndicate agents are called by their surnames; one based on Bullfrog employee, Chris.
+#: guitext:319
+msgctxt "Agent names pool"
+msgid "Hill"
+msgstr ""
+
+#. Syndicate agents are called by their surnames.
+#: guitext:320
+msgctxt "Agent names pool"
+msgid "James"
+msgstr ""
+
+#. Syndicate agents are called by their surnames.
+#: guitext:321
+msgctxt "Agent names pool"
+msgid "Jeffery"
+msgstr ""
+
+#. Syndicate agents are called by their surnames.
+#: guitext:322
+msgctxt "Agent names pool"
+msgid "Joeseph"
+msgstr ""
+
+#. Syndicate agents are called by their surnames.
+#: guitext:323
+msgctxt "Agent names pool"
+msgid "Johnson"
+msgstr ""
+
+#. Syndicate agents are called by their surnames.
+#: guitext:324
+msgctxt "Agent names pool"
+msgid "Johnston"
+msgstr ""
+
+#. Syndicate agents are called by their surnames; one based on Bullfrog employee, Andy.
+#: guitext:325
+msgctxt "Agent names pool"
+msgid "Jones"
+msgstr ""
+
+#. Syndicate agents are called by their surnames.
+#: guitext:326
+msgctxt "Agent names pool"
+msgid "Lewis"
+msgstr ""
+
+#. Syndicate agents are called by their surnames.
+#: guitext:327
+msgctxt "Agent names pool"
+msgid "Lindsell"
+msgstr ""
+
+#. Syndicate agents are called by their surnames.
+#: guitext:328
+msgctxt "Agent names pool"
+msgid "Lockley"
+msgstr ""
+
+#. Syndicate agents are called by their surnames.
+#: guitext:329
+msgctxt "Agent names pool"
+msgid "Martin"
+msgstr ""
+
+#. Syndicate agents are called by their surnames.
+#: guitext:330
+msgctxt "Agent names pool"
+msgid "Mcentee"
+msgstr ""
+
+#. Syndicate agents are called by their surnames.
+#: guitext:331
+msgctxt "Agent names pool"
+msgid "Mclaughin"
+msgstr ""
+
+#. Syndicate agents are called by their surnames; one based on Bullfrog founder, Peter.
+#: guitext:332
+msgctxt "Agent names pool"
+msgid "Molyneux"
+msgstr ""
+
+#. Syndicate agents are called by their surnames.
+#: guitext:333
+msgctxt "Agent names pool"
+msgid "Munro"
+msgstr ""
+
+#. Syndicate agents are called by their surnames.
+#: guitext:334
+msgctxt "Agent names pool"
+msgid "Morris"
+msgstr ""
+
+#. Syndicate agents are called by their surnames.
+#: guitext:335
+msgctxt "Agent names pool"
+msgid "Mumford"
+msgstr ""
+
+#. Syndicate agents are called by their surnames.
+#: guitext:336
+msgctxt "Agent names pool"
+msgid "Nixon"
+msgstr ""
+
+#. Syndicate agents are called by their surnames.
+#: guitext:337
+msgctxt "Agent names pool"
+msgid "Parker"
+msgstr ""
+
+#. Syndicate agents are called by their surnames.
+#: guitext:338
+msgctxt "Agent names pool"
+msgid "Pratt"
+msgstr ""
+
+#. Syndicate agents are called by their surnames.
+#: guitext:339
+msgctxt "Agent names pool"
+msgid "Reid"
+msgstr ""
+
+#. Syndicate agents are called by their surnames.
+#: guitext:340
+msgctxt "Agent names pool"
+msgid "Rennie"
+msgstr ""
+
+#. Syndicate agents are called by their surnames.
+#: guitext:341
+msgctxt "Agent names pool"
+msgid "Rice"
+msgstr ""
+
+#. Syndicate agents are called by their surnames.
+#: guitext:342
+msgctxt "Agent names pool"
+msgid "Ripley"
+msgstr ""
+
+#. Syndicate agents are called by their surnames.
+#: guitext:343
+msgctxt "Agent names pool"
+msgid "Robertson"
+msgstr ""
+
+#. Syndicate agents are called by their surnames.
+#: guitext:344
+msgctxt "Agent names pool"
+msgid "Romano"
+msgstr ""
+
+#. Syndicate agents are called by their surnames.
+#: guitext:345
+msgctxt "Agent names pool"
+msgid "Seat"
+msgstr ""
+
+#. Syndicate agents are called by their surnames.
+#: guitext:346
+msgctxt "Agent names pool"
+msgid "Sen"
+msgstr ""
+
+#. Syndicate agents are called by their surnames; one based on Bullfrog employee, Russell.
+#: guitext:347
+msgctxt "Agent names pool"
+msgid "Shaw"
+msgstr ""
+
+#. Syndicate agents are called by their surnames.
+#: guitext:348
+msgctxt "Agent names pool"
+msgid "Simmons"
+msgstr ""
+
+#. Syndicate agents are called by their surnames.
+#: guitext:349
+msgctxt "Agent names pool"
+msgid "Snelling"
+msgstr ""
+
+#. Syndicate agents are called by their surnames.
+#: guitext:350
+msgctxt "Agent names pool"
+msgid "Taylor"
+msgstr ""
+
+#. Syndicate agents are called by their surnames; one based on Bullfrog employee, Alex.
+#: guitext:351
+msgctxt "Agent names pool"
+msgid "Trowers"
+msgstr ""
+
+#. Syndicate agents are called by their surnames; one based on Bullfrog employee, Mark.
+#: guitext:352
+msgctxt "Agent names pool"
+msgid "Webley"
+msgstr ""
+
+#. Syndicate agents are called by their surnames.
+#: guitext:353
+msgctxt "Agent names pool"
+msgid "Wellesley"
+msgstr ""
+
+#. Syndicate agents are called by their surnames.
+#: guitext:354
+msgctxt "Agent names pool"
+msgid "Wild"
+msgstr ""
+
+#. Syndicate agents are called by their surnames.
+#: guitext:355
+msgctxt "Agent names pool"
+msgid "Willis"
+msgstr ""
