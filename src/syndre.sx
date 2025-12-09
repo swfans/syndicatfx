@@ -76289,6 +76289,7 @@ LbSpriteDrawMCGA:	/* 0x4cf80 */
 		push   %edi
 		push   %esi
 		push   %ebp
+#if 0 /* disabled original 8-bit sprite drawing code */
 		mov    0x10(%ebp),%esi
 		movswl 0x8(%ebp),%ebx
 		movswl 0xc(%ebp),%ecx
@@ -76298,6 +76299,16 @@ LbSpriteDrawMCGA:	/* 0x4cf80 */
 		mov    $0x0,%eax
 		mov    (%esi),%esi
 		call   DrawSpriteVres256
+#else
+		mov    0x10(%ebp),%esi
+		movswl 0xc(%ebp),%ecx
+		movswl 0x8(%ebp),%ebx
+		push   %esi
+		push   %ecx
+		push   %ebx
+		call   ac_ApSpriteDrawMCGA
+		add    $0x0c,%esp
+#endif
 		pop    %ebp
 		pop    %esi
 		pop    %edi

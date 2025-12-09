@@ -28,6 +28,7 @@
 #include "bfpalette.h"
 #include "bfscreen.h"
 #include "bfscrsurf.h"
+#include "bfsprite.h"
 
 #include "applog.h"
 #include "display.h"
@@ -258,5 +259,21 @@ void swap_wscreen(void)
         ;
     }
 }
+
+TbResult ApSpriteDrawMCGA(long x, long y, const TbSprite *spr)
+{
+    TbSprite loc_spr;
+    void *scr_bkp;
+    TbResult ret;
+    scr_bkp = lbDisplay.WScreen;
+    lbDisplay.WScreen = WScreen;
+    loc_spr.SWidth = spr->SWidth/2;
+    loc_spr.SHeight = spr->SHeight/2;
+    loc_spr.Data = spr->Data;
+    ret = LbSpriteDraw(x/2, y/2, &loc_spr);
+    lbDisplay.WScreen = scr_bkp;
+    return ret;
+}
+
 
 /******************************************************************************/
