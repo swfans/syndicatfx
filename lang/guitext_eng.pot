@@ -1102,109 +1102,109 @@ msgstr ""
 #. Cybernetic modification description in Team and Research menus.
 #: guitext:190
 msgctxt "Cyborg mod desc"
-msgid "Replacement Metal Legs. Servo Assisted Hydraulics Allow Quicker Movement."
+msgid "Replacement Metal Legs. Servo assisted hydraulics allow quicker movement."
 msgstr ""
 
 #. Cybernetic modification description in Team and Research menus.
 #: guitext:191
 msgctxt "Cyborg mod desc"
-msgid "Plasteel Legs. Lighter And Tougher Than Metal Legs. Enhanced Hydraulic System And Balance Control."
+msgid "Plasteel Legs. Lighter and tougher than Metal Legs. Enhanced hydraulic system and balance control."
 msgstr ""
 
 #. Cybernetic modification description in Team and Research menus.
 #: guitext:192
 msgctxt "Cyborg mod desc"
-msgid "Cybermesh Legs. Plasteel Core With Synthetic Muscle Fibre. Superb Response And Balance Coupled With High Speed."
+msgid "Cybermesh Legs. Plasteel core with synthetic muscle fibre. Superb response and balance coupled with high speed."
 msgstr ""
 
 #. Cybernetic modification description in Team and Research menus.
 #: guitext:193
 msgctxt "Cyborg mod desc"
-msgid "Replacement Metal Arms. Servo Assisted Hydraulics Allow The Carrying Of Heavier Items."
+msgid "Replacement Metal Arms. Servo assisted hydraulics allow the carrying of heavier items."
 msgstr ""
 
 #. Cybernetic modification description in Team and Research menus.
 #: guitext:194
 msgctxt "Cyborg mod desc"
-msgid "Plasteel Arms. Lighter And Tougher Than Metal Arms. Enhanced Hydraulic System And Pressure Control."
+msgid "Plasteel Arms. Lighter and tougher than metal arms. Enhanced hydraulic system and pressure control."
 msgstr ""
 
 #. Cybernetic modification description in Team and Research menus.
 #: guitext:195
 msgctxt "Cyborg mod desc"
-msgid "Cybermesh Arms. Plasteel Core With Synthetic Muscle Fibre. Excellent Tactile Control And Weight Loading."
+msgid "Cybermesh Arms. Plasteel core with synthetic muscle fibre. Excellent tactile control and weight loading."
 msgstr ""
 
 #. Cybernetic modification description in Team and Research menus.
 #: guitext:196
 msgctxt "Cyborg mod desc"
-msgid "Metal Chest Cage. All Internal Organs Are Shielded By Heavy Metal Casing."
+msgid "Metal Chest Cage. All internal organs are shielded by heavy metal casing."
 msgstr ""
 
 #. Cybernetic modification description in Team and Research menus.
 #: guitext:197
 msgctxt "Cyborg mod desc"
-msgid "Plasteel Chest Cage. Lighter And Tougher Than The Metal Version With Better Mobility."
+msgid "Plasteel chest cage. Lighter and tougher than the metal version with better mobility."
 msgstr ""
 
 #. Cybernetic modification description in Team and Research menus.
 #: guitext:198
 msgctxt "Cyborg mod desc"
-msgid "Cybermesh Chest Cage With Power Shielding. All Internal Organs Are Shielded By A Low Power Field Generator."
+msgid "Cybermesh chest cage with power shielding. All internal organs are shielded by a low power field generator."
 msgstr ""
 
 #. Cybernetic modification description in Team and Research menus.
 #: guitext:199
 msgctxt "Cyborg mod desc"
-msgid "Heart Stimulator. Monitors And Maintains The Heart Rate Of The Individual."
+msgid "Heart stimulator. Monitors and maintains the heart rate of the individual."
 msgstr ""
 
 #. Cybernetic modification description in Team and Research menus.
 #: guitext:200
 msgctxt "Cyborg mod desc"
-msgid "Heart Accelerator And Monitor. Heart Rate Is Almost Doubled Allowing The Quicker Distribution Of Hormones."
+msgid "Heart accelerator and monitor. Heart rate is almost doubled allowing the quicker distribution of hormones."
 msgstr ""
 
 #. Cybernetic modification description in Team and Research menus.
 #: guitext:201
 msgctxt "Cyborg mod desc"
-msgid "Cybernetic Heart. Powerful Pump With In Built System Analysis And Overide Facilities. Triples Output Of A Standard Human Heart."
+msgid "Cybernetic heart. Powerful pump with in built system analysis and overide facilities. Triples output of a standard human heart."
 msgstr ""
 
 #. Cybernetic modification description in Team and Research menus.
 #: guitext:202
 msgctxt "Cyborg mod desc"
-msgid "Vision Enhancer With Limited Zoom Facility. Allows Near Perfect Sight Even At Night."
+msgid "Vision enhancer with limited zoom facility. Allows near perfect sight even at night."
 msgstr ""
 
 #. Cybernetic modification description in Team and Research menus.
 #: guitext:203
 msgctxt "Cyborg mod desc"
-msgid "Enhanced Model Of The V1 Incorporating A Target Aquisition Facility And Range Finder."
+msgid "Enhanced model of the V1 incorporating a target aquisition facility and range finder."
 msgstr ""
 
 #. Cybernetic modification description in Team and Research menus.
 #: guitext:204
 msgctxt "Cyborg mod desc"
-msgid "Latest Neurocybernetic Implants. Gives Perfect Night Vision With The Aid Of Targeters Range Finders And Threat Identifier."
+msgid "Latest neurocybernetic implants. Gives perfect night vision with the aid of targeters range finders and threat identifier."
 msgstr ""
 
 #. Cybernetic modification description in Team and Research menus.
 #: guitext:205
 msgctxt "Cyborg mod desc"
-msgid "Neural Enhancer That Speeds Up Brain Stem Response Time."
+msgid "Neural enhancer that speeds up brain stem response time."
 msgstr ""
 
 #. Cybernetic modification description in Team and Research menus.
 #: guitext:206
 msgctxt "Cyborg mod desc"
-msgid "Neuro CNS Device That Intercepts Most Low Level Functions Leaving The Brain Free To Deal With High End Desicions."
+msgid "Neuro CNS device that intercepts most low level functions leaving the brain free to deal with high end desicions."
 msgstr ""
 
 #. Cybernetic modification description in Team and Research menus.
 #: guitext:207
 msgctxt "Cyborg mod desc"
-msgid "Cerebral Multiplier. Connected To A Compunet Giving Access To A Mass Of Tactical Info. Adapted From The Military Version."
+msgid "Cerebral multiplier. Connected to a compunet giving access to a mass of tactical info. Adapted from the military version."
 msgstr ""
 
 #. Cybernetic modification description in Team and Research menus.

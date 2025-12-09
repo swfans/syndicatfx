@@ -21,7 +21,7 @@ msgstr ""
 "Project-Id-Version: GUI text for SyndicatFX\n"
 "Report-Msgid-Bugs-To: https://github.com/swfans/syndicatfx/issues\n"
 "POT-Creation-Date: 2025-09-20 22:19+0200\n"
-"PO-Revision-Date: 2025-12-09 16:11+0100\n"
+"PO-Revision-Date: 2025-12-09 20:17+0100\n"
 "Last-Translator: Mefistotelis <mefistotelis@gmail.com>\n"
 "Language-Team: Syndicate Wars Fans <github.com/swfans>\n"
 "Language: pl_PL\n"
@@ -612,7 +612,7 @@ msgstr "Oddział"
 #: guitext:107
 msgctxt "Button"
 msgid "Mods"
-msgstr "Korpus"
+msgstr "Wszczepy"
 
 #. Button text within menu screen.
 #: guitext:108
@@ -798,7 +798,7 @@ msgstr "Wskaż, Co Chcesz Zmienić"
 #: guitext:138
 msgctxt "Conf.comp. label"
 msgid "Colour And Logo"
-msgstr "Kolor I Logo"
+msgstr "Kolor i Logo"
 
 #. Label text within configure company screen.
 #: guitext:139
@@ -816,7 +816,7 @@ msgstr "Imię Gracza"
 #: guitext:141
 msgctxt "Conf.comp. label"
 msgid "Change Colour And Logo"
-msgstr "Zmień Kolor I Logo"
+msgstr "Zmień Kolor i Logo"
 
 #. Label text within configure company screen.
 #: guitext:142
