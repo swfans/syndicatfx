@@ -21,7 +21,7 @@ msgstr ""
 "Project-Id-Version: GUI text for SyndicatFX\n"
 "Report-Msgid-Bugs-To: https://github.com/swfans/syndicatfx/issues\n"
 "POT-Creation-Date: 2025-09-20 22:19+0200\n"
-"PO-Revision-Date: 2025-12-07 02:58+0100\n"
+"PO-Revision-Date: 2025-12-09 16:11+0100\n"
 "Last-Translator: Mefistotelis <mefistotelis@gmail.com>\n"
 "Language-Team: Syndicate Wars Fans <github.com/swfans>\n"
 "Language: pl_PL\n"
@@ -332,7 +332,8 @@ msgid "Atlantic Accelerator"
 msgstr "Stacja Na Atlantyku"
 
 #. Name of a territory on World Map.
-#: guitext:51 guitext:52 guitext:53 guitext:54 guitext:55 guitext:56 guitext:57 guitext:58
+#: guitext:51 guitext:52 guitext:53 guitext:54 guitext:55 guitext:56 guitext:57
+#: guitext:58
 msgctxt "Territory"
 msgid "N"
 msgstr ""
@@ -353,13 +354,13 @@ msgstr "Weź Broń"
 #: guitext:61
 msgctxt "Objective"
 msgid "Destroy Car"
-msgstr "Zniszczyć Samochód"
+msgstr "Zniszcz Pojazd"
 
 #. Mission objective representad as short text.
 #: guitext:62
 msgctxt "Objective"
 msgid "Use Vehicle"
-msgstr "Użyć Pojazd"
+msgstr "Użyj Pojazdu"
 
 #. Mission objective representad as short text.
 #: guitext:63
@@ -389,7 +390,7 @@ msgstr "Zabójstwo"
 #: guitext:67
 msgctxt "Objective"
 msgid "Eliminate Agents"
-msgstr "Elimnować Agentów"
+msgstr "Elimnuj Agentów"
 
 #. Mission objective representad as short text.
 #: guitext:68 guitext:69
@@ -407,7 +408,7 @@ msgstr "Misja Wypełniona"
 #: guitext:71
 msgctxt "Miss. status"
 msgid "Press Space"
-msgstr "Przyciśnij Sapcję"
+msgstr "Wciśnij Sapcję"
 
 #. Resolution status of a mission.
 #: guitext:72
@@ -497,13 +498,13 @@ msgstr "Zatopienie"
 #: guitext:86
 msgctxt "Person state"
 msgid "Danger Car"
-msgstr "Uwaga!Samochód"
+msgstr "Uwaga!Pojazd"
 
 #. Short text representation of an action performed by a person.
 #: guitext:87
 msgctxt "Person state"
 msgid "Using Weapon"
-msgstr "Użyć Broń"
+msgstr "Używa Broń"
 
 #. Short text representation of an action performed by a person.
 #: guitext:88
@@ -959,13 +960,13 @@ msgstr "Raport Z Misji:"
 #: guitext:165
 msgctxt "Mission status"
 msgid "Completed"
-msgstr "Zadanie Wykonane"
+msgstr "Zadanie wykonane"
 
 #. Mission status value in debrief screen.
 #: guitext:166
 msgctxt "Mission status"
 msgid "Withdrew From Mission"
-msgstr "Wycofanie Z Akcji"
+msgstr "Wycofanie z akcji"
 
 #. Mission status value in debrief screen.
 #: guitext:167
@@ -1205,7 +1206,7 @@ msgstr "Sztuczna Inteligencja. Przejmuje Kontrolę Nad Niższymi Ośrodkami Nerw
 #: guitext:207
 msgctxt "Cyborg mod desc"
 msgid "Cerebral Multiplier. Connected To A Compunet Giving Access To A Mass Of Tactical Info. Adapted From The Military Version."
-msgstr "Mózgowy Odtwarzacz. Podłączony Do Sieci Komputerowej Daje Dostęp Do Wszystkich Danych Taktycznych. Adaptacja Wersji Wojskowej."
+msgstr "Mózgowy Zwielokratniacz. Połączony z Farmą Obliczeniową daje dostęp do wszystkich danych taktycznych. Adaptacja wersji wojskowej."
 
 #. Cybernetic modification description in Team and Research menus.
 #: guitext:208 guitext:209 guitext:210
