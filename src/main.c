@@ -100,6 +100,41 @@ run_intro (int argc, char **argv)
     system(intro_cmdline);
 }
 
+static TbBool setup_log(void)
+{
+    const char *rel_kind;
+
+#  ifdef DEBUG
+    rel_kind = "debug";
+#  else
+    rel_kind = "standard";
+#  endif
+
+#if !defined(PACKAGE_NAME)
+# error PACKAGE_NAME is not defined, config.h needs to be included
+#endif
+
+    printf(PACKAGE_NAME" ver "VERSION" (%s release)\n"
+        "Web site: https://github.com/swfans/syndwarsfx/\n",
+        rel_kind);
+
+
+    if (LbErrorLogSetup(NULL, NULL, Lb_ERROR_LOG_NEW) != Lb_SUCCESS) {
+        printf("Execution log setup failed\n");
+        return false;
+    }
+
+    LbSyncLog("Application: "PACKAGE" ver "VERSION" (%s release)\n", rel_kind);
+
+    return true;
+}
+
+static void reset_log(void)
+{
+    LbSyncLog("Application: "PACKAGE" ver "VERSION" closing\n");
+    LbErrorLogReset();
+}
+
 static void
 print_help (const char *argv0)
 {
@@ -252,8 +287,7 @@ int main (int argc, char **argv)
     cheats_speedup = 0;
     cheats_mission = 0;
 
-    if (LbErrorLogSetup(NULL, NULL, Lb_ERROR_LOG_NEW) != Lb_SUCCESS)
-            printf("Execution log setup failed\n");
+    setup_log();
 
     process_options(&argc, &argv);
 
@@ -325,7 +359,7 @@ int main (int argc, char **argv)
 #endif
 
     display_free_vga_buffer();
-    LbErrorLogReset();
+    reset_log();
     LbMemoryReset();
     game_quit();
 
