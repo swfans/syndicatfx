@@ -115,9 +115,11 @@ static TbBool setup_log(void)
 #endif
 
     printf(PACKAGE_NAME" ver "VERSION" (%s release)\n"
-        "Web site: https://github.com/swfans/syndwarsfx/\n",
-        rel_kind);
-
+      "The original by Bullfrog. Port solution by Unavowed and Gynvael Coldwind.\n"
+      "Refactored port base by Mefistotelis.\n"
+      "Expanded by other fans, signed in commits.\n"
+      "Web site: https://github.com/swfans/syndicatfx/\n",
+      rel_kind);
 
     if (LbErrorLogSetup(NULL, NULL, Lb_ERROR_LOG_NEW) != Lb_SUCCESS) {
         printf("Execution log setup failed\n");
@@ -290,10 +292,6 @@ int main (int argc, char **argv)
     setup_log();
 
     process_options(&argc, &argv);
-
-    printf("SyndicatFX "VERSION"\n"
-      "The original by Bullfrog. Port solution by Unavowed and Gynvael Coldwind.\n"
-      "Refactored port base by Mefistotelis.\n");
 
     if (!game_initialise())
         return 1;
