@@ -68,6 +68,19 @@ $(langallpol_DATFILES_C): $(langallpol_POFILES_C)
 	$(MKDIR_P) "$(@D)"
 	$(TEXTDAT) -t "$(word 1,$(langall_eu_ETBLS))" -d $@ -c $+
 
+langallpor_DATFILES_C = \
+    por/guitext.dat
+
+langallpor_POFILES_C = \
+    guitext_por.po
+
+langallpordir = $(prefix)/$(PACKAGE)/language/por
+langallpor_DATA = $(langallpor_DATFILES_C)
+
+$(langallpor_DATFILES_C): $(langallpor_POFILES_C)
+	$(MKDIR_P) "$(@D)"
+	$(TEXTDAT) -t "$(word 1,$(langall_eu_ETBLS))" -d $@ -c $+
+
 langallspa_DATFILES_C = \
     spa/guitext.dat
 
@@ -86,5 +99,6 @@ EXTRA_DIST = \
 	langallger \
 	langallita \
 	langallpol \
+	langallpor \
 	langallspa \
 	langalleng
