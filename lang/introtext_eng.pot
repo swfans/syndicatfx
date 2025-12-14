@@ -1,0 +1,146 @@
+# *****************************************************************************
+#  Syndicate Fan Expansion, source port of the classic game from Bullfrog.
+# *****************************************************************************
+#   @file introtext_eng.pot
+#      Intro text for SyndicatFX translation template file
+#  @par Purpose:
+#      Contains translation of the national text in the game.
+#  @par Comment:
+#      Use this file to improve the translation for specific language.
+#  @author   Syndicate Wars Fans
+#  @date     01 Sep 2025 - 04 Dec 2025
+#  @par  Copying and copyrights:
+#      This program is free software; you can redistribute it and/or modify
+#      it under the terms of the GNU General Public License as published by
+#      the Free Software Foundation; either version 2 of the License, or
+#      (at your option) any later version.
+#
+# *****************************************************************************
+msgid ""
+msgstr ""
+"Project-Id-Version: Intro text for SyndicatFX\n"
+"Report-Msgid-Bugs-To: https://github.com/swfans/syndicatfx/issues\n"
+"POT-Creation-Date: 2025-09-20 22:19+0200\n"
+"PO-Revision-Date: 2025-09-01 12:00+0100\n"
+"Last-Translator: Mefistotelis <mefistotelis@gmail.com>\n"
+"Language-Team: Syndicate Wars Fans <github.com/swfans>\n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Generator: Poedit 3.0.1\n"
+
+#. Subtitle string for intro video.
+#: introtext:1
+msgctxt "Subtitle"
+msgid "City Name : New Hessen Europe"
+msgstr ""
+
+#. Subtitle string for intro video.
+#: introtext:2
+msgctxt "Subtitle"
+msgid "Dateline :1/85 NC (New Calender)"
+msgstr ""
+
+#. Subtitle string for intro video.
+#: introtext:3
+msgctxt "Subtitle"
+msgid "Time : 18:20 Hrs"
+msgstr ""
+
+#. Subtitle string for intro video.
+#: introtext:4
+msgctxt "Subtitle"
+msgid "New Subjects required for recruitment"
+msgstr ""
+
+#. Subtitle string for intro video.
+#: introtext:5
+msgctxt "Subtitle"
+msgid "Possible Subject located"
+msgstr ""
+
+#. Subtitle string for intro video.
+#: introtext:6
+msgctxt "Subtitle"
+msgid "Subject Statistics : Male"
+msgstr ""
+
+#. Subtitle string for intro video.
+#: introtext:7
+msgctxt "Subtitle"
+msgid "Subject Statistics : Height :1.85m"
+msgstr ""
+
+#. Subtitle string for intro video.
+#: introtext:8
+msgctxt "Subtitle"
+msgid "Subject Statistics : Weight :70kgs"
+msgstr ""
+
+#. Subtitle string for intro video.
+#: introtext:9
+msgctxt "Subtitle"
+msgid "Subject Accepted"
+msgstr ""
+
+#. Subtitle string for intro video.
+#: introtext:10
+msgctxt "Subtitle"
+msgid "Acquire Subject"
+msgstr ""
+
+#. Subtitle string for intro video.
+#: introtext:11
+msgctxt "Subtitle"
+msgid "Return to Headquarters"
+msgstr ""
+
+#. Subtitle string for intro video.
+#: introtext:12
+msgctxt "Subtitle"
+msgid "Prepare Subject for Biogenetic engineering"
+msgstr ""
+
+#. Subtitle string for intro video.
+#: introtext:13
+msgctxt "Subtitle"
+msgid "Leonardo device activated"
+msgstr ""
+
+#. Subtitle string for intro video.
+#: introtext:14
+msgctxt "Subtitle"
+msgid "Generating replacement limb"
+msgstr ""
+
+#. Subtitle string for intro video.
+#: introtext:15
+msgctxt "Subtitle"
+msgid "Operation Completed"
+msgstr ""
+
+#. Subtitle string for intro video.
+#: introtext:16
+msgctxt "Subtitle"
+msgid "Apply polymorphic rubber coating"
+msgstr ""
+
+#. Subtitle string for intro video.
+#: introtext:17
+msgctxt "Subtitle"
+msgid "System Check"
+msgstr ""
+
+#. Subtitle string for intro video.
+#: introtext:18
+msgctxt "Subtitle"
+msgid "Prepare for Mission"
+msgstr ""
+
+#. Subtitle string for intro video.
+#: introtext:19
+msgctxt "Subtitle"
+msgid "Begin Mission"
+msgstr ""
