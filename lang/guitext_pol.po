@@ -191,7 +191,7 @@ msgstr "Grenlandia"
 #: guitext:27
 msgctxt "Territory"
 msgid "Northeast Territories"
-msgstr "Obszary Północno-Wschodnie "
+msgstr "Obszary Północno-Wschodnie"
 
 #. Name of a territory on World Map.
 #: guitext:28
@@ -1104,73 +1104,73 @@ msgstr ""
 #: guitext:190
 msgctxt "Cyborg mod desc"
 msgid "Replacement Metal Legs. Servo Assisted Hydraulics Allow Quicker Movement."
-msgstr "Zastępcze Nogi Z Metalu. System Hydrauliczny Znacznie Zwiększa Prędkość."
+msgstr "Zastępcze nogi z metalu. System hydrauliczny znacznie zwiększa prędkość."
 
 #. Cybernetic modification description in Team and Research menus.
 #: guitext:191
 msgctxt "Cyborg mod desc"
 msgid "Plasteel Legs. Lighter And Tougher Than Metal Legs. Enhanced Hydraulic System And Balance Control."
-msgstr "Nogi Z Plastali. Lżejsze I Mocniejsze Niż Metalowe. Ulepszenia W Systemie Hydraulicznym I Kontroli Równowagi."
+msgstr "Nogi z plastali. Lżejsze i mocniejsze niż metalowe. Ulepszenia w systemie hydraulicznym i kontroli równowagi."
 
 #. Cybernetic modification description in Team and Research menus.
 #: guitext:192
 msgctxt "Cyborg mod desc"
 msgid "Cybermesh Legs. Plasteel Core With Synthetic Muscle Fibre. Superb Response And Balance Coupled With High Speed."
-msgstr "Cyber-Nogi. Plastal Pokryta Syntetycznymi Włóknami Mięśniowymi. Niezwykle Sprawne, Dobrze Zbalansowane, Bardzo Szybkie."
+msgstr "Cyber-nogi. Plastal pokryta syntetycznymi włóknami mięśniowymi. Niezwykle sprawne, dobrze zbalansowane, bardzo szybkie."
 
 #. Cybernetic modification description in Team and Research menus.
 #: guitext:193
 msgctxt "Cyborg mod desc"
 msgid "Replacement Metal Arms. Servo Assisted Hydraulics Allow The Carrying Of Heavier Items."
-msgstr "Zastępcze Ramiona Z Metalu. System Hydrauliczny Pozwala Przenosić Cięższe Obiekty."
+msgstr "Zastępcze ramiona z metalu. System hydrauliczny pozwala przenosić cięższe obiekty."
 
 #. Cybernetic modification description in Team and Research menus.
 #: guitext:194
 msgctxt "Cyborg mod desc"
 msgid "Plasteel Arms. Lighter And Tougher Than Metal Arms. Enhanced Hydraulic System And Pressure Control."
-msgstr "Ramiona Z Plastali. Lżejsze I Stabilniejsze Niż Metalowe, Ulepszenia W Systemie Hydraulicznym I Kontroli Nacisku."
+msgstr "Ramiona z plastali. Lżejsze i stabilniejsze niż metalowe, ulepszenia w systemie hydraulicznym i kontroli nacisku."
 
 #. Cybernetic modification description in Team and Research menus.
 #: guitext:195
 msgctxt "Cyborg mod desc"
 msgid "Cybermesh Arms. Plasteel Core With Synthetic Muscle Fibre. Excellent Tactile Control And Weight Loading."
-msgstr "Cyber-Ramiona. Plastal Pokryta Syntetycznymi Włóknami Mięśniowymi. Świetna Kontrola Dotyku, Bardzo Silne."
+msgstr "Cyber-ramiona. Plastal pokryta syntetycznymi włóknami mięśniowymi. Świetna kontrola dotyku, bardzo silne."
 
 #. Cybernetic modification description in Team and Research menus.
 #: guitext:196
 msgctxt "Cyborg mod desc"
 msgid "Metal Chest Cage. All Internal Organs Are Shielded By Heavy Metal Casing."
-msgstr "Osłona Metalowa. Wszystkie Organy Wewnętrzne Są Chronione Mocną Metalową Powłoką."
+msgstr "Osłona Metalowa. Wszystkie organy wewnętrzne są chronione mocną metalową powłoką."
 
 #. Cybernetic modification description in Team and Research menus.
 #: guitext:197
 msgctxt "Cyborg mod desc"
 msgid "Plasteel Chest Cage. Lighter And Tougher Than The Metal Version With Better Mobility."
-msgstr "Osłona Z Plastali. Lżejsza I Mocniejsza Niż Wersja Metalowa."
+msgstr "Osłona z Plastali. Lżejsza i mocniejsza niż wersja metalowa, przez co zwiększa mobilność."
 
 #. Cybernetic modification description in Team and Research menus.
 #: guitext:198
 msgctxt "Cyborg mod desc"
 msgid "Cybermesh Chest Cage With Power Shielding. All Internal Organs Are Shielded By A Low Power Field Generator."
-msgstr "Cyber-Osłona Z Polem Siłowym. Wszystkie Organy Wewnętrzne Są Dodatkowo Chronione Polem Siłowym Emitowanym Przez Wewnętrzny Generator."
+msgstr "Cyber-osłona z Polem siłowym. Wszystkie organy wewnętrzne są chronione polem siłowym emitowanym przez wewnętrzny generator."
 
 #. Cybernetic modification description in Team and Research menus.
 #: guitext:199
 msgctxt "Cyborg mod desc"
 msgid "Heart Stimulator. Monitors And Maintains The Heart Rate Of The Individual."
-msgstr "Stymulator Pracy Serca. Kontroluje I Stymuluje Wydajność Pracy Serca Cyborga."
+msgstr "Stymulator Pracy Serca. Kontroluje i utrzymule wydajność pracy serca cyborga."
 
 #. Cybernetic modification description in Team and Research menus.
 #: guitext:200
 msgctxt "Cyborg mod desc"
 msgid "Heart Accelerator And Monitor. Heart Rate Is Almost Doubled Allowing The Quicker Distribution Of Hormones."
-msgstr "Rozrusznik Serca. Niemal Dwukrotnie Zwiększa Wydolność Serca, Tym Samym Przyspiesza Rozprowadzanie Hormonów W Ciele Cyborga."
+msgstr "Rozrusznik i monitor Serca. Niemal dwukrotnie zwiększa wydolność serca, tym samym przyspiesza rozprowadzanie hormonów w ciele."
 
 #. Cybernetic modification description in Team and Research menus.
 #: guitext:201
 msgctxt "Cyborg mod desc"
 msgid "Cybernetic Heart. Powerful Pump With In Built System Analysis And Overide Facilities. Triples Output Of A Standard Human Heart."
-msgstr "Cyber-Serce. Niezwykle Wydajna Pompa Z Wbudowanym Systemem Analizy Pracy I Urządzń Wspomagających. Przetacza Trzykrotnie Więcej Krwi Niż Serce Normalnego Człowieka."
+msgstr "Cyber-Serce. Niezwykle wydajna pompa z wbudowanym systemem analizy pracy i wspomagania. Przetacza trzykrotnie więcej krwi niż ludzkie serce."
 
 #. Cybernetic modification description in Team and Research menus.
 #: guitext:202
