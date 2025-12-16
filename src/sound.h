@@ -38,12 +38,27 @@ struct BFSample {
   int field_4;
   int field_8;
   short field_C;
+  /** Pointer to start of data
+   *  When in TAB file, this field contains position within DAT of the data.
+   */
   int data_shifted;
+  /** Data start, but shifted 12 bits left.
+   *  When in TAB file, value is irrelevant - re-computed on sound bank setup.
+   */
   void *data_start;
   short field_16;
   int field_18;
   short field_1C;
+  /** Priority of the sample. During playback with low amount of channels,
+   * samples with higher priority will discard lower priority ones and
+   * prevent them from playing until finished. Priority of 0 means do not
+   * bother playing at all.
+   */
   ubyte field_1E;
+  /** Allow to finish previous sample.
+   * If another sample with the same priority is currently playing, switch
+   * to his one only after the previous finishes playing. TODO: verify.
+   */
   ubyte field_1F;
 };
 
