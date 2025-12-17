@@ -205,7 +205,7 @@ GLOBAL_FUNC(ASM_syndicate)	/* 0x101e0 */
 		call   set_default_player
 		mov    $0x3f0,%ebp
 	jump_101ec:
-		call   select
+		call   menu_select
 		test   %al,%al
 		jne    jump_1033f
 		call   reset_mission_info
@@ -54128,7 +54128,7 @@ jpt_378BB:	/* 0x375d0 */
 
 
 /*----------------------------------------------------------------*/
-GLOBAL_FUNC(select)	/* 0x37600 */
+GLOBAL_FUNC(menu_select)	/* 0x37600 */
 /*----------------------------------------------------------------*/
 		push   %ebx
 		push   %esi

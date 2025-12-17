@@ -65,7 +65,7 @@ void _cdecl scroll_map(short dx, short dz);
 void _cdecl transfer_people_into_player(ushort plyrno);
 void _cdecl set_default_player(void);
 ubyte _cdecl process_day(uint a1);
-ubyte _cdecl select(void);
+ubyte _cdecl menu_select(void);
 void _cdecl reset_mission_info(void);
 void _cdecl initialise_player(void);
 void _cdecl process_players_turn(void);
@@ -254,7 +254,7 @@ void set_default_player(void)
 {
 }
 
-ubyte select(void)
+ubyte menu_select(void)
 {
 }
 
@@ -335,7 +335,7 @@ void syndicate(void)
       :  : );
 #endif
     set_default_player();
-    while (!select())
+    while (!menu_select())
     {
         uint init_state;
 
