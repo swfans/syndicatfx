@@ -32,6 +32,7 @@
 
 .text
 
+.global EXPORT_SYMBOL(sound_bank_files0);
 
 ___begtext:	/* 0x10003 */
 		nop
@@ -82641,17 +82642,7 @@ data_53f3d:
 		.fill   0xc
 		.long   starts_ani
 		.fill   0x38
-GLOBAL (sound_bank_files0)	/* 0x540c0 */
-		.string "sound/sound-0.dat"
-		.fill   0xa
-		.long   EXPORT_SYMBOL(smpdata)
-		.fill   0x8
-		.ascii  "\x01\x00\x00\x00"
-		.string "sound/sound-0.tab"
-		.fill   0xa
-		.long   EXPORT_SYMBOL(smptable)
-		.long   EXPORT_SYMBOL(smptable_end)
-		.fill   0x34
+
 unkn1_empty_load_files:	/* 0x54144 */
 		.fill   0x2c
 level_palettes:	/* 0x54170 */

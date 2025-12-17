@@ -20,6 +20,7 @@
 
 #include <assert.h>
 #include <string.h>
+#include "bfdata.h"
 #include "bftypes.h"
 #include "bffile.h"
 #include "bfdir.h"
@@ -32,6 +33,7 @@
 #include "guitext.h"
 #include "player.h"
 #include "research.h"
+#include "sound.h"
 #include "weapon.h"
 #include "wrcountry.h"
 
@@ -43,6 +45,12 @@ static char data_path_user[DISKPATH_SIZE] = "";
 static char data_path_hdd[DISKPATH_SIZE] = "";
 static char game_dir_savegame[] = "save";
 static char game_dir_screenshots[] = "screenshots";
+
+struct TbLoadFiles sound_bank_files0[] = {
+  {"sound/sound-0.dat",	(void **)&smpdata,			(void **)NULL,		0, 1, 0,},
+  {"sound/sound-0.tab",	(void **)&smptable,			(void **)&smptable_end, 0, 0, 0,},
+  { "",					(void **)NULL, 				(void **)NULL,		0, 0, 0, }
+};
 
 /******************************************************************************/
 
