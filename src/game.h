@@ -26,6 +26,8 @@
 extern "C" {
 #endif
 /******************************************************************************/
+extern ubyte byte_60AFC;
+extern ubyte is_multiplayer_game;
 
 bool game_initialise (void);
 void game_handle_sdl_events (void);
@@ -37,6 +39,7 @@ void game_transform_path (const char *file_name, char *result);
 const char *game_get_data_path (void);
 const char *game_get_user_path (void);
 
+void syndicate(void);
 /******************************************************************************/
 #ifdef __cplusplus
 };

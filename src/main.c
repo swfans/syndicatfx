@@ -18,6 +18,7 @@
 #include "game_data.h"
 #include "guitext.h"
 #include "keyboard.h"
+#include "mouse.h"
 #include "sound.h"
 #include "util.h"
 
@@ -35,7 +36,6 @@ extern char Network__Name[18];
 extern ubyte byte_60B4C;
 extern ushort current_levno;
 extern ushort level__MapNumber;
-extern ubyte is_multiplayer_game;
 extern ubyte byte_60B42;
 extern ubyte byte_60B44;
 extern ubyte byte_60B3B;
@@ -48,7 +48,6 @@ extern int debug_k;
 extern ubyte byte_60B51;
 extern ubyte cheats_speedup;
 extern ubyte cheats_mission;
-extern ushort MouseSwap;
 extern struct TbSprite *mouse_sprite;
 
 extern struct TbSprite *pointer_sprites;
@@ -68,18 +67,11 @@ const char *langs_str[] = {
 
 // ASM imports with matching call convention
 int * _cdecl ApSpriteSetup_ForceHeight(struct TbSprite *p_start, struct TbSprite *p_end, ubyte *data);
-void _cdecl syndicate(void);
 
 /*
 
 int *ApSpriteSetup_ForceHeight(struct TbSprite *p_start, struct TbSprite *p_end, ubyte *data)
 {
-}
-
-void syndicate(void)
-{
-    asm volatile ("call ASM_syndicate\n"
-      :  : );
 }
 */
 

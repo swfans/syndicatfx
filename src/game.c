@@ -52,6 +52,7 @@
 #include "mouse.h"
 #include "osunix.h"
 #include "oswindws.h"
+#include "player.h"
 #include "sound.h"
 #include "util.h"
 #include "timer.h"
@@ -59,6 +60,30 @@
 #define SAVEGAME_PATH "save/"
 
 /******************************************************************************/
+// ASM imports with matching call convention
+void _cdecl scroll_map(short dx, short dz);
+void _cdecl transfer_people_into_player(ushort plyrno);
+void _cdecl set_default_player(void);
+ubyte _cdecl process_day(uint a1);
+ubyte _cdecl select(void);
+void _cdecl reset_mission_info(void);
+void _cdecl initialise_player(void);
+void _cdecl process_players_turn(void);
+void _cdecl multi_play(void);
+void _cdecl single_play(void);
+void _cdecl process_computer_players(void);
+void _cdecl move_it(void);
+ubyte _cdecl correct_buttons(void);
+void _cdecl check_for_danger(void);
+void _cdecl check_end_level(void);
+void _cdecl swap_screen_vres16(void);
+void _cdecl copy_back(void);
+void _cdecl draw_mapwho(void);
+void _cdecl draw_panel(void);
+void _cdecl click_map(void);
+void _cdecl free_map_level(void);
+void _cdecl level_finished(void);
+
 
 bool
 game_initialise (void)
@@ -218,5 +243,157 @@ void host_reset(void)
 #endif
     reset_input();
     LbScreenReset();
+}
+
+void nullsub_1()
+{
+}
+
+/*
+void set_default_player(void)
+{
+}
+
+ubyte select(void)
+{
+}
+
+
+void reset_mission_info(void)
+{
+}
+
+void initialise_player(void)
+{
+}
+
+void process_players_turn(void)
+{
+}
+
+void multi_play(void)
+{
+}
+
+void single_play(void)
+{
+}
+
+void process_computer_players(void)
+{
+}
+
+void move_it(void)
+{
+}
+
+ubyte correct_buttons(void)
+{
+}
+
+void check_for_danger(void)
+{
+}
+
+void check_end_level(void)
+{
+}
+
+void swap_screen_vres16(void)
+{
+}
+
+void copy_back(void)
+{
+}
+
+void draw_mapwho(void)
+{
+}
+
+void draw_panel(void)
+{
+}
+
+void click_map(void)
+{
+}
+
+void free_map_level(void)
+{
+}
+
+void level_finished(void)
+{
+}
+*/
+
+void syndicate(void)
+{
+#if 0
+    asm volatile ("call ASM_syndicate\n"
+      :  : );
+#endif
+    set_default_player();
+    while (!select())
+    {
+        uint init_state;
+
+        reset_mission_info();
+        initialise_player();
+        init_state = 0;
+        while ((byte_60AFC & 1) != 0)
+        {
+            if (lbKeyOn[KC_F10])
+                break;
+            if (init_state != 0) {
+                process_players_turn();
+            }
+            if (is_multiplayer_game)
+            {
+                multi_play();
+            }
+            else
+            {
+                single_play();
+                process_computer_players();
+            }
+            move_it();
+            correct_buttons();
+            if (init_state > 2)
+                BFSonundUnkn1();
+            check_for_danger();
+            process_day(1008u);
+            check_end_level();
+            LbScreenWaitVbi();
+            nullsub_1();
+            swap_screen_vres16();
+            if (init_state == 2) {
+                LbPaletteSet(GraphicsPalette);
+            }
+            scroll_map(lbDisplay__MMouseX_640, lbDisplay__MMouseY_400);
+            scroll_map(lbDisplay__MMouseX_640, lbDisplay__MMouseY_400);
+            copy_back();
+            draw_mapwho();
+            draw_panel();
+            click_map();
+            game_update();
+            if (init_state < 3) {
+                init_state++;
+            }
+        }
+        if (GetMusicAble())
+            BFMidiStopMusic();
+        free_map_level();
+        if (!lbKeyOn[KC_F10])
+        {
+            *(u32 *)&MouseSwap = 1;
+            MouseOldW = 0;
+            transfer_people_into_player(Network__Slot);
+            level_finished();
+            if (lbKeyOn[KC_F10] == 1)
+                break;
+        }
+    }
 }
 /******************************************************************************/

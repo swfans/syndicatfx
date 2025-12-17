@@ -25,8 +25,14 @@
 extern "C" {
 #endif
 /******************************************************************************/
+#pragma pack(1)
 
 struct TbPoint;
+
+#pragma pack()
+/******************************************************************************/
+extern ushort MouseSwap;
+extern int MouseOldW;
 
 void mouse_update_scaled_coords(void);
 

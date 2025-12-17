@@ -31,6 +31,7 @@
 #include "oswindws.h"
 
 #include "guitext.h"
+#include "mouse.h"
 #include "player.h"
 #include "research.h"
 #include "sound.h"

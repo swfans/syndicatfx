@@ -52,14 +52,14 @@ ___begtext:	/* 0x10003 */
 
 
 /*----------------------------------------------------------------*/
-check_for_danger:	/* 0x10010 */
+GLOBAL_FUNC(check_for_danger)	/* 0x10010 */
 /*----------------------------------------------------------------*/
 		push   %ebx
 		push   %esi
 		push   %edi
 		push   %ebp
 		sub    $0x4,%esp
-		testb  $0x4,data_60afc
+		testb  $0x4,EXPORT_SYMBOL(byte_60AFC)
 		je     jump_1004a
 		cmpl   $0x1,data_5c354
 		jne    jump_1004a
@@ -72,7 +72,7 @@ check_for_danger:	/* 0x10010 */
 		mov    %eax,data_5c354
 		jmp    jump_101c4
 	jump_1004a:
-		testb  $0x2,data_60afc
+		testb  $0x2,EXPORT_SYMBOL(byte_60AFC)
 		je     jump_10080
 		cmpl   $0x1,data_5c354
 		jne    jump_10080
@@ -198,7 +198,7 @@ check_for_danger:	/* 0x10010 */
 
 
 /*----------------------------------------------------------------*/
-GLOBAL_FUNC(syndicate)	/* 0x101e0 */
+GLOBAL_FUNC(ASM_syndicate)	/* 0x101e0 */
 /*----------------------------------------------------------------*/
 		push   %ebx
 		push   %ebp
@@ -210,7 +210,7 @@ GLOBAL_FUNC(syndicate)	/* 0x101e0 */
 		jne    jump_1033f
 		call   reset_mission_info
 		call   initialise_player
-		mov    data_60afc,%ah
+		mov    EXPORT_SYMBOL(byte_60AFC),%ah
 		xor    %ebx,%ebx
 		test   $0x1,%ah
 		je     jump_102e9
@@ -277,7 +277,7 @@ GLOBAL_FUNC(syndicate)	/* 0x101e0 */
 		jae    jump_102dc
 		inc    %ebx
 	jump_102dc:
-		testb  $0x1,data_60afc
+		testb  $0x1,EXPORT_SYMBOL(byte_60AFC)
 		jne    jump_10214
 	jump_102e9:
 		cmpb   $0x0,EXPORT_SYMBOL(MusicAble)
@@ -293,7 +293,7 @@ GLOBAL_FUNC(syndicate)	/* 0x101e0 */
 		xor    %ebx,%ebx
 		push   %eax
 		mov    %edx,EXPORT_SYMBOL(MouseSwap)
-		mov    %ebx,MouseOldW
+		mov    %ebx,EXPORT_SYMBOL(MouseOldW)
 		call   transfer_people_into_player
 		add    $0x4,%esp
 		call   level_finished
@@ -452,14 +452,14 @@ func_103fc:
 /*----------------------------------------------------------------*/
 level_failed:	/* 0x104c0 */
 /*----------------------------------------------------------------*/
-		mov    data_60afc,%ah
+		mov    EXPORT_SYMBOL(byte_60AFC),%ah
 		test   $0x6,%ah
 		jne    jump_10500
 		movw   $0x10,data_5532c
 		mov    %ah,%dl
 		or     $0x4,%dl
 		push   $0x7f
-		mov    %dl,data_60afc
+		mov    %dl,EXPORT_SYMBOL(byte_60AFC)
 		push   $0x18
 		mov    EXPORT_SYMBOL(debug_k),%eax
 		mov    $0x1,%edx
@@ -474,11 +474,11 @@ level_failed:	/* 0x104c0 */
 /*----------------------------------------------------------------*/
 level_complete:	/* 0x10510 */
 /*----------------------------------------------------------------*/
-		testb  $0x6,data_60afc
+		testb  $0x6,EXPORT_SYMBOL(byte_60AFC)
 		jne    jump_1054f
 		call   set_mission_complete
 		movw   $0x10,data_5532c
-		orb    $0x2,data_60afc
+		orb    $0x2,EXPORT_SYMBOL(byte_60AFC)
 		push   $0x7f
 		mov    EXPORT_SYMBOL(debug_k),%eax
 		push   $0x17
@@ -530,7 +530,7 @@ vtable_10594:
 
 
 /*----------------------------------------------------------------*/
-check_end_level:	/* 0x105e0 */
+GLOBAL_FUNC(check_end_level)	/* 0x105e0 */
 /*----------------------------------------------------------------*/
 		push   %ebx
 		push   %esi
@@ -585,17 +585,17 @@ check_end_level:	/* 0x105e0 */
 		movb   $0x2,data_605e1(,%eax,2)
 		jmp    jump_10e0f
 	jump_1067e:
-		mov    data_60afc,%al
+		mov    EXPORT_SYMBOL(byte_60AFC),%al
 		test   $0x6,%al
 		jne    jump_10d9e
 		cmpb   $0x0,EXPORT_SYMBOL(lbKeyOn)+0x01	/* lbKeyOn[KC_ESCAPE] */
 		je     jump_106b6
-		mov    data_60afc,%ah
+		mov    EXPORT_SYMBOL(byte_60AFC),%ah
 		or     $0x8,%ah
 		mov    %ah,%dl
-		mov    %ah,data_60afc
+		mov    %ah,EXPORT_SYMBOL(byte_60AFC)
 		and    $0xfe,%dl
-		mov    %dl,data_60afc
+		mov    %dl,EXPORT_SYMBOL(byte_60AFC)
 		add    $0x8,%esp
 		pop    %ebp
 		pop    %edi
@@ -1153,9 +1153,9 @@ func_10cd9:
 		cmpl   $0x0,data_5c354
 		jne    jump_10dd4
 	jump_10dce:
-		mov    %dl,data_60afc
+		mov    %dl,EXPORT_SYMBOL(byte_60AFC)
 	jump_10dd4:
-		mov    data_60afc,%bl
+		mov    EXPORT_SYMBOL(byte_60AFC),%bl
 		test   $0x2,%bl
 		jne    jump_10de4
 		test   $0x4,%bl
@@ -1175,7 +1175,7 @@ func_10cd9:
 		je     jump_10df8
 		cmp    EXPORT_SYMBOL(lbKeyOn)+0x01,%al	/* lbKeyOn[KC_ESCAPE] */
 		je     jump_10df8
-		andb   $0xfe,data_60afc
+		andb   $0xfe,EXPORT_SYMBOL(byte_60AFC)
 	jump_10e0f:
 		add    $0x8,%esp
 		pop    %ebp
@@ -2091,7 +2091,7 @@ mission_briefing:	/* 0x10e60 */
 		mov    $0x1,%ecx
 		xor    %esi,%esi
 		mov    $AniName,%edi
-		mov    %esi,MouseOldW
+		mov    %esi,EXPORT_SYMBOL(MouseOldW)
 		mov    $aDataMbrieoutDa,%esi
 		xor    %ah,%ah
 		mov    %ecx,EXPORT_SYMBOL(MouseSwap)
@@ -2515,7 +2515,7 @@ vtable_11e58:
 
 
 /*----------------------------------------------------------------*/
-click_map:	/* 0x11ea0 */
+GLOBAL_FUNC(click_map)	/* 0x11ea0 */
 /*----------------------------------------------------------------*/
 		push   %ebx
 		push   %esi
@@ -7492,7 +7492,7 @@ func_159fe:
 
 
 /*----------------------------------------------------------------*/
-process_computer_players:	/* 0x15b10 */
+GLOBAL_FUNC(process_computer_players)	/* 0x15b10 */
 /*----------------------------------------------------------------*/
 		push   %ebx
 		push   %esi
@@ -11449,7 +11449,7 @@ func_187a0:
 
 
 /*----------------------------------------------------------------*/
-process_day:	/* 0x18810 */
+GLOBAL_FUNC(process_day)	/* 0x18810 */
 /*----------------------------------------------------------------*/
 		push   %ebx
 		push   %esi
@@ -12729,7 +12729,7 @@ debrief:	/* 0x18ff0 */
 		push   %esi
 		mov    $0x78,%ebx
 		call   new_show_text
-		mov    data_60afc,%cl
+		mov    EXPORT_SYMBOL(byte_60AFC),%cl
 		add    $0x28,%esp
 		test   $0x2,%cl
 		je     jump_198ee
@@ -13331,7 +13331,7 @@ debrief:	/* 0x18ff0 */
 		call   new_show_text
 		add    $0x28,%esp
 	jump_19ff4:
-		cmpb   $0x2,data_60afc
+		cmpb   $0x2,EXPORT_SYMBOL(byte_60AFC)
 		je     jump_1a0de
 		cmpb   $0x0,EXPORT_SYMBOL(cheats_mission)
 		je     jump_1a0de
@@ -13424,7 +13424,7 @@ debrief:	/* 0x18ff0 */
 		jne    jump_1a164
 		cmpb   $0x0,EXPORT_SYMBOL(cheats_mission)
 		je     jump_1a164
-		cmpb   $0x2,data_60afc
+		cmpb   $0x2,EXPORT_SYMBOL(byte_60AFC)
 		je     jump_1a164
 		mov    $0x7,%edx
 		mov    $0x1,%al
@@ -13488,7 +13488,7 @@ debrief:	/* 0x18ff0 */
 		mov    $0x1,%ecx
 		xor    %esi,%esi
 		mov    $AniName,%edi
-		mov    %esi,MouseOldW
+		mov    %esi,EXPORT_SYMBOL(MouseOldW)
 		mov    $aDataMdeoutDat,%esi
 		mov    data_553a2(,%eax,2),%ebx
 		mov    %ecx,EXPORT_SYMBOL(MouseSwap)
@@ -17061,7 +17061,7 @@ func_1c795:
 		mov    %si,data_60b30
 		test   %bh,%bh
 		jne    jump_1cc47
-		cmpb   $0x1,data_60afc
+		cmpb   $0x1,EXPORT_SYMBOL(byte_60AFC)
 		jne    jump_1cc47
 		xor    %ecx,%ecx
 	jump_1c9be:
@@ -17893,7 +17893,7 @@ set_block_changes:	/* 0x1d1d0 */
 
 
 /*----------------------------------------------------------------*/
-swap_screen_vres16:
+GLOBAL_FUNC(swap_screen_vres16)
 /*----------------------------------------------------------------*/
 		push   %ebx
 		push   %esi
@@ -18028,7 +18028,7 @@ jpt_1DAA1:	/* 0x1d438 */
 
 
 /*----------------------------------------------------------------*/
-draw_mapwho:	/* 0x1d450 */
+GLOBAL_FUNC(draw_mapwho)	/* 0x1d450 */
 /*----------------------------------------------------------------*/
 		push   %ebx
 		push   %esi
@@ -18909,7 +18909,7 @@ number_people:	/* 0x1dcb0 */
 
 
 /*----------------------------------------------------------------*/
-copy_back:	/* 0x1df10 */
+GLOBAL_FUNC(copy_back)	/* 0x1df10 */
 /*----------------------------------------------------------------*/
 		push   %ebx
 		push   %esi
@@ -19351,7 +19351,7 @@ full_redraw:	/* 0x1e300 */
 
 
 /*----------------------------------------------------------------*/
-scroll_map:	/* 0x1e400 */
+GLOBAL_FUNC(scroll_map)	/* 0x1e400 */
 /*----------------------------------------------------------------*/
 		mov    0x4(%esp),%edx
 		mov    0x8(%esp),%eax
@@ -24505,7 +24505,7 @@ func_227c8:
 		xor    %edx,%edx
 		xor    %bl,%bl
 		mov    %eax,EXPORT_SYMBOL(MouseSwap)
-		mov    %edx,MouseOldW
+		mov    %edx,EXPORT_SYMBOL(MouseOldW)
 		movsl  %ds:(%esi),%es:(%edi)
 		movsl  %ds:(%esi),%es:(%edi)
 		movsl  %ds:(%esi),%es:(%edi)
@@ -25828,7 +25828,7 @@ adjust_vehicles:	/* 0x23650 */
 
 
 /*----------------------------------------------------------------*/
-reset_mission_info:	/* 0x237b0 */
+GLOBAL_FUNC(reset_mission_info)	/* 0x237b0 */
 /*----------------------------------------------------------------*/
 		push   %ebx
 		push   %edi
@@ -25847,7 +25847,7 @@ reset_mission_info:	/* 0x237b0 */
 		mov    %ah,data_60af8
 		mov    %ah,data_60af9
 		mov    %ah,data_60afa
-		mov    %al,data_60afc
+		mov    %al,EXPORT_SYMBOL(byte_60AFC)
 		mov    %ah,data_60afd
 		mov    %ebx,data_60afe
 		mov    %ebx,a11
@@ -25886,7 +25886,7 @@ reset_mission_info:	/* 0x237b0 */
 
 
 /*----------------------------------------------------------------*/
-set_default_player:	/* 0x23880 */
+GLOBAL_FUNC(set_default_player)	/* 0x23880 */
 /*----------------------------------------------------------------*/
 		push   %ebx
 		push   %esi
@@ -26903,7 +26903,7 @@ cheat:	/* 0x23f10 */
 
 
 /*----------------------------------------------------------------*/
-transfer_people_into_player:	/* 0x246d0 */
+GLOBAL_FUNC(transfer_people_into_player)	/* 0x246d0 */
 /*----------------------------------------------------------------*/
 		push   %ebx
 		push   %esi
@@ -26946,7 +26946,7 @@ transfer_people_into_player:	/* 0x246d0 */
 		mov    $level__People,%edx
 		add    %eax,%edx
 		mov    %edx,%eax
-		mov    data_60afc,%bh
+		mov    EXPORT_SYMBOL(byte_60AFC),%bh
 		sub    $level__things_base,%eax
 		mov    %edx,(%esp)
 		mov    %eax,0x4(%esp)
@@ -27204,7 +27204,7 @@ transfer_people_into_player:	/* 0x246d0 */
 		mov    %si,data_5e5ba(%ecx,%eax,8)
 		mov    0x3c(%edx),%dx
 		mov    %dx,data_5e5bc(%ecx,%eax,8)
-		testb  $0x8,data_60afc
+		testb  $0x8,EXPORT_SYMBOL(byte_60AFC)
 		jne    jump_24bf3
 		xor    %ebx,%ebx
 		xor    %esi,%esi
@@ -27619,7 +27619,7 @@ clear_savegame:	/* 0x24fc0 */
 
 
 /*----------------------------------------------------------------*/
-free_map_level:	/* 0x24fe0 */
+GLOBAL_FUNC(free_map_level)	/* 0x24fe0 */
 /*----------------------------------------------------------------*/
 		push   $mission_load_files
 		call   ac_LbDataFreeAll
@@ -28067,7 +28067,7 @@ NetworkPlayersCount:	/* 0x25510 */
 
 
 /*----------------------------------------------------------------*/
-single_play:	/* 0x25560 */
+GLOBAL_FUNC(single_play)	/* 0x25560 */
 /*----------------------------------------------------------------*/
 		push   %ebx
 		xor    %ebx,%ebx
@@ -28085,7 +28085,7 @@ single_play:	/* 0x25560 */
 
 
 /*----------------------------------------------------------------*/
-multi_play:	/* 0x25580 */
+GLOBAL_FUNC(multi_play)	/* 0x25580 */
 /*----------------------------------------------------------------*/
 		push   %ebx
 		push   %esi
@@ -28196,7 +28196,7 @@ multi_play:	/* 0x25580 */
 
 
 /*----------------------------------------------------------------*/
-initialise_player:	/* 0x256f0 */
+GLOBAL_FUNC(initialise_player)	/* 0x256f0 */
 /*----------------------------------------------------------------*/
 		push   %ebx
 		mov    $0x1,%ecx
@@ -28547,12 +28547,12 @@ func_25b45:
 		mov    %di,%ax
 		cmp    %eax,%edx
 		jne    jump_25b6f
-		mov    data_60afc,%bh
+		mov    EXPORT_SYMBOL(byte_60AFC),%bh
 		or     $0x8,%bh
 		mov    %bh,%cl
-		mov    %bh,data_60afc
+		mov    %bh,EXPORT_SYMBOL(byte_60AFC)
 		and    $0xfe,%cl
-		mov    %cl,data_60afc
+		mov    %cl,EXPORT_SYMBOL(byte_60AFC)
 	jump_25b6f:
 		cmpb   $0x0,EXPORT_SYMBOL(is_multiplayer_game)
 		je     def_25A67
@@ -30672,7 +30672,7 @@ func_27280:
 		xor    %edx,%edx
 		xor    %bl,%bl
 		mov    %al,EXPORT_SYMBOL(byte_60B4C)
-		mov    %edx,MouseOldW
+		mov    %edx,EXPORT_SYMBOL(MouseOldW)
 		mov    $0x1,%eax
 		movsl  %ds:(%esi),%es:(%edi)
 		movsl  %ds:(%esi),%es:(%edi)
@@ -31293,7 +31293,7 @@ GLOBAL_FUNC (ASM_main)	/* 0x274a0 */
 		jmp    jump_279c7
 	jump_27998:
 		call   OpenIKeyboard_0
-		call   syndicate
+		call   ac_syndicate
 		mov    EXPORT_SYMBOL(debug_k),%si
 	jump_279a9:
 		movswl %si,%eax
@@ -31660,7 +31660,7 @@ OpenIKeyboardMs:	/* 0x27d60 */
 
 
 /*----------------------------------------------------------------*/
-correct_buttons:	/* 0x27db0 */
+GLOBAL_FUNC(correct_buttons)	/* 0x27db0 */
 /*----------------------------------------------------------------*/
 		cmpb   $0x1,EXPORT_SYMBOL(lbDisplay)+103	/* lbDisplay.LeftButton */
 		jbe    jump_27dc1
@@ -33309,7 +33309,7 @@ func_29030:
 
 
 /*----------------------------------------------------------------*/
-move_it:	/* 0x29250 */
+GLOBAL_FUNC(move_it)	/* 0x29250 */
 /*----------------------------------------------------------------*/
 		call   move_worlds
 		call   move_people
@@ -33928,7 +33928,7 @@ func_29818:
 		mov    $aDataMmultoutDa,%esi
 		xor    %ecx,%ecx
 		mov    %ebx,EXPORT_SYMBOL(MouseSwap)
-		mov    %ecx,MouseOldW
+		mov    %ecx,EXPORT_SYMBOL(MouseOldW)
 		movsl  %ds:(%esi),%es:(%edi)
 		movsl  %ds:(%esi),%es:(%edi)
 		movsl  %ds:(%esi),%es:(%edi)
@@ -37961,7 +37961,7 @@ set_panel_string:	/* 0x2c390 */
 		mov    %ax,data_5537c
 		cmpb   $0x0,EXPORT_SYMBOL(is_multiplayer_game)
 		jne    jump_2c4ff
-		mov    data_60afc,%dl
+		mov    EXPORT_SYMBOL(byte_60AFC),%dl
 		test   $0x6,%dl
 		jne    jump_2c4e7
 		xor    %ebx,%ebx
@@ -38089,7 +38089,7 @@ func_2c484:
 		je     jump_2c4f1
 		call   set_mission_complete
 	jump_2c4f1:
-		testb  $0x4,data_60afc
+		testb  $0x4,EXPORT_SYMBOL(byte_60AFC)
 		je     jump_2c4ff
 		call   set_mission_failed
 	jump_2c4ff:
@@ -38103,7 +38103,7 @@ func_2c484:
 /*----------------------------------------------------------------*/
 print_panel_string:	/* 0x2c510 */
 /*----------------------------------------------------------------*/
-		mov    data_60afc,%ah
+		mov    EXPORT_SYMBOL(byte_60AFC),%ah
 		test   $0x4,%ah
 		je     jump_2c545
 	jump_2c51b:
@@ -38376,7 +38376,7 @@ setup_panel:	/* 0x2c640 */
 
 
 /*----------------------------------------------------------------*/
-process_players_turn:	/* 0x2c880 */
+GLOBAL_FUNC(process_players_turn)	/* 0x2c880 */
 /*----------------------------------------------------------------*/
 		push   %ebx
 		push   %esi
@@ -39015,7 +39015,7 @@ func_2d0b0:
 
 
 /*----------------------------------------------------------------*/
-draw_panel:	/* 0x2d0e0 */
+GLOBAL_FUNC(draw_panel)	/* 0x2d0e0 */
 /*----------------------------------------------------------------*/
 		push   %ebx
 		sub    $0x4,%esp
@@ -51901,7 +51901,7 @@ func_359e6:
 		xor    %ebx,%ebx
 		xor    %ah,%ah
 		mov    %edx,EXPORT_SYMBOL(MouseSwap)
-		mov    %ebx,MouseOldW
+		mov    %ebx,EXPORT_SYMBOL(MouseOldW)
 		movsl  %ds:(%esi),%es:(%edi)
 		movsl  %ds:(%esi),%es:(%edi)
 		movsl  %ds:(%esi),%es:(%edi)
@@ -54128,7 +54128,7 @@ jpt_378BB:	/* 0x375d0 */
 
 
 /*----------------------------------------------------------------*/
-select:	/* 0x37600 */
+GLOBAL_FUNC(select)	/* 0x37600 */
 /*----------------------------------------------------------------*/
 		push   %ebx
 		push   %esi
@@ -54188,7 +54188,7 @@ select:	/* 0x37600 */
 		mov    $0x1,%edi
 		mov    %edi,EXPORT_SYMBOL(MouseSwap)
 		xor    %ebp,%ebp
-		mov    %ebp,MouseOldW
+		mov    %ebp,EXPORT_SYMBOL(MouseOldW)
 		mov    EXPORT_SYMBOL(m_sprites),%eax
 		add    $0x17a,%eax
 #if defined(USE_BFLIB_MOUSE_CURSOR) /* moved as sprites need to be set up before use for mouse */
@@ -54334,7 +54334,7 @@ func_37800:
 		add    $0xc,%esp
 		mov    %bl,data_55591
 		movl   $0x8,0x4(%esp)
-		testb  $0x10,data_60afc
+		testb  $0x10,EXPORT_SYMBOL(byte_60AFC)
 		je     def_3775C
 		xor    %cl,%cl
 		mov    %cl,data_55590
@@ -54475,7 +54475,7 @@ func_378c3:
 		mov    0x4(%esp),%ecx
 		xor    %ebx,%ebx
 		mov    %edx,EXPORT_SYMBOL(MouseSwap)
-		mov    %ebx,MouseOldW
+		mov    %ebx,EXPORT_SYMBOL(MouseOldW)
 		test   %ecx,%ecx
 		je     jump_37a38
 		mov    $AniName,%edi
@@ -54524,7 +54524,7 @@ func_378c3:
 		mov    0x4(%esp),%edi
 		xor    %esi,%esi
 		mov    %ecx,EXPORT_SYMBOL(MouseSwap)
-		mov    %esi,MouseOldW
+		mov    %esi,EXPORT_SYMBOL(MouseOldW)
 		test   %edi,%edi
 		je     jump_37ad8
 		mov    $AniName,%edi
@@ -54698,7 +54698,7 @@ func_37bdd:
 	jump_37c42:
 		xor    %edx,%edx
 		mov    $0x1,%eax
-		mov    %edx,MouseOldW
+		mov    %edx,EXPORT_SYMBOL(MouseOldW)
 		mov    0xc(%esp),%dl
 		mov    %eax,EXPORT_SYMBOL(MouseSwap)
 		test   %dl,%dl
@@ -54947,7 +54947,7 @@ show_opt:	/* 0x37ef0 */
 		xor    %ebx,%ebx
 		push   $AniName
 		mov    %edx,EXPORT_SYMBOL(MouseSwap)
-		mov    %ebx,MouseOldW
+		mov    %ebx,EXPORT_SYMBOL(MouseOldW)
 		call   ac_strcpy
 		add    $0x8,%esp
 		xor    %ah,%ah
@@ -54977,7 +54977,7 @@ show_opt:	/* 0x37ef0 */
 
 
 /*----------------------------------------------------------------*/
-level_finished:	/* 0x37f80 */
+GLOBAL_FUNC(level_finished)	/* 0x37f80 */
 /*----------------------------------------------------------------*/
 		push   %ebx
 		push   %esi
@@ -55003,7 +55003,7 @@ level_finished:	/* 0x37f80 */
 		mov    %al,EXPORT_SYMBOL(OldDrawFlags)
 		mov    %dh,EXPORT_SYMBOL(DrawFlags)
 		call   ac_AppScreenSetup
-		mov    data_60afc,%al
+		mov    EXPORT_SYMBOL(byte_60AFC),%al
 		add    $0x4,%esp
 		test   $0x8,%al
 		je     jump_38011
@@ -55011,7 +55011,7 @@ level_finished:	/* 0x37f80 */
 		mov    $0x5,%esi
 		xor    %ecx,%ecx
 		mov    %ebx,EXPORT_SYMBOL(MouseSwap)
-		mov    %ecx,MouseOldW
+		mov    %ecx,EXPORT_SYMBOL(MouseOldW)
 		mov    $0x1,%bh
 		mov    %esi,AniSpeed
 		mov    %bh,data_55590
@@ -55024,7 +55024,7 @@ level_finished:	/* 0x37f80 */
 		add    $0x4,%esp
 		call   ac_sound_bank_setup
 	jump_3802c:
-		testb  $0x2,data_60afc
+		testb  $0x2,EXPORT_SYMBOL(byte_60AFC)
 		je     jump_38176
 		xor    %edx,%edx
 		mov    data_60b36,%dl
@@ -55099,7 +55099,7 @@ level_finished:	/* 0x37f80 */
 		mov    $aDataMendwinDat,%esi
 		call   AniPlay
 		mov    $0x1,%ch
-		mov    data_60afc,%cl
+		mov    EXPORT_SYMBOL(byte_60AFC),%cl
 		add    $0xc,%esp
 		movsl  %ds:(%esi),%es:(%edi)
 		movsl  %ds:(%esi),%es:(%edi)
@@ -55108,7 +55108,7 @@ level_finished:	/* 0x37f80 */
 		movsb  %ds:(%esi),%es:(%edi)
 		or     $0x10,%cl
 		mov    %ch,0x4(%esp)
-		mov    %cl,data_60afc
+		mov    %cl,EXPORT_SYMBOL(byte_60AFC)
 		jmp    jump_38176
 	jump_38161:
 		mov    $AniName,%edi
@@ -55120,7 +55120,7 @@ level_finished:	/* 0x37f80 */
 		movsl  %ds:(%esi),%es:(%edi)
 		movsw  %ds:(%esi),%es:(%edi)
 	jump_38176:
-		testb  $0x4,data_60afc
+		testb  $0x4,EXPORT_SYMBOL(byte_60AFC)
 		je     jump_38224
 		xor    %cl,%cl
 		lea    0x0(%eax),%eax
@@ -55160,12 +55160,12 @@ level_finished:	/* 0x37f80 */
 	jump_381f0:
 		mov    $0xa,%edi
 		mov    $aDataMlosegamDa,%esi
-		mov    data_60afc,%dh
+		mov    EXPORT_SYMBOL(byte_60AFC),%dh
 		mov    %edi,AniSpeed
 		or     $0x10,%dh
 		mov    $AniName,%edi
 		mov    $data_5bbc8,%ebx
-		mov    %dh,data_60afc
+		mov    %dh,EXPORT_SYMBOL(byte_60AFC)
 		movsl  %ds:(%esi),%es:(%edi)
 		movsl  %ds:(%esi),%es:(%edi)
 		movsl  %ds:(%esi),%es:(%edi)
@@ -55176,7 +55176,7 @@ level_finished:	/* 0x37f80 */
 		mov    $0x1,%ebp
 		xor    %eax,%eax
 		mov    %ebp,EXPORT_SYMBOL(MouseSwap)
-		mov    %eax,MouseOldW
+		mov    %eax,EXPORT_SYMBOL(MouseOldW)
 		test   %ebx,%ebx
 		je     jump_382b9
 		cmpb   $0x0,0x4(%esp)
@@ -62512,7 +62512,7 @@ UndoMouse:	/* 0x410ce */
 		push   %edx
 		push   %edi
 		push   %esi
-		cmpw   $0x0,MouseOldW
+		cmpw   $0x0,EXPORT_SYMBOL(MouseOldW)
 		je     jump_4131c
 		movzbw EXPORT_SYMBOL(DrawFlags),%ax
 		cmp    $0x1,%ax
@@ -62990,7 +62990,7 @@ BackupMouse:	/* 0x41323 */
 		pop    %ecx
 		pop    %ebx
 		pop    %eax
-		movw   $0x10,MouseOldW
+		movw   $0x10,EXPORT_SYMBOL(MouseOldW)
 		ret
 
 
@@ -63185,7 +63185,7 @@ UndrawWMouse:	/* 0x417e2 */
 		push   %edx
 		push   %edi
 		push   %esi
-		cmpw   $0x0,MouseOldW
+		cmpw   $0x0,EXPORT_SYMBOL(MouseOldW)
 		je     jump_419a2
 		movzbw EXPORT_SYMBOL(DrawFlags),%ax
 		cmp    $0x1,%ax
@@ -83671,7 +83671,7 @@ MouseOldX:	/* 0x5505c */
 		.ascii  "\x40\x01\x00\x00"
 MouseOldY:	/* 0x55060 */
 		.ascii  "\xc8\x00\x00\x00"
-MouseOldW:	/* 0x55064 */
+GLOBAL (MouseOldW)	/* 0x55064 */
 		.fill   0x8
 GLOBAL (MouseSwap)	/* 0x5506c */
 		.fill   0x4
@@ -85417,7 +85417,7 @@ data_60afa:
 		.ascii  "\x00"
 data_60afb:
 		.ascii  "\x00"
-data_60afc:
+GLOBAL (byte_60AFC)	/* 0x60AFC */
 		.ascii  "\x00"
 data_60afd:
 		.ascii  "\x00"
