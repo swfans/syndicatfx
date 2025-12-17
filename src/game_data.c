@@ -25,6 +25,9 @@
 #include "bffile.h"
 #include "bfdir.h"
 #include "bffnuniq.h"
+#include "bfsvaribl.h"
+#include "ssampply.h"
+
 #include "applog.h"
 #include "dos.h"
 #include "osunix.h"
@@ -47,9 +50,26 @@ static char data_path_hdd[DISKPATH_SIZE] = "";
 static char game_dir_savegame[] = "save";
 static char game_dir_screenshots[] = "screenshots";
 
+struct TbLoadFiles mission_load_files[] = {
+  {"data/hfnt01.dat",	(void **)&h_font,		(void **)NULL,		0, 0, 0, },
+  {"data/map01.dat",	(void **)&map_buf,		(void **)NULL,		0, 0, 0, },
+  {"data/col01.dat",	(void **)&h_col,		(void **)NULL,		0, 0, 0, },
+  {"data/hblk01.dat",	(void **)&h_blocks,		(void **)NULL,		0, 0, 0, },
+  {"data/hspr-0.dat",	(void **)&h_sprites_data, (void **)NULL,		0, 0, 0, },
+  {"data/hspr-0.tab",	(void **)&h_sprites,	(void **)&h_sprites_end,	0, 0, 0, },
+  {"data/hfra-0.ani",	(void **)&frames,		(void **)&frames_end,	0, 0, 0, },
+  {"data/hele-0.ani",	(void **)&elements_ani,	(void **)&elements_ani_end,	0, 0, 0, },
+  {"data/hsta-0.ani",	(void **)&starts_ani,		(void **)NULL,		0, 0, 0, },
+  { "",					(void **)NULL, 				(void **)NULL,		0, 0, 0, },
+};
+
 struct TbLoadFiles sound_bank_files0[] = {
   {"sound/sound-0.dat",	(void **)&smpdata,			(void **)NULL,		0, 1, 0,},
   {"sound/sound-0.tab",	(void **)&smptable,			(void **)&smptable_end, 0, 0, 0,},
+  { "",					(void **)NULL, 				(void **)NULL,		0, 0, 0, },
+};
+
+struct TbLoadFiles unkn1_empty_load_files[] = {
   { "",					(void **)NULL, 				(void **)NULL,		0, 0, 0, },
 };
 
@@ -213,6 +233,17 @@ TbBool save_player(char *p_desc, int slot)
 
     LbFileClose(fh);
     return true;
+}
+
+void free_map_level(void)
+{
+    LbDataFreeAll(mission_load_files);
+    LbDataFreeAll(unkn1_empty_load_files);
+    if (GetSoundAble())
+    {
+        StopAllSamples();
+        LbDataFreeAll(sound_bank_files0);
+    }
 }
 
 /******************************************************************************/

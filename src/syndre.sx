@@ -33,6 +33,7 @@
 .text
 
 .global EXPORT_SYMBOL(sound_bank_files0);
+.global EXPORT_SYMBOL(unkn1_empty_load_files);
 .global EXPORT_SYMBOL(unk984_load_files);
 
 ___begtext:	/* 0x10003 */
@@ -284,7 +285,7 @@ GLOBAL_FUNC(ASM_syndicate)	/* 0x101e0 */
 		je     jump_102f7
 		call   ac_BFMidiStopMusic
 	jump_102f7:
-		call   free_map_level
+		call   ac_free_map_level
 		cmpb   $0x0,EXPORT_SYMBOL(lbKeyOn)+0x44
 		jne    jump_101ec
 		xor    %eax,%eax
@@ -17667,7 +17668,7 @@ func_1cfa0:
 		xor    %edx,%edx
 		mov    %ax,%dx
 		lea    0x0(,%edx,2),%ecx
-		mov    starts_ani,%edx
+		mov    EXPORT_SYMBOL(starts_ani),%edx
 		mov    (%ecx,%edx,1),%dx
 		mov    %dx,0x10(%ebx)
 		mov    %ax,0x12(%ebx)
@@ -17684,13 +17685,13 @@ show_selected_frame:	/* 0x1d060 */
 		mov    0x14(%esp),%ecx
 		cmpw   $0x0,data_53ef6
 		jne    jump_1d084
-		mov    starts_ani,%eax
+		mov    EXPORT_SYMBOL(starts_ani),%eax
 		mov    0x4b0(%eax),%ax
 		mov    %ax,data_53ef6
 	jump_1d084:
 		xor    %ebx,%ebx
 		mov    data_53ef6,%bx
-		mov    frames,%edx
+		mov    EXPORT_SYMBOL(frames),%edx
 		lea    0x0(,%ebx,8),%ebx
 		add    %edx,%ebx
 		mov    0x6(%ebx),%ax
@@ -17725,15 +17726,15 @@ show_selected_frame:	/* 0x1d060 */
 		mov    %eax,%esi
 		lea    0x0(,%edx,4),%eax
 		add    %edx,%eax
-		mov    elements_ani,%ebx
+		mov    EXPORT_SYMBOL(elements_ani),%ebx
 		add    %eax,%eax
-		mov    elements_ani,%ecx
+		mov    EXPORT_SYMBOL(elements_ani),%ecx
 		add    %eax,%ebx
 		cmp    %ecx,%ebx
 		jbe    jump_1d172
 	jump_1d117:
 		xor    %eax,%eax
-		mov    h_sprites,%edx
+		mov    EXPORT_SYMBOL(h_sprites),%edx
 		mov    (%ebx),%ax
 		add    %edx,%eax
 		cmp    %edx,%eax
@@ -17758,9 +17759,9 @@ show_selected_frame:	/* 0x1d060 */
 		and    $0xffff,%ebx
 		lea    0x0(,%ebx,4),%eax
 		add    %ebx,%eax
-		mov    elements_ani,%ebx
+		mov    EXPORT_SYMBOL(elements_ani),%ebx
 		add    %eax,%eax
-		mov    elements_ani,%ebp
+		mov    EXPORT_SYMBOL(elements_ani),%ebp
 		add    %eax,%ebx
 		cmp    %ebp,%ebx
 		ja     jump_1d117
@@ -18242,7 +18243,7 @@ func_1d5b3:
 		test   %eax,%eax
 		je     jump_1dca3
 		movzwl 0x10(%eax),%ebp
-		mov    frames,%edx
+		mov    EXPORT_SYMBOL(frames),%edx
 		lea    0x0(,%ebp,8),%ebp
 		add    %edx,%ebp
 		mov    0x4(%ebp),%bl
@@ -18345,9 +18346,9 @@ func_1d5b3:
 		mov    %eax,0x24(%esp)
 		lea    0x0(,%edx,4),%eax
 		add    %edx,%eax
-		mov    elements_ani,%ebx
+		mov    EXPORT_SYMBOL(elements_ani),%ebx
 		add    %eax,%eax
-		mov    elements_ani,%edx
+		mov    EXPORT_SYMBOL(elements_ani),%edx
 		add    %eax,%ebx
 		cmp    %edx,%ebx
 		jbe    jump_1da38
@@ -18369,17 +18370,17 @@ func_1d5b3:
 		add    %eax,%edx
 		lea    0x0(,%edx,4),%eax
 		sub    %edx,%eax
-		mov    h_sprites,%ecx
+		mov    EXPORT_SYMBOL(h_sprites),%ecx
 		add    %eax,%eax
 		add    %ecx,%eax
 		jmp    jump_1d8db
 	jump_1d8ce:
 		xor    %eax,%eax
-		mov    h_sprites,%edx
+		mov    EXPORT_SYMBOL(h_sprites),%edx
 		mov    (%ebx),%ax
 		add    %edx,%eax
 	jump_1d8db:
-		cmp    h_sprites,%eax
+		cmp    EXPORT_SYMBOL(h_sprites),%eax
 		jbe    jump_1d946
 		mov    0x2(%ebx),%dx
 		cmp    %dx,%di
@@ -18423,10 +18424,10 @@ func_1d5b3:
 		mov    0x8(%ebx),%dx
 		lea    0x0(,%edx,4),%eax
 		add    %edx,%eax
-		mov    elements_ani,%ebx
+		mov    EXPORT_SYMBOL(elements_ani),%ebx
 		add    %eax,%eax
 		add    %eax,%ebx
-		cmp    elements_ani,%ebx
+		cmp    EXPORT_SYMBOL(elements_ani),%ebx
 		ja     jump_1d88d
 		jmp    jump_1da38
 	jump_1d970:
@@ -18434,14 +18435,14 @@ func_1d5b3:
 		mov    0x0(%ebp),%dx
 		lea    0x0(,%edx,4),%eax
 		add    %edx,%eax
-		mov    elements_ani,%ebx
+		mov    EXPORT_SYMBOL(elements_ani),%ebx
 		add    %eax,%eax
 		add    %eax,%ebx
-		cmp    elements_ani,%ebx
+		cmp    EXPORT_SYMBOL(elements_ani),%ebx
 		jbe    jump_1da38
 	jump_1d995:
 		xor    %eax,%eax
-		mov    h_sprites,%edx
+		mov    EXPORT_SYMBOL(h_sprites),%edx
 		mov    (%ebx),%ax
 		add    %edx,%eax
 		cmp    %edx,%eax
@@ -18490,9 +18491,9 @@ func_1d5b3:
 		mov    0x8(%ebx),%dx
 		lea    0x0(,%edx,4),%eax
 		add    %edx,%eax
-		mov    elements_ani,%ebx
+		mov    EXPORT_SYMBOL(elements_ani),%ebx
 		add    %eax,%eax
-		mov    elements_ani,%ecx
+		mov    EXPORT_SYMBOL(elements_ani),%ecx
 		add    %eax,%ebx
 		cmp    %ecx,%ebx
 		ja     jump_1d995
@@ -18791,7 +18792,7 @@ number_people:	/* 0x1dcb0 */
 		add    %eax,%eax
 		cmpw   $0x0,data_53ef8(%eax)
 		jne    jump_1ddac
-		mov    starts_ani,%edx
+		mov    EXPORT_SYMBOL(starts_ani),%edx
 		mov    0xf3e(%edx,%eax,1),%dx
 		mov    %dx,data_53ef8(%eax)
 	jump_1ddac:
@@ -18799,7 +18800,7 @@ number_people:	/* 0x1dcb0 */
 		lea    0x0(,%edx,2),%eax
 		xor    %esi,%esi
 		mov    data_53ef8(%eax),%si
-		mov    frames,%ebx
+		mov    EXPORT_SYMBOL(frames),%ebx
 		lea    0x0(,%esi,8),%esi
 		add    %ebx,%esi
 		xor    %ebx,%ebx
@@ -18811,7 +18812,7 @@ number_people:	/* 0x1dcb0 */
 		mov    0x6(%esi),%dx
 		jmp    jump_1ddf8
 	jump_1ddea:
-		mov    starts_ani,%edx
+		mov    EXPORT_SYMBOL(starts_ani),%edx
 		mov    0xf3e(%edx,%eax,1),%dx
 	jump_1ddf8:
 		mov    %dx,data_53ef8(%eax)
@@ -18821,16 +18822,16 @@ number_people:	/* 0x1dcb0 */
 		lea    0x0(,%edx,4),%eax
 		mov    $0xff,%edi
 		add    %edx,%eax
-		mov    elements_ani,%ebx
+		mov    EXPORT_SYMBOL(elements_ani),%ebx
 		add    %eax,%eax
-		mov    elements_ani,%ecx
+		mov    EXPORT_SYMBOL(elements_ani),%ecx
 		add    %eax,%ebx
 		mov    %edi,0x20(%esp)
 		cmp    %ecx,%ebx
 		jbe    jump_1dee6
 	jump_1de2e:
 		xor    %eax,%eax
-		mov    h_sprites,%edx
+		mov    EXPORT_SYMBOL(h_sprites),%edx
 		mov    (%ebx),%ax
 		add    %edx,%eax
 		cmp    %edx,%eax
@@ -18888,7 +18889,7 @@ number_people:	/* 0x1dcb0 */
 		mov    0x8(%ebx),%ax
 		lea    0x0(,%eax,4),%ebx
 		add    %eax,%ebx
-		mov    elements_ani,%ebp
+		mov    EXPORT_SYMBOL(elements_ani),%ebp
 		add    %ebx,%ebx
 		add    %ebp,%ebx
 		add    $0x10,%esp
@@ -19045,7 +19046,7 @@ draw_pelement:	/* 0x1e050 */
 		mov    0x1c(%esp),%esi
 		xor    %ebx,%ebx
 		mov    0x14(%esp),%bx
-		mov    frames,%edx
+		mov    EXPORT_SYMBOL(frames),%edx
 		lea    0x0(,%ebx,8),%ebx
 		add    %edx,%ebx
 		cmpb   $0x0,0x4(%ebx)
@@ -19061,15 +19062,15 @@ draw_pelement:	/* 0x1e050 */
 		mov    (%ebx),%dx
 		lea    0x0(,%edx,4),%eax
 		add    %edx,%eax
-		mov    elements_ani,%ebx
+		mov    EXPORT_SYMBOL(elements_ani),%ebx
 		add    %eax,%eax
-		mov    elements_ani,%ecx
+		mov    EXPORT_SYMBOL(elements_ani),%ecx
 		add    %eax,%ebx
 		cmp    %ecx,%ebx
 		jbe    jump_1e102
 	jump_1e0aa:
 		xor    %eax,%eax
-		mov    h_sprites,%edx
+		mov    EXPORT_SYMBOL(h_sprites),%edx
 		mov    (%ebx),%ax
 		add    %edx,%eax
 		cmp    %edx,%eax
@@ -19093,9 +19094,9 @@ draw_pelement:	/* 0x1e050 */
 		and    $0xffff,%ebx
 		lea    0x0(,%ebx,4),%eax
 		add    %ebx,%eax
-		mov    elements_ani,%ebx
+		mov    EXPORT_SYMBOL(elements_ani),%ebx
 		add    %eax,%eax
-		mov    elements_ani,%ebp
+		mov    EXPORT_SYMBOL(elements_ani),%ebp
 		add    %eax,%ebx
 		cmp    %ebp,%ebx
 		ja     jump_1e0aa
@@ -19118,22 +19119,22 @@ draw_element:	/* 0x1e110 */
 		mov    0x1c(%esp),%esi
 		xor    %eax,%eax
 		mov    0x14(%esp),%ax
-		mov    frames,%edx
+		mov    EXPORT_SYMBOL(frames),%edx
 		lea    0x0(,%eax,8),%eax
 		add    %eax,%edx
 		mov    (%edx),%dx
 		and    $0xffff,%edx
 		lea    0x0(,%edx,4),%eax
 		add    %edx,%eax
-		mov    elements_ani,%ebx
+		mov    EXPORT_SYMBOL(elements_ani),%ebx
 		add    %eax,%eax
-		mov    elements_ani,%edx
+		mov    EXPORT_SYMBOL(elements_ani),%edx
 		add    %eax,%ebx
 		cmp    %edx,%ebx
 		jbe    jump_1e1b0
 	jump_1e158:
 		xor    %eax,%eax
-		mov    h_sprites,%ebp
+		mov    EXPORT_SYMBOL(h_sprites),%ebp
 		mov    (%ebx),%ax
 		add    %ebp,%eax
 		cmp    %ebp,%eax
@@ -19157,9 +19158,9 @@ draw_element:	/* 0x1e110 */
 		and    $0xffff,%ebx
 		lea    0x0(,%ebx,4),%eax
 		add    %ebx,%eax
-		mov    elements_ani,%ebx
+		mov    EXPORT_SYMBOL(elements_ani),%ebx
 		add    %eax,%eax
-		mov    elements_ani,%ecx
+		mov    EXPORT_SYMBOL(elements_ani),%ecx
 		add    %eax,%ebx
 		cmp    %ecx,%ebx
 		ja     jump_1e158
@@ -19178,19 +19179,19 @@ draw_agent_element:	/* 0x1e1c0 */
 		push   %esi
 		push   %edi
 		push   %ebp
-		mov    h_sprites,%edi
+		mov    EXPORT_SYMBOL(h_sprites),%edi
 		xor    %eax,%eax
 		mov    0x18(%esp),%ax
-		mov    frames,%edx
+		mov    EXPORT_SYMBOL(frames),%edx
 		lea    0x0(,%eax,8),%eax
 		add    %edx,%eax
 		xor    %edx,%edx
 		mov    (%eax),%dx
 		lea    0x0(,%edx,4),%eax
 		add    %edx,%eax
-		mov    elements_ani,%ebx
+		mov    EXPORT_SYMBOL(elements_ani),%ebx
 		add    %eax,%eax
-		mov    elements_ani,%ecx
+		mov    EXPORT_SYMBOL(elements_ani),%ecx
 		add    %eax,%ebx
 		cmp    %ecx,%ebx
 		jbe    jump_1e2f2
@@ -19243,7 +19244,7 @@ draw_agent_element:	/* 0x1e1c0 */
 		mov    (%ebx),%ax
 	jump_1e291:
 		add    %edi,%eax
-		mov    %edi,h_sprites
+		mov    %edi,EXPORT_SYMBOL(h_sprites)
 		cmp    %edi,%eax
 		jbe    jump_1e2c5
 		xor    %edx,%edx
@@ -19263,19 +19264,19 @@ draw_agent_element:	/* 0x1e1c0 */
 		call   DrawASpriteHires16_A
 		add    $0x10,%esp
 	jump_1e2c5:
-		mov    h_sprites,%edi
+		mov    EXPORT_SYMBOL(h_sprites),%edi
 		xor    %edx,%edx
 		mov    0x8(%ebx),%dx
 		lea    0x0(,%edx,4),%eax
 		add    %edx,%eax
-		mov    elements_ani,%ebx
+		mov    EXPORT_SYMBOL(elements_ani),%ebx
 		add    %eax,%eax
-		mov    elements_ani,%ebp
+		mov    EXPORT_SYMBOL(elements_ani),%ebp
 		add    %eax,%ebx
 		cmp    %ebp,%ebx
 		ja     jump_1e242
 	jump_1e2f2:
-		mov    %edi,h_sprites
+		mov    %edi,EXPORT_SYMBOL(h_sprites)
 		pop    %ebp
 		pop    %edi
 		pop    %esi
@@ -21281,7 +21282,7 @@ func_1fb07:
 		test   %si,%si
 		je     jump_1fb35
 		xor    %edx,%edx
-		mov    starts_ani,%eax
+		mov    EXPORT_SYMBOL(starts_ani),%eax
 		mov    %si,%dx
 		mov    (%eax,%edx,2),%ax
 		mov    %ax,0x10(%ebx)
@@ -27619,12 +27620,12 @@ clear_savegame:	/* 0x24fc0 */
 
 
 /*----------------------------------------------------------------*/
-GLOBAL_FUNC(free_map_level)	/* 0x24fe0 */
+GLOBAL_FUNC(ASM_free_map_level)	/* 0x24fe0 */
 /*----------------------------------------------------------------*/
-		push   $mission_load_files
+		push   $EXPORT_SYMBOL(mission_load_files)
 		call   ac_LbDataFreeAll
 		add    $0x4,%esp
-		push   $unkn1_empty_load_files
+		push   $EXPORT_SYMBOL(unkn1_empty_load_files)
 		call   ac_LbDataFreeAll
 		mov    EXPORT_SYMBOL(SoundAble),%ah
 		add    $0x4,%esp
@@ -27702,11 +27703,11 @@ init_level_data:	/* 0x25110 */
 		push   %edx
 		call   init_map_data
 		add    $0x4,%esp
-		mov    h_sprites_data,%ebx
+		mov    EXPORT_SYMBOL(h_sprites_data),%ebx
 		push   %ebx
-		mov    h_sprites_end,%ecx
+		mov    EXPORT_SYMBOL(h_sprites_end),%ecx
 		push   %ecx
-		mov    h_sprites,%esi
+		mov    EXPORT_SYMBOL(h_sprites),%esi
 		push   %esi
 		call   ac_LbSpriteSetup
 		add    $0xc,%esp
@@ -27875,13 +27876,13 @@ load_map_level:	/* 0x252b0 */
 		idiv   %ecx
 		add    $0x30,%eax
 		mov    %ebx,%edx
-		mov    %al,data_53f3c
+		mov    %al,EXPORT_SYMBOL(mission_load_files)+0x34 # mission_load_files[1].FName[8]
 		sar    $0x1f,%edx
 		mov    %ebx,%eax
 		idiv   %ecx
 		add    $0x30,%edx
-		push   $mission_load_files
-		mov    %dl,data_53f3d
+		push   $EXPORT_SYMBOL(mission_load_files)
+		mov    %dl,EXPORT_SYMBOL(mission_load_files)+0x35 # mission_load_files[1].FName[9]
 		call   ac_LbDataLoadAll
 		mov    EXPORT_SYMBOL(SoundAble),%dl
 		add    $0x4,%esp
@@ -27905,7 +27906,7 @@ load_map_level:	/* 0x252b0 */
 		jne    jump_253d5
 		movw   $0x1,EXPORT_SYMBOL(level__MapNumber)
 	jump_253d5:
-		push   $unkn1_empty_load_files
+		push   $EXPORT_SYMBOL(unkn1_empty_load_files)
 		call   ac_LbDataLoadAll
 		add    $0x4,%esp
 	jump_253e2:
@@ -28135,7 +28136,7 @@ GLOBAL_FUNC(multi_play)	/* 0x25580 */
 		movswl %si,%eax
 		push   %eax
 		push   $0x0
-		mov    h_font,%edx
+		mov    EXPORT_SYMBOL(h_font),%edx
 		push   %edx
 		movswl EXPORT_SYMBOL(Network__Slot),%eax
 		push   %eax
@@ -28171,7 +28172,7 @@ GLOBAL_FUNC(multi_play)	/* 0x25580 */
 		movswl %si,%eax
 		push   %eax
 		push   $0x8c
-		mov    h_font,%ebx
+		mov    EXPORT_SYMBOL(h_font),%ebx
 		push   %ebx
 		lea    0x10(%esp),%eax
 		push   %eax
@@ -33338,7 +33339,7 @@ animate_model:	/* 0x29290 */
 		mov    0x8(%esp),%edx
 		xor    %eax,%eax
 		mov    0x10(%edx),%ax
-		mov    frames,%ebx
+		mov    EXPORT_SYMBOL(frames),%ebx
 		lea    0x0(,%eax,8),%eax
 		add    %ebx,%eax
 		mov    0x6(%eax),%ax
@@ -37799,7 +37800,7 @@ func_2c1d4:
 		test   %si,%si
 		je     jump_2c223
 		xor    %eax,%eax
-		mov    starts_ani,%edx
+		mov    EXPORT_SYMBOL(starts_ani),%edx
 		mov    %si,%ax
 		mov    (%edx,%eax,2),%ax
 		mov    %ax,0x10(%ebx)
@@ -37824,7 +37825,7 @@ animate_panel:	/* 0x2c240 */
 		mov    0x8(%esp),%edx
 		xor    %eax,%eax
 		mov    0xc(%edx),%ax
-		mov    frames,%ebx
+		mov    EXPORT_SYMBOL(frames),%ebx
 		lea    0x0(,%eax,8),%eax
 		add    %ebx,%eax
 		mov    0x6(%eax),%ax
@@ -38730,7 +38731,7 @@ func_2cd0c:
 		push   %ecx
 		movswl data_55258(,%eax,2),%eax
 		push   %eax
-		mov    starts_ani,%eax
+		mov    EXPORT_SYMBOL(starts_ani),%eax
 		mov    0x242(%eax),%ax
 		jmp    jump_2d004
 
@@ -38743,7 +38744,7 @@ func_2cd3b:
 		push   %ecx
 		movswl data_55258(,%eax,2),%eax
 		push   %eax
-		mov    starts_ani,%eax
+		mov    EXPORT_SYMBOL(starts_ani),%eax
 		mov    0x24a(%eax),%ax
 		jmp    jump_2d004
 
@@ -38756,7 +38757,7 @@ func_2cd6a:
 		push   %ecx
 		movswl data_55258(,%eax,2),%eax
 		push   %eax
-		mov    starts_ani,%eax
+		mov    EXPORT_SYMBOL(starts_ani),%eax
 		mov    0x252(%eax),%ax
 		jmp    jump_2d004
 
@@ -38769,7 +38770,7 @@ func_2cd99:
 		push   %ecx
 		movswl data_55258(,%eax,2),%eax
 		push   %eax
-		mov    starts_ani,%eax
+		mov    EXPORT_SYMBOL(starts_ani),%eax
 		mov    0x25a(%eax),%ax
 		jmp    jump_2d004
 
@@ -38782,7 +38783,7 @@ func_2cdc8:
 		push   %ecx
 		movswl data_55258(,%eax,2),%eax
 		push   %eax
-		mov    starts_ani,%eax
+		mov    EXPORT_SYMBOL(starts_ani),%eax
 		mov    0x262(%eax),%ax
 		jmp    jump_2d004
 
@@ -38795,7 +38796,7 @@ func_2cdf7:
 		push   %ecx
 		movswl data_55258(,%eax,2),%eax
 		push   %eax
-		mov    starts_ani,%eax
+		mov    EXPORT_SYMBOL(starts_ani),%eax
 		mov    0x26a(%eax),%ax
 		jmp    jump_2d004
 
@@ -38808,7 +38809,7 @@ func_2ce26:
 		push   %ecx
 		movswl data_55258(,%eax,2),%eax
 		push   %eax
-		mov    starts_ani,%eax
+		mov    EXPORT_SYMBOL(starts_ani),%eax
 		mov    0x272(%eax),%ax
 		jmp    jump_2d004
 
@@ -38821,7 +38822,7 @@ func_2ce55:
 		push   %ecx
 		movswl data_55258(,%eax,2),%eax
 		push   %eax
-		mov    starts_ani,%eax
+		mov    EXPORT_SYMBOL(starts_ani),%eax
 		mov    0x27a(%eax),%ax
 		jmp    jump_2d004
 
@@ -38834,7 +38835,7 @@ func_2ce84:
 		push   %ecx
 		movswl data_55258(,%eax,2),%eax
 		push   %eax
-		mov    starts_ani,%eax
+		mov    EXPORT_SYMBOL(starts_ani),%eax
 		mov    0x282(%eax),%ax
 		jmp    jump_2d004
 
@@ -38847,7 +38848,7 @@ func_2ceb3:
 		push   %ecx
 		movswl data_55258(,%eax,2),%eax
 		push   %eax
-		mov    starts_ani,%eax
+		mov    EXPORT_SYMBOL(starts_ani),%eax
 		mov    0x28a(%eax),%ax
 		jmp    jump_2d004
 
@@ -38860,7 +38861,7 @@ func_2cee2:
 		push   %ecx
 		movswl data_55258(,%eax,2),%eax
 		push   %eax
-		mov    starts_ani,%eax
+		mov    EXPORT_SYMBOL(starts_ani),%eax
 		mov    0x292(%eax),%ax
 		jmp    jump_2d004
 
@@ -38873,7 +38874,7 @@ func_2cf11:
 		push   %ecx
 		movswl data_55258(,%eax,2),%eax
 		push   %eax
-		mov    starts_ani,%eax
+		mov    EXPORT_SYMBOL(starts_ani),%eax
 		mov    0x29a(%eax),%ax
 		and    $0xffff,%eax
 		push   %eax
@@ -38903,7 +38904,7 @@ func_2cf82:
 		push   %ecx
 		movswl data_55258(,%eax,2),%eax
 		push   %eax
-		mov    starts_ani,%eax
+		mov    EXPORT_SYMBOL(starts_ani),%eax
 		mov    0x2b2(%eax),%ax
 		jmp    jump_2d004
 
@@ -38916,7 +38917,7 @@ func_2cfae:
 		push   %ecx
 		movswl data_55258(,%eax,2),%eax
 		push   %eax
-		mov    starts_ani,%eax
+		mov    EXPORT_SYMBOL(starts_ani),%eax
 		mov    0x2ba(%eax),%ax
 		jmp    jump_2d004
 
@@ -38929,7 +38930,7 @@ func_2cfda:
 		push   %ecx
 		movswl data_55258(,%eax,2),%eax
 		push   %eax
-		mov    starts_ani,%eax
+		mov    EXPORT_SYMBOL(starts_ani),%eax
 		mov    0x2c2(%eax),%ax
 
 	jump_2d004:
@@ -40688,7 +40689,7 @@ func_2e4e4:
 		cmp    %si,%ax
 		je     jump_2e514
 		xor    %edx,%edx
-		mov    starts_ani,%ecx
+		mov    EXPORT_SYMBOL(starts_ani),%ecx
 		mov    %ax,%dx
 		mov    (%ecx,%edx,2),%dx
 		mov    %dx,0xc(%ebx)
@@ -57838,7 +57839,7 @@ func_39e60:
 		test   %si,%si
 		je     jump_39eaa
 		xor    %eax,%eax
-		mov    starts_ani,%edx
+		mov    EXPORT_SYMBOL(starts_ani),%edx
 		mov    %si,%ax
 		mov    (%edx,%eax,2),%ax
 		mov    %ax,0x10(%ebx)
@@ -59846,7 +59847,7 @@ func_3b41b:
 		xor    %eax,%eax
 		mov    %bx,%ax
 		lea    0x0(,%eax,2),%edx
-		mov    starts_ani,%eax
+		mov    EXPORT_SYMBOL(starts_ani),%eax
 		mov    (%edx,%eax,1),%ax
 		mov    %ax,0x10(%edi)
 		mov    %bx,0x12(%edi)
@@ -66732,7 +66733,7 @@ func_442fc:
 		cmp    $0x4,%ebx
 		jle    jump_4436c
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0xc(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4436c
@@ -66741,7 +66742,7 @@ func_442fc:
 		call   func_48a40
 	jump_44353:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_4512f
@@ -66760,7 +66761,7 @@ func_442fc:
 		cmp    $0x4,%ebx
 		jle    jump_443d2
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x4(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_443d2
@@ -66769,7 +66770,7 @@ func_442fc:
 		call   func_48a40
 	jump_443b9:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_4512f
@@ -66788,7 +66789,7 @@ func_442fc:
 		cmp    $0x4,%ebx
 		jle    jump_44438
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x14(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_44438
@@ -66797,7 +66798,7 @@ func_442fc:
 		call   func_48a40
 	jump_4441f:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_4512f
@@ -66816,7 +66817,7 @@ func_442fc:
 		cmp    $0x4,%ebx
 		jle    jump_4449d
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    (%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4449d
@@ -66825,7 +66826,7 @@ func_442fc:
 		call   func_48a40
 	jump_44484:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_4512f
@@ -66844,7 +66845,7 @@ func_442fc:
 		cmp    $0x4,%ebx
 		jle    jump_44503
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x10(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_44503
@@ -66853,7 +66854,7 @@ func_442fc:
 		call   func_48a40
 	jump_444ea:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_4512f
@@ -66872,7 +66873,7 @@ func_442fc:
 		cmp    $0x4,%ebx
 		jle    jump_44569
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x8(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_44569
@@ -66881,7 +66882,7 @@ func_442fc:
 		call   func_48a40
 	jump_44550:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_4512f
@@ -66900,7 +66901,7 @@ func_442fc:
 		cmp    $0x4,%ebx
 		jle    jump_445cf
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0xc(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_445cf
@@ -66909,7 +66910,7 @@ func_442fc:
 		call   func_48a40
 	jump_445b6:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_4512f
@@ -66928,7 +66929,7 @@ func_442fc:
 		cmp    $0x4,%ebx
 		jle    jump_44635
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x4(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_44635
@@ -66937,7 +66938,7 @@ func_442fc:
 		call   func_48a40
 	jump_4461c:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_4512f
@@ -66956,7 +66957,7 @@ func_442fc:
 		cmp    $0x4,%ebx
 		jle    jump_4469b
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x14(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4469b
@@ -66965,7 +66966,7 @@ func_442fc:
 		call   func_48a40
 	jump_44682:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_4512f
@@ -66984,7 +66985,7 @@ func_442fc:
 		cmp    $0x4,%ebx
 		jle    jump_44700
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    (%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_44700
@@ -66993,7 +66994,7 @@ func_442fc:
 		call   func_48a40
 	jump_446e7:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_4512f
@@ -67012,7 +67013,7 @@ func_442fc:
 		cmp    $0x4,%ebx
 		jle    jump_44766
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x10(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_44766
@@ -67021,7 +67022,7 @@ func_442fc:
 		call   func_48a40
 	jump_4474d:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_4512f
@@ -67040,7 +67041,7 @@ func_442fc:
 		cmp    $0x4,%ebx
 		jle    jump_447cc
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x8(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_447cc
@@ -67049,7 +67050,7 @@ func_442fc:
 		call   func_48a40
 	jump_447b3:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_4512f
@@ -67068,7 +67069,7 @@ func_442fc:
 		cmp    $0x4,%ebx
 		jle    jump_44832
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0xc(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_44832
@@ -67077,7 +67078,7 @@ func_442fc:
 		call   func_48a40
 	jump_44819:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_4512f
@@ -67096,7 +67097,7 @@ func_442fc:
 		cmp    $0x4,%ebx
 		jle    jump_44898
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x4(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_44898
@@ -67105,7 +67106,7 @@ func_442fc:
 		call   func_48a40
 	jump_4487f:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_4512f
@@ -67124,7 +67125,7 @@ func_442fc:
 		cmp    $0x4,%ebx
 		jle    jump_448fe
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x14(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_448fe
@@ -67133,7 +67134,7 @@ func_442fc:
 		call   func_48a40
 	jump_448e5:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_4512f
@@ -67152,7 +67153,7 @@ func_442fc:
 		cmp    $0x4,%ebx
 		jle    jump_44963
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    (%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_44963
@@ -67161,7 +67162,7 @@ func_442fc:
 		call   func_48a40
 	jump_4494a:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_4512f
@@ -67180,7 +67181,7 @@ func_442fc:
 		cmp    $0x4,%ebx
 		jle    jump_449c9
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x10(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_449c9
@@ -67189,7 +67190,7 @@ func_442fc:
 		call   func_48a40
 	jump_449b0:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_4512f
@@ -67208,7 +67209,7 @@ func_442fc:
 		cmp    $0x4,%ebx
 		jle    jump_44a2f
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x8(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_44a2f
@@ -67217,7 +67218,7 @@ func_442fc:
 		call   func_48a40
 	jump_44a16:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_4512f
@@ -67236,7 +67237,7 @@ func_442fc:
 		cmp    $0x4,%ebx
 		jle    jump_44a95
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0xc(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_44a95
@@ -67245,7 +67246,7 @@ func_442fc:
 		call   func_48a40
 	jump_44a7c:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_4512f
@@ -67264,7 +67265,7 @@ func_442fc:
 		cmp    $0x4,%ebx
 		jle    jump_44afb
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x4(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_44afb
@@ -67273,7 +67274,7 @@ func_442fc:
 		call   func_48a40
 	jump_44ae2:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_4512f
@@ -67292,7 +67293,7 @@ func_442fc:
 		cmp    $0x4,%ebx
 		jle    jump_44b61
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x14(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_44b61
@@ -67301,7 +67302,7 @@ func_442fc:
 		call   func_48a40
 	jump_44b48:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_4512f
@@ -67320,7 +67321,7 @@ func_442fc:
 		cmp    $0x4,%ebx
 		jle    jump_44bc6
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    (%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_44bc6
@@ -67329,7 +67330,7 @@ func_442fc:
 		call   func_48a40
 	jump_44bad:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_4512f
@@ -67348,7 +67349,7 @@ func_442fc:
 		cmp    $0x4,%ebx
 		jle    jump_44c2c
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x10(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_44c2c
@@ -67357,7 +67358,7 @@ func_442fc:
 		call   func_48a40
 	jump_44c13:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_4512f
@@ -67376,7 +67377,7 @@ func_442fc:
 		cmp    $0x4,%ebx
 		jle    jump_44c92
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x8(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_44c92
@@ -67385,7 +67386,7 @@ func_442fc:
 		call   func_48a40
 	jump_44c79:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_4512f
@@ -67404,7 +67405,7 @@ func_442fc:
 		cmp    $0x4,%ebx
 		jle    jump_44cf8
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0xc(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_44cf8
@@ -67413,7 +67414,7 @@ func_442fc:
 		call   func_48a40
 	jump_44cdf:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_4512f
@@ -67432,7 +67433,7 @@ func_442fc:
 		cmp    $0x4,%ebx
 		jle    jump_44d5e
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x4(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_44d5e
@@ -67441,7 +67442,7 @@ func_442fc:
 		call   func_48a40
 	jump_44d45:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_4512f
@@ -67460,7 +67461,7 @@ func_442fc:
 		cmp    $0x4,%ebx
 		jle    jump_44dc4
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x14(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_44dc4
@@ -67469,7 +67470,7 @@ func_442fc:
 		call   func_48a40
 	jump_44dab:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_4512f
@@ -67488,7 +67489,7 @@ func_442fc:
 		cmp    $0x4,%ebx
 		jle    jump_44e29
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    (%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_44e29
@@ -67497,7 +67498,7 @@ func_442fc:
 		call   func_48a40
 	jump_44e10:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_4512f
@@ -67516,7 +67517,7 @@ func_442fc:
 		cmp    $0x4,%ebx
 		jle    jump_44e8f
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x10(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_44e8f
@@ -67525,7 +67526,7 @@ func_442fc:
 		call   func_48a40
 	jump_44e76:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_4512f
@@ -67544,7 +67545,7 @@ func_442fc:
 		cmp    $0x4,%ebx
 		jle    jump_44eee
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x8(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_44eee
@@ -67553,7 +67554,7 @@ func_442fc:
 		call   func_48a40
 	jump_44ed5:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_4512f
@@ -67572,7 +67573,7 @@ func_442fc:
 		cmp    $0x4,%ebx
 		jle    jump_44f54
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0xc(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_44f54
@@ -67581,7 +67582,7 @@ func_442fc:
 		call   func_48a40
 	jump_44f3b:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_4512f
@@ -67600,7 +67601,7 @@ func_442fc:
 		cmp    $0x4,%ebx
 		jle    jump_44fb3
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x4(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_44fb3
@@ -67609,7 +67610,7 @@ func_442fc:
 		call   func_48a40
 	jump_44f9a:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_4512f
@@ -67628,7 +67629,7 @@ func_442fc:
 		cmp    $0x4,%ebx
 		jle    jump_45013
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x14(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_45013
@@ -67637,7 +67638,7 @@ func_442fc:
 		call   func_48a40
 	jump_44ffa:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_4512f
@@ -67656,7 +67657,7 @@ func_442fc:
 		cmp    $0x4,%ebx
 		jle    jump_45070
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    (%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_45070
@@ -67665,7 +67666,7 @@ func_442fc:
 		call   func_48a40
 	jump_45057:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_4512f
@@ -67684,7 +67685,7 @@ func_442fc:
 		cmp    $0x4,%ebx
 		jle    jump_450cb
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x10(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_450cb
@@ -67693,7 +67694,7 @@ func_442fc:
 		call   func_48a40
 	jump_450b6:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_4512f
@@ -67712,7 +67713,7 @@ func_442fc:
 		cmp    $0x4,%ebx
 		jle    jump_45128
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x8(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_45128
@@ -67721,7 +67722,7 @@ func_442fc:
 		call   func_48a40
 	jump_45113:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_4512f
@@ -67758,7 +67759,7 @@ func_45136:
 		cmp    $0x4,%ebx
 		jle    jump_451a5
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    (%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_451a5
@@ -67767,7 +67768,7 @@ func_45136:
 		call   func_48a40
 	jump_4518c:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_45f63
@@ -67786,7 +67787,7 @@ func_45136:
 		cmp    $0x4,%ebx
 		jle    jump_4520b
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x10(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4520b
@@ -67795,7 +67796,7 @@ func_45136:
 		call   func_48a40
 	jump_451f2:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_45f63
@@ -67814,7 +67815,7 @@ func_45136:
 		cmp    $0x4,%ebx
 		jle    jump_45271
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x8(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_45271
@@ -67823,7 +67824,7 @@ func_45136:
 		call   func_48a40
 	jump_45258:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_45f63
@@ -67842,7 +67843,7 @@ func_45136:
 		cmp    $0x4,%ebx
 		jle    jump_452d7
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0xc(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_452d7
@@ -67851,7 +67852,7 @@ func_45136:
 		call   func_48a40
 	jump_452be:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_45f63
@@ -67870,7 +67871,7 @@ func_45136:
 		cmp    $0x4,%ebx
 		jle    jump_4533d
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x4(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4533d
@@ -67879,7 +67880,7 @@ func_45136:
 		call   func_48a40
 	jump_45324:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_45f63
@@ -67898,7 +67899,7 @@ func_45136:
 		cmp    $0x4,%ebx
 		jle    jump_453a3
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x14(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_453a3
@@ -67907,7 +67908,7 @@ func_45136:
 		call   func_48a40
 	jump_4538a:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_45f63
@@ -67926,7 +67927,7 @@ func_45136:
 		cmp    $0x4,%ebx
 		jle    jump_45408
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    (%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_45408
@@ -67935,7 +67936,7 @@ func_45136:
 		call   func_48a40
 	jump_453ef:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_45f63
@@ -67954,7 +67955,7 @@ func_45136:
 		cmp    $0x4,%ebx
 		jle    jump_4546e
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x10(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4546e
@@ -67963,7 +67964,7 @@ func_45136:
 		call   func_48a40
 	jump_45455:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_45f63
@@ -67982,7 +67983,7 @@ func_45136:
 		cmp    $0x4,%ebx
 		jle    jump_454d4
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x8(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_454d4
@@ -67991,7 +67992,7 @@ func_45136:
 		call   func_48a40
 	jump_454bb:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_45f63
@@ -68010,7 +68011,7 @@ func_45136:
 		cmp    $0x4,%ebx
 		jle    jump_4553a
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0xc(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4553a
@@ -68019,7 +68020,7 @@ func_45136:
 		call   func_48a40
 	jump_45521:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_45f63
@@ -68038,7 +68039,7 @@ func_45136:
 		cmp    $0x4,%ebx
 		jle    jump_455a0
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x4(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_455a0
@@ -68047,7 +68048,7 @@ func_45136:
 		call   func_48a40
 	jump_45587:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_45f63
@@ -68066,7 +68067,7 @@ func_45136:
 		cmp    $0x4,%ebx
 		jle    jump_45606
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x14(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_45606
@@ -68075,7 +68076,7 @@ func_45136:
 		call   func_48a40
 	jump_455ed:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_45f63
@@ -68094,7 +68095,7 @@ func_45136:
 		cmp    $0x4,%ebx
 		jle    jump_4566b
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    (%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4566b
@@ -68103,7 +68104,7 @@ func_45136:
 		call   func_48a40
 	jump_45652:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_45f63
@@ -68122,7 +68123,7 @@ func_45136:
 		cmp    $0x4,%ebx
 		jle    jump_456d1
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x10(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_456d1
@@ -68131,7 +68132,7 @@ func_45136:
 		call   func_48a40
 	jump_456b8:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_45f63
@@ -68150,7 +68151,7 @@ func_45136:
 		cmp    $0x4,%ebx
 		jle    jump_45737
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x8(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_45737
@@ -68159,7 +68160,7 @@ func_45136:
 		call   func_48a40
 	jump_4571e:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_45f63
@@ -68178,7 +68179,7 @@ func_45136:
 		cmp    $0x4,%ebx
 		jle    jump_4579d
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0xc(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4579d
@@ -68187,7 +68188,7 @@ func_45136:
 		call   func_48a40
 	jump_45784:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_45f63
@@ -68206,7 +68207,7 @@ func_45136:
 		cmp    $0x4,%ebx
 		jle    jump_45803
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x4(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_45803
@@ -68215,7 +68216,7 @@ func_45136:
 		call   func_48a40
 	jump_457ea:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_45f63
@@ -68234,7 +68235,7 @@ func_45136:
 		cmp    $0x4,%ebx
 		jle    jump_45869
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x14(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_45869
@@ -68243,7 +68244,7 @@ func_45136:
 		call   func_48a40
 	jump_45850:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_45f63
@@ -68262,7 +68263,7 @@ func_45136:
 		cmp    $0x4,%ebx
 		jle    jump_458ce
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    (%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_458ce
@@ -68271,7 +68272,7 @@ func_45136:
 		call   func_48a40
 	jump_458b5:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_45f63
@@ -68290,7 +68291,7 @@ func_45136:
 		cmp    $0x4,%ebx
 		jle    jump_45934
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x10(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_45934
@@ -68299,7 +68300,7 @@ func_45136:
 		call   func_48a40
 	jump_4591b:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_45f63
@@ -68318,7 +68319,7 @@ func_45136:
 		cmp    $0x4,%ebx
 		jle    jump_4599a
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x8(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4599a
@@ -68327,7 +68328,7 @@ func_45136:
 		call   func_48a40
 	jump_45981:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_45f63
@@ -68346,7 +68347,7 @@ func_45136:
 		cmp    $0x4,%ebx
 		jle    jump_45a00
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0xc(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_45a00
@@ -68355,7 +68356,7 @@ func_45136:
 		call   func_48a40
 	jump_459e7:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_45f63
@@ -68374,7 +68375,7 @@ func_45136:
 		cmp    $0x4,%ebx
 		jle    jump_45a66
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x4(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_45a66
@@ -68383,7 +68384,7 @@ func_45136:
 		call   func_48a40
 	jump_45a4d:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_45f63
@@ -68402,7 +68403,7 @@ func_45136:
 		cmp    $0x4,%ebx
 		jle    jump_45acc
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x14(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_45acc
@@ -68411,7 +68412,7 @@ func_45136:
 		call   func_48a40
 	jump_45ab3:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_45f63
@@ -68430,7 +68431,7 @@ func_45136:
 		cmp    $0x4,%ebx
 		jle    jump_45b31
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    (%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_45b31
@@ -68439,7 +68440,7 @@ func_45136:
 		call   func_48a40
 	jump_45b18:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_45f63
@@ -68458,7 +68459,7 @@ func_45136:
 		cmp    $0x4,%ebx
 		jle    jump_45b97
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x10(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_45b97
@@ -68467,7 +68468,7 @@ func_45136:
 		call   func_48a40
 	jump_45b7e:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_45f63
@@ -68486,7 +68487,7 @@ func_45136:
 		cmp    $0x4,%ebx
 		jle    jump_45bf7
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x8(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_45bf7
@@ -68495,7 +68496,7 @@ func_45136:
 		call   func_48a40
 	jump_45bde:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_45f63
@@ -68514,7 +68515,7 @@ func_45136:
 		cmp    $0x4,%ebx
 		jle    jump_45c5d
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0xc(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_45c5d
@@ -68523,7 +68524,7 @@ func_45136:
 		call   func_48a40
 	jump_45c44:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_45f63
@@ -68542,7 +68543,7 @@ func_45136:
 		cmp    $0x4,%ebx
 		jle    jump_45cbd
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x4(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_45cbd
@@ -68551,7 +68552,7 @@ func_45136:
 		call   func_48a40
 	jump_45ca4:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_45f63
@@ -68570,7 +68571,7 @@ func_45136:
 		cmp    $0x4,%ebx
 		jle    jump_45d1c
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x14(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_45d1c
@@ -68579,7 +68580,7 @@ func_45136:
 		call   func_48a40
 	jump_45d03:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_45f63
@@ -68598,7 +68599,7 @@ func_45136:
 		cmp    $0x4,%ebx
 		jle    jump_45d7b
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    (%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_45d7b
@@ -68607,7 +68608,7 @@ func_45136:
 		call   func_48a40
 	jump_45d62:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_45f63
@@ -68626,7 +68627,7 @@ func_45136:
 		cmp    $0x4,%ebx
 		jle    jump_45dda
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x10(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_45dda
@@ -68635,7 +68636,7 @@ func_45136:
 		call   func_48a40
 	jump_45dc1:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_45f63
@@ -68654,7 +68655,7 @@ func_45136:
 		cmp    $0x4,%ebx
 		jle    jump_45e40
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x8(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_45e40
@@ -68663,7 +68664,7 @@ func_45136:
 		call   func_48a40
 	jump_45e27:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_45f63
@@ -68682,7 +68683,7 @@ func_45136:
 		cmp    $0x4,%ebx
 		jle    jump_45e9e
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0xc(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_45e9e
@@ -68691,7 +68692,7 @@ func_45136:
 		call   func_48a40
 	jump_45e85:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_45f63
@@ -68710,7 +68711,7 @@ func_45136:
 		cmp    $0x4,%ebx
 		jle    jump_45eff
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x4(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_45eff
@@ -68719,7 +68720,7 @@ func_45136:
 		call   func_48a40
 	jump_45eea:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_45f63
@@ -68738,7 +68739,7 @@ func_45136:
 		cmp    $0x4,%ebx
 		jle    jump_45f5c
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x14(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_45f5c
@@ -68747,7 +68748,7 @@ func_45136:
 		call   func_48a40
 	jump_45f47:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_45f63
@@ -68784,7 +68785,7 @@ func_45f6a:
 		cmp    $0x4,%ebx
 		jle    jump_45ff2
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0xc(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_45ff2
@@ -68799,7 +68800,7 @@ func_45f6a:
 		call   func_48a40
 	jump_45fd9:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_470ee
@@ -68818,7 +68819,7 @@ func_45f6a:
 		cmp    $0x4,%ebx
 		jle    jump_46070
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x4(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_46070
@@ -68833,7 +68834,7 @@ func_45f6a:
 		call   func_48a40
 	jump_46057:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_470ee
@@ -68852,7 +68853,7 @@ func_45f6a:
 		cmp    $0x4,%ebx
 		jle    jump_460ee
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x14(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_460ee
@@ -68867,7 +68868,7 @@ func_45f6a:
 		call   func_48a40
 	jump_460d5:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_470ee
@@ -68886,7 +68887,7 @@ func_45f6a:
 		cmp    $0x4,%ebx
 		jle    jump_4616b
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    (%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4616b
@@ -68901,7 +68902,7 @@ func_45f6a:
 		call   func_48a40
 	jump_46152:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_470ee
@@ -68920,7 +68921,7 @@ func_45f6a:
 		cmp    $0x4,%ebx
 		jle    jump_461e9
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x10(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_461e9
@@ -68935,7 +68936,7 @@ func_45f6a:
 		call   func_48a40
 	jump_461d0:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_470ee
@@ -68954,7 +68955,7 @@ func_45f6a:
 		cmp    $0x4,%ebx
 		jle    jump_46267
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x8(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_46267
@@ -68969,7 +68970,7 @@ func_45f6a:
 		call   func_48a40
 	jump_4624e:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_470ee
@@ -68988,7 +68989,7 @@ func_45f6a:
 		cmp    $0x4,%ebx
 		jle    jump_462e5
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0xc(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_462e5
@@ -69003,7 +69004,7 @@ func_45f6a:
 		call   func_48a40
 	jump_462cc:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_470ee
@@ -69022,7 +69023,7 @@ func_45f6a:
 		cmp    $0x4,%ebx
 		jle    jump_46363
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x4(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_46363
@@ -69037,7 +69038,7 @@ func_45f6a:
 		call   func_48a40
 	jump_4634a:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_470ee
@@ -69056,7 +69057,7 @@ func_45f6a:
 		cmp    $0x4,%ebx
 		jle    jump_463e1
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x14(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_463e1
@@ -69071,7 +69072,7 @@ func_45f6a:
 		call   func_48a40
 	jump_463c8:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_470ee
@@ -69090,7 +69091,7 @@ func_45f6a:
 		cmp    $0x4,%ebx
 		jle    jump_4645e
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    (%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4645e
@@ -69105,7 +69106,7 @@ func_45f6a:
 		call   func_48a40
 	jump_46445:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_470ee
@@ -69124,7 +69125,7 @@ func_45f6a:
 		cmp    $0x4,%ebx
 		jle    jump_464dc
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x10(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_464dc
@@ -69139,7 +69140,7 @@ func_45f6a:
 		call   func_48a40
 	jump_464c3:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_470ee
@@ -69158,7 +69159,7 @@ func_45f6a:
 		cmp    $0x4,%ebx
 		jle    jump_4655a
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x8(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4655a
@@ -69173,7 +69174,7 @@ func_45f6a:
 		call   func_48a40
 	jump_46541:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_470ee
@@ -69192,7 +69193,7 @@ func_45f6a:
 		cmp    $0x4,%ebx
 		jle    jump_465d8
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0xc(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_465d8
@@ -69207,7 +69208,7 @@ func_45f6a:
 		call   func_48a40
 	jump_465bf:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_470ee
@@ -69226,7 +69227,7 @@ func_45f6a:
 		cmp    $0x4,%ebx
 		jle    jump_46656
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x4(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_46656
@@ -69241,7 +69242,7 @@ func_45f6a:
 		call   func_48a40
 	jump_4663d:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_470ee
@@ -69260,7 +69261,7 @@ func_45f6a:
 		cmp    $0x4,%ebx
 		jle    jump_466d4
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x14(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_466d4
@@ -69275,7 +69276,7 @@ func_45f6a:
 		call   func_48a40
 	jump_466bb:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_470ee
@@ -69294,7 +69295,7 @@ func_45f6a:
 		cmp    $0x4,%ebx
 		jle    jump_46751
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    (%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_46751
@@ -69309,7 +69310,7 @@ func_45f6a:
 		call   func_48a40
 	jump_46738:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_470ee
@@ -69328,7 +69329,7 @@ func_45f6a:
 		cmp    $0x4,%ebx
 		jle    jump_467cf
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x10(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_467cf
@@ -69343,7 +69344,7 @@ func_45f6a:
 		call   func_48a40
 	jump_467b6:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_470ee
@@ -69362,7 +69363,7 @@ func_45f6a:
 		cmp    $0x4,%ebx
 		jle    jump_4684d
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x8(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4684d
@@ -69377,7 +69378,7 @@ func_45f6a:
 		call   func_48a40
 	jump_46834:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_470ee
@@ -69396,7 +69397,7 @@ func_45f6a:
 		cmp    $0x4,%ebx
 		jle    jump_468cb
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0xc(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_468cb
@@ -69411,7 +69412,7 @@ func_45f6a:
 		call   func_48a40
 	jump_468b2:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_470ee
@@ -69430,7 +69431,7 @@ func_45f6a:
 		cmp    $0x4,%ebx
 		jle    jump_46949
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x4(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_46949
@@ -69445,7 +69446,7 @@ func_45f6a:
 		call   func_48a40
 	jump_46930:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_470ee
@@ -69464,7 +69465,7 @@ func_45f6a:
 		cmp    $0x4,%ebx
 		jle    jump_469c7
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x14(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_469c7
@@ -69479,7 +69480,7 @@ func_45f6a:
 		call   func_48a40
 	jump_469ae:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_470ee
@@ -69498,7 +69499,7 @@ func_45f6a:
 		cmp    $0x4,%ebx
 		jle    jump_46a44
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    (%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_46a44
@@ -69513,7 +69514,7 @@ func_45f6a:
 		call   func_48a40
 	jump_46a2b:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_470ee
@@ -69532,7 +69533,7 @@ func_45f6a:
 		cmp    $0x4,%ebx
 		jle    jump_46ac2
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x10(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_46ac2
@@ -69547,7 +69548,7 @@ func_45f6a:
 		call   func_48a40
 	jump_46aa9:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_470ee
@@ -69566,7 +69567,7 @@ func_45f6a:
 		cmp    $0x4,%ebx
 		jle    jump_46b40
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x8(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_46b40
@@ -69581,7 +69582,7 @@ func_45f6a:
 		call   func_48a40
 	jump_46b27:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_470ee
@@ -69600,7 +69601,7 @@ func_45f6a:
 		cmp    $0x4,%ebx
 		jle    jump_46bbe
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0xc(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_46bbe
@@ -69615,7 +69616,7 @@ func_45f6a:
 		call   func_48a40
 	jump_46ba5:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_470ee
@@ -69634,7 +69635,7 @@ func_45f6a:
 		cmp    $0x4,%ebx
 		jle    jump_46c3c
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x4(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_46c3c
@@ -69649,7 +69650,7 @@ func_45f6a:
 		call   func_48a40
 	jump_46c23:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_470ee
@@ -69668,7 +69669,7 @@ func_45f6a:
 		cmp    $0x4,%ebx
 		jle    jump_46cba
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x14(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_46cba
@@ -69683,7 +69684,7 @@ func_45f6a:
 		call   func_48a40
 	jump_46ca1:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_470ee
@@ -69702,7 +69703,7 @@ func_45f6a:
 		cmp    $0x4,%ebx
 		jle    jump_46d37
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    (%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_46d37
@@ -69717,7 +69718,7 @@ func_45f6a:
 		call   func_48a40
 	jump_46d1e:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_470ee
@@ -69736,7 +69737,7 @@ func_45f6a:
 		cmp    $0x4,%ebx
 		jle    jump_46db5
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x10(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_46db5
@@ -69751,7 +69752,7 @@ func_45f6a:
 		call   func_48a40
 	jump_46d9c:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_470ee
@@ -69770,7 +69771,7 @@ func_45f6a:
 		cmp    $0x4,%ebx
 		jle    jump_46e29
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x8(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_46e29
@@ -69785,7 +69786,7 @@ func_45f6a:
 		call   func_48a40
 	jump_46e10:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_470ee
@@ -69804,7 +69805,7 @@ func_45f6a:
 		cmp    $0x4,%ebx
 		jle    jump_46ea7
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0xc(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_46ea7
@@ -69819,7 +69820,7 @@ func_45f6a:
 		call   func_48a40
 	jump_46e8e:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_470ee
@@ -69838,7 +69839,7 @@ func_45f6a:
 		cmp    $0x4,%ebx
 		jle    jump_46f1b
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x4(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_46f1b
@@ -69853,7 +69854,7 @@ func_45f6a:
 		call   func_48a40
 	jump_46f02:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_470ee
@@ -69872,7 +69873,7 @@ func_45f6a:
 		cmp    $0x4,%ebx
 		jle    jump_46f90
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x14(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_46f90
@@ -69887,7 +69888,7 @@ func_45f6a:
 		call   func_48a40
 	jump_46f77:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_470ee
@@ -69906,7 +69907,7 @@ func_45f6a:
 		cmp    $0x4,%ebx
 		jle    jump_47002
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    (%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_47002
@@ -69921,7 +69922,7 @@ func_45f6a:
 		call   func_48a40
 	jump_46fe9:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_470ee
@@ -69940,7 +69941,7 @@ func_45f6a:
 		cmp    $0x4,%ebx
 		jle    jump_47072
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x10(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_47072
@@ -69955,7 +69956,7 @@ func_45f6a:
 		call   func_48a40
 	jump_4705d:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_470ee
@@ -69974,7 +69975,7 @@ func_45f6a:
 		cmp    $0x4,%ebx
 		jle    jump_470e7
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x8(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_470e7
@@ -69989,7 +69990,7 @@ func_45f6a:
 		call   func_48a40
 	jump_470d2:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_470ee
@@ -70026,7 +70027,7 @@ func_470f5:
 		cmp    $0x4,%ebx
 		jle    jump_4717c
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    (%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4717c
@@ -70041,7 +70042,7 @@ func_470f5:
 		call   func_48a40
 	jump_47163:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_48270
@@ -70060,7 +70061,7 @@ func_470f5:
 		cmp    $0x4,%ebx
 		jle    jump_471fa
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x10(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_471fa
@@ -70075,7 +70076,7 @@ func_470f5:
 		call   func_48a40
 	jump_471e1:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_48270
@@ -70094,7 +70095,7 @@ func_470f5:
 		cmp    $0x4,%ebx
 		jle    jump_47278
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x8(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_47278
@@ -70109,7 +70110,7 @@ func_470f5:
 		call   func_48a40
 	jump_4725f:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_48270
@@ -70128,7 +70129,7 @@ func_470f5:
 		cmp    $0x4,%ebx
 		jle    jump_472f6
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0xc(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_472f6
@@ -70143,7 +70144,7 @@ func_470f5:
 		call   func_48a40
 	jump_472dd:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_48270
@@ -70162,7 +70163,7 @@ func_470f5:
 		cmp    $0x4,%ebx
 		jle    jump_47374
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x4(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_47374
@@ -70177,7 +70178,7 @@ func_470f5:
 		call   func_48a40
 	jump_4735b:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_48270
@@ -70196,7 +70197,7 @@ func_470f5:
 		cmp    $0x4,%ebx
 		jle    jump_473f2
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x14(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_473f2
@@ -70211,7 +70212,7 @@ func_470f5:
 		call   func_48a40
 	jump_473d9:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_48270
@@ -70230,7 +70231,7 @@ func_470f5:
 		cmp    $0x4,%ebx
 		jle    jump_4746f
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    (%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4746f
@@ -70245,7 +70246,7 @@ func_470f5:
 		call   func_48a40
 	jump_47456:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_48270
@@ -70264,7 +70265,7 @@ func_470f5:
 		cmp    $0x4,%ebx
 		jle    jump_474ed
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x10(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_474ed
@@ -70279,7 +70280,7 @@ func_470f5:
 		call   func_48a40
 	jump_474d4:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_48270
@@ -70298,7 +70299,7 @@ func_470f5:
 		cmp    $0x4,%ebx
 		jle    jump_4756b
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x8(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4756b
@@ -70313,7 +70314,7 @@ func_470f5:
 		call   func_48a40
 	jump_47552:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_48270
@@ -70332,7 +70333,7 @@ func_470f5:
 		cmp    $0x4,%ebx
 		jle    jump_475e9
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0xc(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_475e9
@@ -70347,7 +70348,7 @@ func_470f5:
 		call   func_48a40
 	jump_475d0:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_48270
@@ -70366,7 +70367,7 @@ func_470f5:
 		cmp    $0x4,%ebx
 		jle    jump_47667
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x4(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_47667
@@ -70381,7 +70382,7 @@ func_470f5:
 		call   func_48a40
 	jump_4764e:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_48270
@@ -70400,7 +70401,7 @@ func_470f5:
 		cmp    $0x4,%ebx
 		jle    jump_476e5
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x14(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_476e5
@@ -70415,7 +70416,7 @@ func_470f5:
 		call   func_48a40
 	jump_476cc:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_48270
@@ -70434,7 +70435,7 @@ func_470f5:
 		cmp    $0x4,%ebx
 		jle    jump_47762
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    (%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_47762
@@ -70449,7 +70450,7 @@ func_470f5:
 		call   func_48a40
 	jump_47749:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_48270
@@ -70468,7 +70469,7 @@ func_470f5:
 		cmp    $0x4,%ebx
 		jle    jump_477e0
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x10(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_477e0
@@ -70483,7 +70484,7 @@ func_470f5:
 		call   func_48a40
 	jump_477c7:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_48270
@@ -70502,7 +70503,7 @@ func_470f5:
 		cmp    $0x4,%ebx
 		jle    jump_4785e
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x8(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4785e
@@ -70517,7 +70518,7 @@ func_470f5:
 		call   func_48a40
 	jump_47845:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_48270
@@ -70536,7 +70537,7 @@ func_470f5:
 		cmp    $0x4,%ebx
 		jle    jump_478dc
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0xc(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_478dc
@@ -70551,7 +70552,7 @@ func_470f5:
 		call   func_48a40
 	jump_478c3:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_48270
@@ -70570,7 +70571,7 @@ func_470f5:
 		cmp    $0x4,%ebx
 		jle    jump_4795a
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x4(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4795a
@@ -70585,7 +70586,7 @@ func_470f5:
 		call   func_48a40
 	jump_47941:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_48270
@@ -70604,7 +70605,7 @@ func_470f5:
 		cmp    $0x4,%ebx
 		jle    jump_479d8
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x14(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_479d8
@@ -70619,7 +70620,7 @@ func_470f5:
 		call   func_48a40
 	jump_479bf:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_48270
@@ -70638,7 +70639,7 @@ func_470f5:
 		cmp    $0x4,%ebx
 		jle    jump_47a55
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    (%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_47a55
@@ -70653,7 +70654,7 @@ func_470f5:
 		call   func_48a40
 	jump_47a3c:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_48270
@@ -70672,7 +70673,7 @@ func_470f5:
 		cmp    $0x4,%ebx
 		jle    jump_47ad3
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x10(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_47ad3
@@ -70687,7 +70688,7 @@ func_470f5:
 		call   func_48a40
 	jump_47aba:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_48270
@@ -70706,7 +70707,7 @@ func_470f5:
 		cmp    $0x4,%ebx
 		jle    jump_47b51
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x8(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_47b51
@@ -70721,7 +70722,7 @@ func_470f5:
 		call   func_48a40
 	jump_47b38:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_48270
@@ -70740,7 +70741,7 @@ func_470f5:
 		cmp    $0x4,%ebx
 		jle    jump_47bcf
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0xc(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_47bcf
@@ -70755,7 +70756,7 @@ func_470f5:
 		call   func_48a40
 	jump_47bb6:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_48270
@@ -70774,7 +70775,7 @@ func_470f5:
 		cmp    $0x4,%ebx
 		jle    jump_47c4d
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x4(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_47c4d
@@ -70789,7 +70790,7 @@ func_470f5:
 		call   func_48a40
 	jump_47c34:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_48270
@@ -70808,7 +70809,7 @@ func_470f5:
 		cmp    $0x4,%ebx
 		jle    jump_47ccb
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x14(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_47ccb
@@ -70823,7 +70824,7 @@ func_470f5:
 		call   func_48a40
 	jump_47cb2:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_48270
@@ -70842,7 +70843,7 @@ func_470f5:
 		cmp    $0x4,%ebx
 		jle    jump_47d48
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    (%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_47d48
@@ -70857,7 +70858,7 @@ func_470f5:
 		call   func_48a40
 	jump_47d2f:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_48270
@@ -70876,7 +70877,7 @@ func_470f5:
 		cmp    $0x4,%ebx
 		jle    jump_47dc6
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x10(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_47dc6
@@ -70891,7 +70892,7 @@ func_470f5:
 		call   func_48a40
 	jump_47dad:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_48270
@@ -70910,7 +70911,7 @@ func_470f5:
 		cmp    $0x4,%ebx
 		jle    jump_47e3b
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x8(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_47e3b
@@ -70925,7 +70926,7 @@ func_470f5:
 		call   func_48a40
 	jump_47e22:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_48270
@@ -70944,7 +70945,7 @@ func_470f5:
 		cmp    $0x4,%ebx
 		jle    jump_47eb9
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0xc(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_47eb9
@@ -70959,7 +70960,7 @@ func_470f5:
 		call   func_48a40
 	jump_47ea0:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_48270
@@ -70978,7 +70979,7 @@ func_470f5:
 		cmp    $0x4,%ebx
 		jle    jump_47f2e
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x4(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_47f2e
@@ -70993,7 +70994,7 @@ func_470f5:
 		call   func_48a40
 	jump_47f15:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_48270
@@ -71012,7 +71013,7 @@ func_470f5:
 		cmp    $0x4,%ebx
 		jle    jump_47fa2
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x14(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_47fa2
@@ -71027,7 +71028,7 @@ func_470f5:
 		call   func_48a40
 	jump_47f89:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_48270
@@ -71046,7 +71047,7 @@ func_470f5:
 		cmp    $0x4,%ebx
 		jle    jump_48016
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    (%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_48016
@@ -71061,7 +71062,7 @@ func_470f5:
 		call   func_48a40
 	jump_47ffd:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_48270
@@ -71080,7 +71081,7 @@ func_470f5:
 		cmp    $0x4,%ebx
 		jle    jump_4808a
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x10(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4808a
@@ -71095,7 +71096,7 @@ func_470f5:
 		call   func_48a40
 	jump_48071:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_48270
@@ -71114,7 +71115,7 @@ func_470f5:
 		cmp    $0x4,%ebx
 		jle    jump_48108
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x8(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_48108
@@ -71129,7 +71130,7 @@ func_470f5:
 		call   func_48a40
 	jump_480ef:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_48270
@@ -71148,7 +71149,7 @@ func_470f5:
 		cmp    $0x4,%ebx
 		jle    jump_4817b
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0xc(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4817b
@@ -71163,7 +71164,7 @@ func_470f5:
 		call   func_48a40
 	jump_48162:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_48270
@@ -71182,7 +71183,7 @@ func_470f5:
 		cmp    $0x4,%ebx
 		jle    jump_481f4
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x4(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_481f4
@@ -71197,7 +71198,7 @@ func_470f5:
 		call   func_48a40
 	jump_481df:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_48270
@@ -71216,7 +71217,7 @@ func_470f5:
 		cmp    $0x4,%ebx
 		jle    jump_48269
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x14(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_48269
@@ -71231,7 +71232,7 @@ func_470f5:
 		call   func_48a40
 	jump_48254:
 		addb   $0x1,-0x1(%ebp)
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		call   func_44164
 		cmp    $0x0,%cx
 		jle    jump_48270
@@ -71622,11 +71623,11 @@ func_48b60:
 		cmp    $0x4,%ebx
 		jle    jump_48bb7
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0xc(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_48bb7
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x8,data_5e39c(%ebx)
@@ -71644,11 +71645,11 @@ func_48b60:
 		cmp    $0x4,%ebx
 		jle    jump_48c0d
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0x4(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_48c0d
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x2,data_5e39c(%ebx)
@@ -71666,11 +71667,11 @@ func_48b60:
 		cmp    $0x4,%ebx
 		jle    jump_48c63
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0x14(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_48c63
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x20,data_5e39c(%ebx)
@@ -71688,11 +71689,11 @@ func_48b60:
 		cmp    $0x4,%ebx
 		jle    jump_48cb8
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    (%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_48cb8
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x1,data_5e39c(%ebx)
@@ -71710,11 +71711,11 @@ func_48b60:
 		cmp    $0x4,%ebx
 		jle    jump_48d0e
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0x10(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_48d0e
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x10,data_5e39c(%ebx)
@@ -71732,11 +71733,11 @@ func_48b60:
 		cmp    $0x4,%ebx
 		jle    jump_48d64
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0x8(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_48d64
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x4,data_5e39c(%ebx)
@@ -71754,11 +71755,11 @@ func_48b60:
 		cmp    $0x4,%ebx
 		jle    jump_48dba
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0xc(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_48dba
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x8,data_5e39c(%ebx)
@@ -71776,11 +71777,11 @@ func_48b60:
 		cmp    $0x4,%ebx
 		jle    jump_48e10
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0x4(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_48e10
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x2,data_5e39c(%ebx)
@@ -71798,11 +71799,11 @@ func_48b60:
 		cmp    $0x4,%ebx
 		jle    jump_48e66
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0x14(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_48e66
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x20,data_5e39c(%ebx)
@@ -71820,11 +71821,11 @@ func_48b60:
 		cmp    $0x4,%ebx
 		jle    jump_48ebb
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    (%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_48ebb
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x1,data_5e39c(%ebx)
@@ -71842,11 +71843,11 @@ func_48b60:
 		cmp    $0x4,%ebx
 		jle    jump_48f11
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0x10(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_48f11
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x10,data_5e39c(%ebx)
@@ -71864,11 +71865,11 @@ func_48b60:
 		cmp    $0x4,%ebx
 		jle    jump_48f67
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0x8(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_48f67
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x4,data_5e39c(%ebx)
@@ -71886,11 +71887,11 @@ func_48b60:
 		cmp    $0x4,%ebx
 		jle    jump_48fbd
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0xc(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_48fbd
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x8,data_5e39c(%ebx)
@@ -71908,11 +71909,11 @@ func_48b60:
 		cmp    $0x4,%ebx
 		jle    jump_49013
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0x4(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_49013
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x2,data_5e39c(%ebx)
@@ -71930,11 +71931,11 @@ func_48b60:
 		cmp    $0x4,%ebx
 		jle    jump_49069
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0x14(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_49069
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x20,data_5e39c(%ebx)
@@ -71952,11 +71953,11 @@ func_48b60:
 		cmp    $0x4,%ebx
 		jle    jump_490be
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    (%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_490be
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x1,data_5e39c(%ebx)
@@ -71974,11 +71975,11 @@ func_48b60:
 		cmp    $0x4,%ebx
 		jle    jump_49114
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0x10(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_49114
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x10,data_5e39c(%ebx)
@@ -71996,11 +71997,11 @@ func_48b60:
 		cmp    $0x4,%ebx
 		jle    jump_4916a
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0x8(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_4916a
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x4,data_5e39c(%ebx)
@@ -72018,11 +72019,11 @@ func_48b60:
 		cmp    $0x4,%ebx
 		jle    jump_491c0
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0xc(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_491c0
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x8,data_5e39c(%ebx)
@@ -72040,11 +72041,11 @@ func_48b60:
 		cmp    $0x4,%ebx
 		jle    jump_49216
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0x4(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_49216
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x2,data_5e39c(%ebx)
@@ -72062,11 +72063,11 @@ func_48b60:
 		cmp    $0x4,%ebx
 		jle    jump_4926c
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0x14(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_4926c
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x20,data_5e39c(%ebx)
@@ -72084,11 +72085,11 @@ func_48b60:
 		cmp    $0x4,%ebx
 		jle    jump_492c1
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    (%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_492c1
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x1,data_5e39c(%ebx)
@@ -72106,11 +72107,11 @@ func_48b60:
 		cmp    $0x4,%ebx
 		jle    jump_49317
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0x10(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_49317
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x10,data_5e39c(%ebx)
@@ -72128,11 +72129,11 @@ func_48b60:
 		cmp    $0x4,%ebx
 		jle    jump_4936d
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0x8(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_4936d
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x4,data_5e39c(%ebx)
@@ -72150,11 +72151,11 @@ func_48b60:
 		cmp    $0x4,%ebx
 		jle    jump_493c3
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0xc(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_493c3
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x8,data_5e39c(%ebx)
@@ -72172,11 +72173,11 @@ func_48b60:
 		cmp    $0x4,%ebx
 		jle    jump_49419
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0x4(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_49419
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x2,data_5e39c(%ebx)
@@ -72194,11 +72195,11 @@ func_48b60:
 		cmp    $0x4,%ebx
 		jle    jump_4946f
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0x14(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_4946f
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x20,data_5e39c(%ebx)
@@ -72216,11 +72217,11 @@ func_48b60:
 		cmp    $0x4,%ebx
 		jle    jump_494c4
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    (%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_494c4
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x1,data_5e39c(%ebx)
@@ -72238,11 +72239,11 @@ func_48b60:
 		cmp    $0x4,%ebx
 		jle    jump_4951a
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0x10(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_4951a
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x10,data_5e39c(%ebx)
@@ -72260,11 +72261,11 @@ func_48b60:
 		cmp    $0x4,%ebx
 		jle    jump_49569
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0x8(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_49569
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x4,data_5e39c(%ebx)
@@ -72282,11 +72283,11 @@ func_48b60:
 		cmp    $0x4,%ebx
 		jle    jump_495bf
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0xc(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_495bf
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x8,data_5e39c(%ebx)
@@ -72304,11 +72305,11 @@ func_48b60:
 		cmp    $0x4,%ebx
 		jle    jump_4960e
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0x4(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_4960e
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x2,data_5e39c(%ebx)
@@ -72326,11 +72327,11 @@ func_48b60:
 		cmp    $0x4,%ebx
 		jle    jump_4965e
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0x14(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_4965e
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x20,data_5e39c(%ebx)
@@ -72348,11 +72349,11 @@ func_48b60:
 		cmp    $0x4,%ebx
 		jle    jump_496ab
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    (%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_496ab
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x1,data_5e39c(%ebx)
@@ -72370,11 +72371,11 @@ func_48b60:
 		cmp    $0x4,%ebx
 		jle    jump_496f6
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0x10(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_496f6
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x10,data_5e39c(%ebx)
@@ -72392,11 +72393,11 @@ func_48b60:
 		cmp    $0x4,%ebx
 		jle    jump_49747
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0x8(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_49747
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x4,data_5e39c(%ebx)
@@ -72423,11 +72424,11 @@ func_4974e:
 		cmp    $0x4,%ebx
 		jle    jump_497a4
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    (%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_497a4
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x1,data_5e39c(%ebx)
@@ -72445,11 +72446,11 @@ func_4974e:
 		cmp    $0x4,%ebx
 		jle    jump_497fa
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0x10(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_497fa
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x10,data_5e39c(%ebx)
@@ -72467,11 +72468,11 @@ func_4974e:
 		cmp    $0x4,%ebx
 		jle    jump_49850
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0x8(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_49850
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x4,data_5e39c(%ebx)
@@ -72489,11 +72490,11 @@ func_4974e:
 		cmp    $0x4,%ebx
 		jle    jump_498a6
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0xc(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_498a6
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x8,data_5e39c(%ebx)
@@ -72511,11 +72512,11 @@ func_4974e:
 		cmp    $0x4,%ebx
 		jle    jump_498fc
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0x4(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_498fc
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x2,data_5e39c(%ebx)
@@ -72533,11 +72534,11 @@ func_4974e:
 		cmp    $0x4,%ebx
 		jle    jump_49952
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0x14(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_49952
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x20,data_5e39c(%ebx)
@@ -72555,11 +72556,11 @@ func_4974e:
 		cmp    $0x4,%ebx
 		jle    jump_499a7
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    (%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_499a7
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x1,data_5e39c(%ebx)
@@ -72577,11 +72578,11 @@ func_4974e:
 		cmp    $0x4,%ebx
 		jle    jump_499fd
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0x10(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_499fd
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x10,data_5e39c(%ebx)
@@ -72599,11 +72600,11 @@ func_4974e:
 		cmp    $0x4,%ebx
 		jle    jump_49a53
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0x8(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_49a53
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x4,data_5e39c(%ebx)
@@ -72621,11 +72622,11 @@ func_4974e:
 		cmp    $0x4,%ebx
 		jle    jump_49aa9
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0xc(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_49aa9
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x8,data_5e39c(%ebx)
@@ -72643,11 +72644,11 @@ func_4974e:
 		cmp    $0x4,%ebx
 		jle    jump_49aff
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0x4(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_49aff
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x2,data_5e39c(%ebx)
@@ -72665,11 +72666,11 @@ func_4974e:
 		cmp    $0x4,%ebx
 		jle    jump_49b55
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0x14(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_49b55
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x20,data_5e39c(%ebx)
@@ -72687,11 +72688,11 @@ func_4974e:
 		cmp    $0x4,%ebx
 		jle    jump_49baa
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    (%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_49baa
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x1,data_5e39c(%ebx)
@@ -72709,11 +72710,11 @@ func_4974e:
 		cmp    $0x4,%ebx
 		jle    jump_49c00
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0x10(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_49c00
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x10,data_5e39c(%ebx)
@@ -72731,11 +72732,11 @@ func_4974e:
 		cmp    $0x4,%ebx
 		jle    jump_49c56
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0x8(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_49c56
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x4,data_5e39c(%ebx)
@@ -72753,11 +72754,11 @@ func_4974e:
 		cmp    $0x4,%ebx
 		jle    jump_49cac
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0xc(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_49cac
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x8,data_5e39c(%ebx)
@@ -72775,11 +72776,11 @@ func_4974e:
 		cmp    $0x4,%ebx
 		jle    jump_49d02
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0x4(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_49d02
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x2,data_5e39c(%ebx)
@@ -72797,11 +72798,11 @@ func_4974e:
 		cmp    $0x4,%ebx
 		jle    jump_49d58
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0x14(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_49d58
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x20,data_5e39c(%ebx)
@@ -72819,11 +72820,11 @@ func_4974e:
 		cmp    $0x4,%ebx
 		jle    jump_49dad
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    (%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_49dad
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x1,data_5e39c(%ebx)
@@ -72841,11 +72842,11 @@ func_4974e:
 		cmp    $0x4,%ebx
 		jle    jump_49e03
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0x10(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_49e03
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x10,data_5e39c(%ebx)
@@ -72863,11 +72864,11 @@ func_4974e:
 		cmp    $0x4,%ebx
 		jle    jump_49e59
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0x8(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_49e59
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x4,data_5e39c(%ebx)
@@ -72885,11 +72886,11 @@ func_4974e:
 		cmp    $0x4,%ebx
 		jle    jump_49eaf
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0xc(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_49eaf
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x8,data_5e39c(%ebx)
@@ -72907,11 +72908,11 @@ func_4974e:
 		cmp    $0x4,%ebx
 		jle    jump_49f05
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0x4(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_49f05
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x2,data_5e39c(%ebx)
@@ -72929,11 +72930,11 @@ func_4974e:
 		cmp    $0x4,%ebx
 		jle    jump_49f5b
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0x14(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_49f5b
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x20,data_5e39c(%ebx)
@@ -72951,11 +72952,11 @@ func_4974e:
 		cmp    $0x4,%ebx
 		jle    jump_49fb0
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    (%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_49fb0
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x1,data_5e39c(%ebx)
@@ -72973,11 +72974,11 @@ func_4974e:
 		cmp    $0x4,%ebx
 		jle    jump_4a006
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0x10(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_4a006
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x10,data_5e39c(%ebx)
@@ -72995,11 +72996,11 @@ func_4974e:
 		cmp    $0x4,%ebx
 		jle    jump_4a056
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0x8(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_4a056
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x4,data_5e39c(%ebx)
@@ -73017,11 +73018,11 @@ func_4974e:
 		cmp    $0x4,%ebx
 		jle    jump_4a0ac
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0xc(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_4a0ac
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x8,data_5e39c(%ebx)
@@ -73039,11 +73040,11 @@ func_4974e:
 		cmp    $0x4,%ebx
 		jle    jump_4a0fc
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0x4(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_4a0fc
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x2,data_5e39c(%ebx)
@@ -73061,11 +73062,11 @@ func_4974e:
 		cmp    $0x4,%ebx
 		jle    jump_4a14b
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0x14(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_4a14b
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x20,data_5e39c(%ebx)
@@ -73083,11 +73084,11 @@ func_4974e:
 		cmp    $0x4,%ebx
 		jle    jump_4a19a
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    (%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_4a19a
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x1,data_5e39c(%ebx)
@@ -73105,11 +73106,11 @@ func_4974e:
 		cmp    $0x4,%ebx
 		jle    jump_4a1e9
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0x10(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_4a1e9
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x10,data_5e39c(%ebx)
@@ -73127,11 +73128,11 @@ func_4974e:
 		cmp    $0x4,%ebx
 		jle    jump_4a23f
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0x8(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_4a23f
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x4,data_5e39c(%ebx)
@@ -73149,11 +73150,11 @@ func_4974e:
 		cmp    $0x4,%ebx
 		jle    jump_4a28d
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0xc(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_4a28d
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x8,data_5e39c(%ebx)
@@ -73171,11 +73172,11 @@ func_4974e:
 		cmp    $0x4,%ebx
 		jle    jump_4a2de
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0x4(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_4a2de
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x2,data_5e39c(%ebx)
@@ -73193,11 +73194,11 @@ func_4974e:
 		cmp    $0x4,%ebx
 		jle    jump_4a32f
 		imul   $0x18,%ebx,%edx
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    0x14(%edx),%edx
 		cmp    $0x0,%edx
 		je     jump_4a32f
-		add    h_blocks,%edx
+		add    EXPORT_SYMBOL(h_blocks),%edx
 		mov    %edx,data_48ad0(,%ecx,4)
 		inc    %ecx
 		testb  $0x20,data_5e39c(%ebx)
@@ -73289,11 +73290,11 @@ func_4a3c5:
 		cmp    $0x4,%ebx
 		jle    jump_4a447
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0xc(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4a447
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4a447
 		sub    data_55358,%esi
@@ -73315,11 +73316,11 @@ func_4a3c5:
 		cmp    $0x4,%ebx
 		jle    jump_4a4b0
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x4(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4a4b0
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4a4b0
 		sub    data_55358,%esi
@@ -73341,11 +73342,11 @@ func_4a3c5:
 		cmp    $0x4,%ebx
 		jle    jump_4a519
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x14(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4a519
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4a519
 		sub    data_55358,%esi
@@ -73367,11 +73368,11 @@ func_4a3c5:
 		cmp    $0x4,%ebx
 		jle    jump_4a581
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    (%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4a581
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4a581
 		sub    data_55358,%esi
@@ -73393,11 +73394,11 @@ func_4a3c5:
 		cmp    $0x4,%ebx
 		jle    jump_4a5ea
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x10(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4a5ea
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4a5ea
 		sub    data_55358,%esi
@@ -73419,11 +73420,11 @@ func_4a3c5:
 		cmp    $0x4,%ebx
 		jle    jump_4a653
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x8(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4a653
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4a653
 		sub    data_55358,%esi
@@ -73445,11 +73446,11 @@ func_4a3c5:
 		cmp    $0x4,%ebx
 		jle    jump_4a6bc
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0xc(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4a6bc
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4a6bc
 		sub    data_55358,%esi
@@ -73471,11 +73472,11 @@ func_4a3c5:
 		cmp    $0x4,%ebx
 		jle    jump_4a725
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x4(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4a725
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4a725
 		sub    data_55358,%esi
@@ -73497,11 +73498,11 @@ func_4a3c5:
 		cmp    $0x4,%ebx
 		jle    jump_4a78e
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x14(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4a78e
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4a78e
 		sub    data_55358,%esi
@@ -73523,11 +73524,11 @@ func_4a3c5:
 		cmp    $0x4,%ebx
 		jle    jump_4a7f6
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    (%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4a7f6
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4a7f6
 		sub    data_55358,%esi
@@ -73549,11 +73550,11 @@ func_4a3c5:
 		cmp    $0x4,%ebx
 		jle    jump_4a85f
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x10(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4a85f
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4a85f
 		sub    data_55358,%esi
@@ -73575,11 +73576,11 @@ func_4a3c5:
 		cmp    $0x4,%ebx
 		jle    jump_4a8c8
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x8(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4a8c8
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4a8c8
 		sub    data_55358,%esi
@@ -73601,11 +73602,11 @@ func_4a3c5:
 		cmp    $0x4,%ebx
 		jle    jump_4a931
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0xc(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4a931
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4a931
 		sub    data_55358,%esi
@@ -73627,11 +73628,11 @@ func_4a3c5:
 		cmp    $0x4,%ebx
 		jle    jump_4a99a
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x4(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4a99a
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4a99a
 		sub    data_55358,%esi
@@ -73653,11 +73654,11 @@ func_4a3c5:
 		cmp    $0x4,%ebx
 		jle    jump_4aa03
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x14(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4aa03
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4aa03
 		sub    data_55358,%esi
@@ -73679,11 +73680,11 @@ func_4a3c5:
 		cmp    $0x4,%ebx
 		jle    jump_4aa6b
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    (%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4aa6b
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4aa6b
 		sub    data_55358,%esi
@@ -73705,11 +73706,11 @@ func_4a3c5:
 		cmp    $0x4,%ebx
 		jle    jump_4aad4
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x10(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4aad4
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4aad4
 		sub    data_55358,%esi
@@ -73731,11 +73732,11 @@ func_4a3c5:
 		cmp    $0x4,%ebx
 		jle    jump_4ab3d
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x8(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4ab3d
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4ab3d
 		sub    data_55358,%esi
@@ -73757,11 +73758,11 @@ func_4a3c5:
 		cmp    $0x4,%ebx
 		jle    jump_4aba6
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0xc(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4aba6
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4aba6
 		sub    data_55358,%esi
@@ -73783,11 +73784,11 @@ func_4a3c5:
 		cmp    $0x4,%ebx
 		jle    jump_4ac0f
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x4(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4ac0f
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4ac0f
 		sub    data_55358,%esi
@@ -73809,11 +73810,11 @@ func_4a3c5:
 		cmp    $0x4,%ebx
 		jle    jump_4ac78
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x14(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4ac78
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4ac78
 		sub    data_55358,%esi
@@ -73835,11 +73836,11 @@ func_4a3c5:
 		cmp    $0x4,%ebx
 		jle    jump_4ace0
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    (%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4ace0
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4ace0
 		sub    data_55358,%esi
@@ -73861,11 +73862,11 @@ func_4a3c5:
 		cmp    $0x4,%ebx
 		jle    jump_4ad49
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x10(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4ad49
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4ad49
 		sub    data_55358,%esi
@@ -73887,11 +73888,11 @@ func_4a3c5:
 		cmp    $0x4,%ebx
 		jle    jump_4adb2
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x8(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4adb2
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4adb2
 		sub    data_55358,%esi
@@ -73913,11 +73914,11 @@ func_4a3c5:
 		cmp    $0x4,%ebx
 		jle    jump_4ae1b
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0xc(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4ae1b
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4ae1b
 		sub    data_55358,%esi
@@ -73939,11 +73940,11 @@ func_4a3c5:
 		cmp    $0x4,%ebx
 		jle    jump_4ae84
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x4(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4ae84
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4ae84
 		sub    data_55358,%esi
@@ -73965,11 +73966,11 @@ func_4a3c5:
 		cmp    $0x4,%ebx
 		jle    jump_4aeed
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x14(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4aeed
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4aeed
 		sub    data_55358,%esi
@@ -73991,11 +73992,11 @@ func_4a3c5:
 		cmp    $0x4,%ebx
 		jle    jump_4af55
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    (%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4af55
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4af55
 		sub    data_55358,%esi
@@ -74017,11 +74018,11 @@ func_4a3c5:
 		cmp    $0x4,%ebx
 		jle    jump_4afbe
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x10(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4afbe
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4afbe
 		sub    data_55358,%esi
@@ -74043,11 +74044,11 @@ func_4a3c5:
 		cmp    $0x4,%ebx
 		jle    jump_4b020
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x8(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4b020
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4b020
 		sub    data_55358,%esi
@@ -74069,11 +74070,11 @@ func_4a3c5:
 		cmp    $0x4,%ebx
 		jle    jump_4b089
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0xc(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4b089
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4b089
 		sub    data_55358,%esi
@@ -74095,11 +74096,11 @@ func_4a3c5:
 		cmp    $0x4,%ebx
 		jle    jump_4b0eb
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x4(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4b0eb
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4b0eb
 		sub    data_55358,%esi
@@ -74121,11 +74122,11 @@ func_4a3c5:
 		cmp    $0x4,%ebx
 		jle    jump_4b14e
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x14(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4b14e
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4b14e
 		sub    data_55358,%esi
@@ -74147,11 +74148,11 @@ func_4a3c5:
 		cmp    $0x4,%ebx
 		jle    jump_4b1ab
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    (%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4b1ab
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4b1ab
 		sub    data_55358,%esi
@@ -74173,11 +74174,11 @@ func_4a3c5:
 		cmp    $0x4,%ebx
 		jle    jump_4b20a
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x10(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4b20a
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4b20a
 		sub    data_55358,%esi
@@ -74199,11 +74200,11 @@ func_4a3c5:
 		cmp    $0x4,%ebx
 		jle    jump_4b272
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x8(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4b272
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4b272
 		sub    data_55358,%esi
@@ -74239,11 +74240,11 @@ func_4b277:
 		cmp    $0x4,%ebx
 		jle    jump_4b2f8
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    (%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4b2f8
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4b2f8
 		sub    data_55358,%esi
@@ -74265,11 +74266,11 @@ func_4b277:
 		cmp    $0x4,%ebx
 		jle    jump_4b361
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x10(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4b361
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4b361
 		sub    data_55358,%esi
@@ -74291,11 +74292,11 @@ func_4b277:
 		cmp    $0x4,%ebx
 		jle    jump_4b3ca
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x8(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4b3ca
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4b3ca
 		sub    data_55358,%esi
@@ -74317,11 +74318,11 @@ func_4b277:
 		cmp    $0x4,%ebx
 		jle    jump_4b433
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0xc(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4b433
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4b433
 		sub    data_55358,%esi
@@ -74343,11 +74344,11 @@ func_4b277:
 		cmp    $0x4,%ebx
 		jle    jump_4b49c
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x4(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4b49c
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4b49c
 		sub    data_55358,%esi
@@ -74369,11 +74370,11 @@ func_4b277:
 		cmp    $0x4,%ebx
 		jle    jump_4b505
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x14(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4b505
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4b505
 		sub    data_55358,%esi
@@ -74395,11 +74396,11 @@ func_4b277:
 		cmp    $0x4,%ebx
 		jle    jump_4b56d
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    (%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4b56d
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4b56d
 		sub    data_55358,%esi
@@ -74421,11 +74422,11 @@ func_4b277:
 		cmp    $0x4,%ebx
 		jle    jump_4b5d6
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x10(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4b5d6
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4b5d6
 		sub    data_55358,%esi
@@ -74447,11 +74448,11 @@ func_4b277:
 		cmp    $0x4,%ebx
 		jle    jump_4b63f
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x8(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4b63f
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4b63f
 		sub    data_55358,%esi
@@ -74473,11 +74474,11 @@ func_4b277:
 		cmp    $0x4,%ebx
 		jle    jump_4b6a8
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0xc(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4b6a8
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4b6a8
 		sub    data_55358,%esi
@@ -74499,11 +74500,11 @@ func_4b277:
 		cmp    $0x4,%ebx
 		jle    jump_4b711
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x4(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4b711
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4b711
 		sub    data_55358,%esi
@@ -74525,11 +74526,11 @@ func_4b277:
 		cmp    $0x4,%ebx
 		jle    jump_4b77a
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x14(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4b77a
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4b77a
 		sub    data_55358,%esi
@@ -74551,11 +74552,11 @@ func_4b277:
 		cmp    $0x4,%ebx
 		jle    jump_4b7e2
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    (%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4b7e2
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4b7e2
 		sub    data_55358,%esi
@@ -74577,11 +74578,11 @@ func_4b277:
 		cmp    $0x4,%ebx
 		jle    jump_4b84b
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x10(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4b84b
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4b84b
 		sub    data_55358,%esi
@@ -74603,11 +74604,11 @@ func_4b277:
 		cmp    $0x4,%ebx
 		jle    jump_4b8b4
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x8(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4b8b4
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4b8b4
 		sub    data_55358,%esi
@@ -74629,11 +74630,11 @@ func_4b277:
 		cmp    $0x4,%ebx
 		jle    jump_4b91d
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0xc(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4b91d
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4b91d
 		sub    data_55358,%esi
@@ -74655,11 +74656,11 @@ func_4b277:
 		cmp    $0x4,%ebx
 		jle    jump_4b986
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x4(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4b986
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4b986
 		sub    data_55358,%esi
@@ -74681,11 +74682,11 @@ func_4b277:
 		cmp    $0x4,%ebx
 		jle    jump_4b9ef
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x14(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4b9ef
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4b9ef
 		sub    data_55358,%esi
@@ -74707,11 +74708,11 @@ func_4b277:
 		cmp    $0x4,%ebx
 		jle    jump_4ba57
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    (%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4ba57
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4ba57
 		sub    data_55358,%esi
@@ -74733,11 +74734,11 @@ func_4b277:
 		cmp    $0x4,%ebx
 		jle    jump_4bac0
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x10(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4bac0
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4bac0
 		sub    data_55358,%esi
@@ -74759,11 +74760,11 @@ func_4b277:
 		cmp    $0x4,%ebx
 		jle    jump_4bb29
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x8(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4bb29
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4bb29
 		sub    data_55358,%esi
@@ -74785,11 +74786,11 @@ func_4b277:
 		cmp    $0x4,%ebx
 		jle    jump_4bb92
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0xc(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4bb92
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4bb92
 		sub    data_55358,%esi
@@ -74811,11 +74812,11 @@ func_4b277:
 		cmp    $0x4,%ebx
 		jle    jump_4bbfb
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x4(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4bbfb
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4bbfb
 		sub    data_55358,%esi
@@ -74837,11 +74838,11 @@ func_4b277:
 		cmp    $0x4,%ebx
 		jle    jump_4bc64
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x14(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4bc64
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4bc64
 		sub    data_55358,%esi
@@ -74863,11 +74864,11 @@ func_4b277:
 		cmp    $0x4,%ebx
 		jle    jump_4bccc
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    (%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4bccc
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4bccc
 		sub    data_55358,%esi
@@ -74889,11 +74890,11 @@ func_4b277:
 		cmp    $0x4,%ebx
 		jle    jump_4bd35
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x10(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4bd35
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4bd35
 		sub    data_55358,%esi
@@ -74915,11 +74916,11 @@ func_4b277:
 		cmp    $0x4,%ebx
 		jle    jump_4bd98
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x8(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4bd98
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4bd98
 		sub    data_55358,%esi
@@ -74941,11 +74942,11 @@ func_4b277:
 		cmp    $0x4,%ebx
 		jle    jump_4be01
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0xc(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4be01
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4be01
 		sub    data_55358,%esi
@@ -74967,11 +74968,11 @@ func_4b277:
 		cmp    $0x4,%ebx
 		jle    jump_4be64
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x4(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4be64
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4be64
 		sub    data_55358,%esi
@@ -74993,11 +74994,11 @@ func_4b277:
 		cmp    $0x4,%ebx
 		jle    jump_4bec6
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x14(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4bec6
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4bec6
 		sub    data_55358,%esi
@@ -75019,11 +75020,11 @@ func_4b277:
 		cmp    $0x4,%ebx
 		jle    jump_4bf28
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    (%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4bf28
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4bf28
 		sub    data_55358,%esi
@@ -75045,11 +75046,11 @@ func_4b277:
 		cmp    $0x4,%ebx
 		jle    jump_4bf8a
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x10(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4bf8a
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4bf8a
 		sub    data_55358,%esi
@@ -75071,11 +75072,11 @@ func_4b277:
 		cmp    $0x4,%ebx
 		jle    jump_4bff3
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x8(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4bff3
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4bff3
 		sub    data_55358,%esi
@@ -75097,11 +75098,11 @@ func_4b277:
 		cmp    $0x4,%ebx
 		jle    jump_4c051
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0xc(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4c051
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4c051
 		sub    data_55358,%esi
@@ -75123,11 +75124,11 @@ func_4b277:
 		cmp    $0x4,%ebx
 		jle    jump_4c0b3
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x4(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4c0b3
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4c0b3
 		sub    data_55358,%esi
@@ -75149,11 +75150,11 @@ func_4b277:
 		cmp    $0x4,%ebx
 		jle    jump_4c118
 		imul   $0x18,%ebx,%ebx
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		mov    0x14(%ebx),%ebx
 		cmp    $0x0,%ebx
 		je     jump_4c118
-		add    h_blocks,%ebx
+		add    EXPORT_SYMBOL(h_blocks),%ebx
 		test   %eax,(%ecx,%ebx,1)
 		jne    jump_4c118
 		sub    data_55358,%esi
@@ -79727,14 +79728,14 @@ init_hires_blocks:	/* 0x4f921 */
 		push   %edx
 		push   %esi
 		push   %edi
-		mov    h_blocks,%esi
+		mov    EXPORT_SYMBOL(h_blocks),%esi
 		mov    $data_5e39c,%edi
 		mov    $0xff,%dx
 	jump_4f936:
 		movb   $0x0,(%edi)
 		mov    $0x0,%cl
 	jump_4f93b:
-		mov    h_blocks,%eax
+		mov    EXPORT_SYMBOL(h_blocks),%eax
 		add    (%esi),%eax
 		add    $0x4,%esi
 		mov    $0xf,%ch
@@ -82599,53 +82600,7 @@ data_53ef6:
 		.ascii  "\x00\x00"
 data_53ef8:
 		.fill   0x10
-mission_load_files:	/* 0x53f08 */
-		.string "data/hfnt01.dat"
-		.fill   0xc
-		.long   h_font
-		.fill   0xc
-		.ascii   "data/map"
-data_53f3c:
-		.ascii  "\x30"
-data_53f3d:
-		.string "1.dat"
-		.fill   0xd
-		.long   EXPORT_SYMBOL(map_buf)
-		.fill   0xc
-		.string "data/col01.dat"
-		.fill   0xd
-		.long   EXPORT_SYMBOL(h_col)
-		.fill   0xc
-		.string "data/hblk01.dat"
-		.fill   0xc
-		.long   h_blocks
-		.fill   0xc
-		.string "data/hspr-0.dat"
-		.fill   0xc
-		.long   h_sprites_data
-		.fill   0xc
-		.string "data/hspr-0.tab"
-		.fill   0xc
-		.long   h_sprites
-		.long   h_sprites_end
-		.fill   0x8
-		.string "data/hfra-0.ani"
-		.fill   0xc
-		.long   frames
-		.long   frames_end
-		.fill   0x8
-		.string "data/hele-0.ani"
-		.fill   0xc
-		.long   elements_ani
-		.long   elements_ani_end
-		.fill   0x8
-		.string "data/hsta-0.ani"
-		.fill   0xc
-		.long   starts_ani
-		.fill   0x38
 
-unkn1_empty_load_files:	/* 0x54144 */
-		.fill   0x2c
 level_palettes:	/* 0x54170 */
 		.ascii  "\x01\x02\x03\x04\x05\x01\x02\x03"
 		.ascii  "\x04\x05\x01\x02\x03\x04\x05\x01"
@@ -83828,9 +83783,9 @@ GLOBAL (pointer_sprites_end)	/* 0x5530c */
 		.fill   0x4
 GLOBAL (pointer_data)	/* 0x55310 */
 		.fill   0x4
-h_sprites:	/* 0x55314 */
+GLOBAL (h_sprites)	/* 0x55314 */
 		.fill   0x4
-h_sprites_end:	/* 0x55318 */
+GLOBAL (h_sprites_end)	/* 0x55318 */
 		.fill   0x4
 data_5531c:
 		.fill   0x4
@@ -83842,19 +83797,19 @@ data_5532c:
 		.ascii  "\x00\x00"
 data_5532e:
 		.ascii  "\x00\x00"
-h_sprites_data:	/* 0x55330 */
+GLOBAL (h_sprites_data)	/* 0x55330 */
 		.fill   0x4
 data_55334:
 		.fill   0x4
-frames:	/* 0x55338 */
+GLOBAL (frames)	/* 0x55338 */
 		.fill   0x4
-frames_end:	/* 0x5533c */
+GLOBAL (frames_end)	/* 0x5533c */
 		.fill   0x4
-elements_ani:	/* 0x55340 */
+GLOBAL (elements_ani)	/* 0x55340 */
 		.fill   0x4
-elements_ani_end:	/* 0x55344 */
+GLOBAL (elements_ani_end)	/* 0x55344 */
 		.fill   0x4
-starts_ani:	/* 0x55348 */
+GLOBAL (starts_ani)	/* 0x55348 */
 		.fill   0x4
 GLOBAL (smpdata)	/* 0x5534c */
 		.fill   0x4
@@ -83866,9 +83821,9 @@ data_55358:
 		.fill   0x4
 GLOBAL (map_buf)	/* 0x5535c */
 		.fill   0x4
-h_blocks:	/* 0x55360 */
+GLOBAL (h_blocks)	/* 0x55360 */
 		.fill   0x4
-h_font:	/* 0x55364 */
+GLOBAL (h_font)	/* 0x55364 */
 		.fill   0x4
 GLOBAL (WScreen)	/* 0x55368 */
 		.fill   0x4

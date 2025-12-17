@@ -59,10 +59,23 @@ extern ubyte *h_col;
 extern ubyte *map_buf;
 extern ubyte *m_select_pal;
 
+extern struct TbSprite *h_sprites;
+extern struct TbSprite *h_sprites_end;
+extern ubyte *h_font;
+extern ubyte *h_blocks;
+extern ubyte *h_sprites_data;
+extern ubyte *frames;
+extern ubyte *frames_end;
+extern ubyte *elements_ani;
+extern ubyte *elements_ani_end;
+extern ubyte *starts_ani;
+
 const char *GetDirectoryUser(void);
 const char *GetDirectoryHdd(void);
 
 void setup_file_names(void);
+
+void free_map_level(void);
 
 /******************************************************************************/
 #ifdef __cplusplus

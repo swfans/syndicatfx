@@ -81,7 +81,6 @@ void _cdecl copy_back(void);
 void _cdecl draw_mapwho(void);
 void _cdecl draw_panel(void);
 void _cdecl click_map(void);
-void _cdecl free_map_level(void);
 void _cdecl level_finished(void);
 
 
@@ -316,10 +315,6 @@ void draw_panel(void)
 }
 
 void click_map(void)
-{
-}
-
-void free_map_level(void)
 {
 }
 
