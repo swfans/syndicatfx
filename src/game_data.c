@@ -49,7 +49,22 @@ static char game_dir_screenshots[] = "screenshots";
 struct TbLoadFiles sound_bank_files0[] = {
   {"sound/sound-0.dat",	(void **)&smpdata,			(void **)NULL,		0, 1, 0,},
   {"sound/sound-0.tab",	(void **)&smptable,			(void **)&smptable_end, 0, 0, 0,},
-  { "",					(void **)NULL, 				(void **)NULL,		0, 0, 0, }
+  { "",					(void **)NULL, 				(void **)NULL,		0, 0, 0, },
+};
+
+extern ubyte *m_spr_data;
+extern ubyte *m_font_data;
+
+struct TbLoadFiles unk984_load_files[] = {
+  {"data/mspr-0.dat",	(void **)&m_spr_data,		(void **)NULL,		0, 0, 0, },
+  {"data/mspr-0.tab",	(void **)&m_sprites,		(void **)&m_sprites_end,	0, 0, 0, },
+  {"data/mfnt-0.dat",	(void **)&m_font_data,		(void **)NULL,		0, 0, 0, },
+  {"data/mfnt-0.tab",	(void **)&m_font,			(void **)&m_font_end,	0, 0, 0, },
+  {"data/mlogos.dat",	(void **)&m_logos,			(void **)NULL,		0, 0, 0, },
+  {"data/col01.dat",	(void **)&h_col,			(void **)NULL,		0, 0, 0, },
+  {"*", 				(void **)&map_buf,			(void **)NULL,	0x14CA0, 0, 0, },
+  {"data/mselect.pal",	(void **)&m_select_pal,		(void **)NULL,		0, 0, 0, },
+  { "",					(void **)NULL, 				(void **)NULL,		0, 0, 0, },
 };
 
 /******************************************************************************/

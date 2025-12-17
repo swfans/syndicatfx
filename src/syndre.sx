@@ -33,6 +33,7 @@
 .text
 
 .global EXPORT_SYMBOL(sound_bank_files0);
+.global EXPORT_SYMBOL(unk984_load_files);
 
 ___begtext:	/* 0x10003 */
 		nop
@@ -1253,7 +1254,7 @@ mission_briefing:	/* 0x10e60 */
 		push   %eax
 		call   ac_sprintf
 		add    $0xc,%esp
-		mov    map_buf,%ebx
+		mov    EXPORT_SYMBOL(map_buf),%ebx
 		push   %ebx
 		lea    0x1e(%ebp),%eax
 		push   %eax
@@ -1269,7 +1270,7 @@ mission_briefing:	/* 0x10e60 */
 		pop    %ebx
 		ret
 	jump_10f18:
-		mov    map_buf,%ecx
+		mov    EXPORT_SYMBOL(map_buf),%ecx
 		push   %ecx
 		call   init_map_data
 		add    $0x4,%esp
@@ -1503,7 +1504,7 @@ mission_briefing:	/* 0x10e60 */
 		call   DrawScreenGadget
 		add    $0x1c,%esp
 		call   ShowGameTime
-		mov    m_logos,%eax
+		mov    EXPORT_SYMBOL(m_logos),%eax
 		movswl EXPORT_SYMBOL(Network__Slot),%edx
 		push   %eax
 		mov    %edx,%eax
@@ -2266,7 +2267,7 @@ draw_brief_tact_map:	/* 0x11a70 */
 		add    %ebp,%eax
 		mov    (%edx,%eax,4),%edx
 		mov    (%edx),%dl
-		mov    h_col,%eax
+		mov    EXPORT_SYMBOL(h_col),%eax
 		and    $0xff,%edx
 		add    %eax,%edx
 		cmpb   $0xf,(%edx)
@@ -2674,7 +2675,7 @@ func_11fcd:
 		add    (%ecx),%eax
 		xor    %edx,%edx
 		mov    (%eax),%dl
-		mov    h_col,%eax
+		mov    EXPORT_SYMBOL(h_col),%eax
 		add    %edx,%eax
 		mov    (%eax),%dl
 		cmp    $0x10,%dl
@@ -2842,7 +2843,7 @@ sight_colide:	/* 0x12150 */
 		mov    (%edi),%eax
 		add    %ecx,%eax
 		mov    (%eax),%al
-		mov    h_col,%edi
+		mov    EXPORT_SYMBOL(h_col),%edi
 		and    $0xff,%eax
 		add    %edi,%eax
 		mov    (%eax),%al
@@ -3112,7 +3113,7 @@ check_point1:	/* 0x12400 */
 		je     jump_12595
 		xor    %edx,%edx
 		mov    %al,%dl
-		mov    h_col,%eax
+		mov    EXPORT_SYMBOL(h_col),%eax
 		add    %edx,%eax
 		mov    (%eax),%dl
 		cmp    $0x10,%dl
@@ -3335,7 +3336,7 @@ check_point2:	/* 0x125f0 */
 		mov    (%eax),%al
 		test   %al,%al
 		je     jump_12797
-		mov    h_col,%edx
+		mov    EXPORT_SYMBOL(h_col),%edx
 		and    $0xff,%eax
 		add    %edx,%eax
 		mov    (%eax),%dl
@@ -10201,7 +10202,7 @@ configure_company:	/* 0x175c0 */
 		call   LbCopyScreenFromBackMCGA
 		call   DrawAcceptGadget
 		call   DrawMenuGadget
-		mov    m_logos,%edx
+		mov    EXPORT_SYMBOL(m_logos),%edx
 		push   %edx
 		push   $0x20
 		push   $0x20
@@ -11079,7 +11080,7 @@ func_18394:
 		push   %edx
 		call   new_show_text
 		add    $0x28,%esp
-		mov    m_logos,%ecx
+		mov    EXPORT_SYMBOL(m_logos),%ecx
 		push   %ecx
 		push   $0x20
 		push   $0x20
@@ -12650,7 +12651,7 @@ debrief:	/* 0x18ff0 */
 		movswl EXPORT_SYMBOL(Network__Slot),%edx
 		mov    %edx,%eax
 		shl    $0x5,%eax
-		mov    m_logos,%ebx
+		mov    EXPORT_SYMBOL(m_logos),%ebx
 		add    %edx,%eax
 		push   %ebx
 		lea    0x0(,%eax,4),%eax
@@ -16369,7 +16370,7 @@ draw_tact_map:	/* 0x1bec0 */
 		add    %edx,%eax
 		mov    (%eax),%eax
 		mov    (%eax),%al
-		mov    h_col,%edx
+		mov    EXPORT_SYMBOL(h_col),%edx
 		and    $0xff,%eax
 		add    %edx,%eax
 		mov    (%eax),%dl
@@ -20031,7 +20032,7 @@ func_1ebf0:
 		sar    $0x7,%eax
 		add    (%esi),%eax
 		mov    (%eax),%al
-		mov    h_col,%edx
+		mov    EXPORT_SYMBOL(h_col),%edx
 		and    $0xff,%eax
 		cmpb   $0x0,(%edx,%eax,1)
 		jne    jump_1ec74
@@ -21772,7 +21773,7 @@ equip_team:	/* 0x1fbc0 */
 		movswl EXPORT_SYMBOL(Network__Slot),%edx
 		mov    %edx,%eax
 		shl    $0x5,%eax
-		mov    m_logos,%ecx
+		mov    EXPORT_SYMBOL(m_logos),%ecx
 		add    %edx,%eax
 		push   %ecx
 		lea    0x0(,%eax,4),%eax
@@ -27697,7 +27698,7 @@ init_level_data:	/* 0x25110 */
 		push   %edi
 		push   %ebp
 		sub    $0x14,%esp
-		mov    map_buf,%edx
+		mov    EXPORT_SYMBOL(map_buf),%edx
 		push   %edx
 		call   init_map_data
 		add    $0x4,%esp
@@ -33829,7 +33830,7 @@ func_29818:
 		movswl EXPORT_SYMBOL(Network__Slot),%edx
 		mov    %edx,%eax
 		shl    $0x5,%eax
-		mov    m_logos,%ebx
+		mov    EXPORT_SYMBOL(m_logos),%ebx
 		add    %edx,%eax
 		push   %ebx
 		lea    0x0(,%eax,4),%eax
@@ -42960,7 +42961,7 @@ i_can_walk_here:	/* 0x2fd20 */
 		add    (%ecx),%eax
 		xor    %edx,%edx
 		mov    (%eax),%dl
-		mov    h_col,%eax
+		mov    EXPORT_SYMBOL(h_col),%eax
 		add    %edx,%eax
 		mov    (%eax),%dh
 		cmp    $0xf,%dh
@@ -43078,7 +43079,7 @@ i_can_walk_here_quick:	/* 0x2fe70 */
 		add    (%ecx),%eax
 		xor    %edx,%edx
 		mov    (%eax),%dl
-		mov    h_col,%eax
+		mov    EXPORT_SYMBOL(h_col),%eax
 		add    %edx,%eax
 		mov    (%eax),%dh
 		cmp    $0xf,%dh
@@ -45010,7 +45011,7 @@ func_3135f:
 		sar    $0x7,%eax
 		add    (%ecx),%eax
 		mov    (%eax),%al
-		mov    h_col,%edx
+		mov    EXPORT_SYMBOL(h_col),%edx
 		and    $0xff,%eax
 		add    %edx,%eax
 		mov    (%eax),%dl
@@ -50599,7 +50600,7 @@ ResearchAndDevelop:	/* 0x34ad0 */
 		movswl EXPORT_SYMBOL(Network__Slot),%edx
 		mov    %edx,%eax
 		shl    $0x5,%eax
-		mov    m_logos,%esi
+		mov    EXPORT_SYMBOL(m_logos),%esi
 		add    %edx,%eax
 		push   %esi
 		lea    0x0(,%eax,4),%eax
@@ -52770,7 +52771,7 @@ check_for_on_coming_cars:	/* 0x36730 */
 		sar    $0x7,%eax
 		add    (%ecx),%eax
 		mov    (%eax),%al
-		mov    h_col,%edx
+		mov    EXPORT_SYMBOL(h_col),%edx
 		and    $0xff,%eax
 		mov    (%edx,%eax,1),%al
 		sub    $0x6,%al
@@ -52934,7 +52935,7 @@ there_is_a_road_here:	/* 0x36870 */
 		sar    $0x7,%eax
 		add    (%ebx),%eax
 		mov    (%eax),%al
-		mov    h_col,%edx
+		mov    EXPORT_SYMBOL(h_col),%edx
 		and    $0xff,%eax
 		mov    (%edx,%eax,1),%al
 		cmp    $0x6,%al
@@ -53262,7 +53263,7 @@ i_can_drive_in_this_direction:	/* 0x36c20 */
 		push   %esi
 		push   %edi
 		mov    data_55358,%esi
-		mov    h_col,%edi
+		mov    EXPORT_SYMBOL(h_col),%edi
 		mov    0x14(%esp),%ecx
 		mov    0x1c(%esp),%al
 		cmp    $0x40,%al
@@ -53318,7 +53319,7 @@ i_can_drive_in_this_direction:	/* 0x36c20 */
 		jne    jump_36ea6
 		mov    $0x1,%edx
 		mov    %edx,%eax
-		mov    %edi,h_col
+		mov    %edi,EXPORT_SYMBOL(h_col)
 		mov    %esi,data_55358
 		pop    %edi
 		pop    %esi
@@ -53366,7 +53367,7 @@ i_can_drive_in_this_direction:	/* 0x36c20 */
 		jne    jump_36ea6
 		mov    $0x1,%edx
 		mov    %edx,%eax
-		mov    %edi,h_col
+		mov    %edi,EXPORT_SYMBOL(h_col)
 		mov    %esi,data_55358
 		pop    %edi
 		pop    %esi
@@ -53414,7 +53415,7 @@ i_can_drive_in_this_direction:	/* 0x36c20 */
 		jne    jump_36ea6
 		mov    $0x1,%edx
 		mov    %edx,%eax
-		mov    %edi,h_col
+		mov    %edi,EXPORT_SYMBOL(h_col)
 		mov    %esi,data_55358
 		pop    %edi
 		pop    %esi
@@ -53462,7 +53463,7 @@ i_can_drive_in_this_direction:	/* 0x36c20 */
 		jne    jump_36ea6
 		mov    $0x1,%edx
 		mov    %edx,%eax
-		mov    %edi,h_col
+		mov    %edi,EXPORT_SYMBOL(h_col)
 		mov    %esi,data_55358
 		pop    %edi
 		pop    %esi
@@ -53471,7 +53472,7 @@ i_can_drive_in_this_direction:	/* 0x36c20 */
 	jump_36ea6:
 		xor    %edx,%edx
 		mov    %edx,%eax
-		mov    %edi,h_col
+		mov    %edi,EXPORT_SYMBOL(h_col)
 		mov    %esi,data_55358
 		pop    %edi
 		pop    %esi
@@ -53969,7 +53970,7 @@ person_goto_in_vehicle:	/* 0x37110 */
 		add    (%edi),%eax
 		xor    %edx,%edx
 		mov    (%eax),%dl
-		mov    h_col,%eax
+		mov    EXPORT_SYMBOL(h_col),%eax
 		cmpb   $0x0,(%edx,%eax,1)
 		je     jump_37488
 		push   %ebx
@@ -54019,7 +54020,7 @@ LbDrawText:	/* 0x374f0 */
 		push   %esi
 		push   %edi
 		push   %ebp
-		mov    m_font,%ebp
+		mov    EXPORT_SYMBOL(m_font),%ebp
 		mov    0x14(%esp),%esi
 		mov    %esi,%edx
 		mov    (%esi),%ah
@@ -54081,9 +54082,9 @@ LbDrawText:	/* 0x374f0 */
 		xor    %eax,%eax
 		mov    %di,%ax
 		push   %eax
-		mov    %ebp,m_font
+		mov    %ebp,EXPORT_SYMBOL(m_font)
 		call   LbSpriteDrawMCGA
-		mov    m_font,%ebp
+		mov    EXPORT_SYMBOL(m_font),%ebp
 		add    %ebp,%esi
 		xor    %eax,%eax
 		mov    0x4(%esi),%al
@@ -54099,7 +54100,7 @@ LbDrawText:	/* 0x374f0 */
 		cmpb   $0x0,(%ebx)
 		jne    jump_37553
 	jump_375b5:
-		mov    %ebp,m_font
+		mov    %ebp,EXPORT_SYMBOL(m_font)
 		pop    %ebp
 		pop    %edi
 		pop    %esi
@@ -54134,11 +54135,11 @@ select:	/* 0x37600 */
 		push   %edi
 		push   %ebp
 		sub    $0x10,%esp
-		push   $unk984_load_files
+		push   $EXPORT_SYMBOL(unk984_load_files)
 		xor    %ah,%ah
 		xor    %edx,%edx
 		mov    %ah,0x10(%esp)
-		mov    %edx,m_spr_data
+		mov    %edx,EXPORT_SYMBOL(m_spr_data)
 		mov    %edx,EXPORT_SYMBOL(m_sprites)
 		mov    %edx,EXPORT_SYMBOL(m_sprites_end)
 		call   ac_LbDataLoadAll
@@ -54159,7 +54160,7 @@ select:	/* 0x37600 */
 	/* inlined LbSpriteSetup() but with W&H doubling */
 		jmp    jump_37699
 	jump_3767a:
-		mov    m_spr_data,%ebx
+		mov    EXPORT_SYMBOL(m_spr_data),%ebx
 		mov    (%eax),%ecx
 		add    %ebx,%ecx
 		mov    %ecx,(%eax)
@@ -54200,7 +54201,7 @@ select:	/* 0x37600 */
 		xor    %esi,%esi
 		jmp    jump_376cd
 	jump_376ae:
-		mov    m_font_data,%edx
+		mov    EXPORT_SYMBOL(m_font_data),%edx
 		mov    (%eax),%edi
 		add    %edx,%edi
 		mov    0x4(%eax),%ch
@@ -54212,8 +54213,8 @@ select:	/* 0x37600 */
 		add    $0x6,%esi
 		mov    %dl,0x5(%eax)
 	jump_376cd:
-		mov    m_font,%eax
-		mov    m_font_end,%edi
+		mov    EXPORT_SYMBOL(m_font),%eax
+		mov    EXPORT_SYMBOL(m_font_end),%edi
 		add    %esi,%eax
 		cmp    %edi,%eax
 		jne    jump_376ae
@@ -54816,7 +54817,7 @@ func_37bdd:
 #else
 		call   LbScreenSwapMCGA
 #endif
-		push   $unk984_load_files
+		push   $EXPORT_SYMBOL(unk984_load_files)
 		call   ac_LbDataFreeAll
 		mov    EXPORT_SYMBOL(SoundAble),%bl
 		add    $0x4,%esp
@@ -54953,7 +54954,7 @@ show_opt:	/* 0x37ef0 */
 		mov    %ah,EXPORT_SYMBOL(lbDisplay)+103	/* lbDisplay.LeftButton */
 		cmpb   $0x0,data_55591
 		je     jump_37f47
-		mov    m_select_pal,%esi
+		mov    EXPORT_SYMBOL(m_select_pal),%esi
 		push   %esi
 		call   ac_LbPaletteSet
 		xor    %dh,%dh
@@ -55670,7 +55671,7 @@ ASM_ClearBFSampleStatus:	/* 0x38790 */
 		add    $0x10,%eax
 		mov    %dl,data_61bdc(%eax)
 		mov    %dl,data_61bde(%eax)
-		mov    %dl,m_logos(%eax)
+		mov    %dl,EXPORT_SYMBOL(m_logos)(%eax)
 		mov    %dl,data_61be2(%eax)
 		mov    %dl,EXPORT_SYMBOL(m_sprites)(%eax)
 		mov    %dl,data_61be6(%eax)
@@ -82609,11 +82610,11 @@ data_53f3c:
 data_53f3d:
 		.string "1.dat"
 		.fill   0xd
-		.long   map_buf
+		.long   EXPORT_SYMBOL(map_buf)
 		.fill   0xc
 		.string "data/col01.dat"
 		.fill   0xd
-		.long   h_col
+		.long   EXPORT_SYMBOL(h_col)
 		.fill   0xc
 		.string "data/hblk01.dat"
 		.fill   0xc
@@ -83863,7 +83864,7 @@ GLOBAL (smptable_end)	/* 0x55354 */
 		.fill   0x4
 data_55358:
 		.fill   0x4
-map_buf:	/* 0x5535c */
+GLOBAL (map_buf)	/* 0x5535c */
 		.fill   0x4
 h_blocks:	/* 0x55360 */
 		.fill   0x4
@@ -84981,43 +84982,7 @@ data_5b96e:
 aCSyndSave:	/* 0x5b970 */
 		.string "synd/save"
 		.fill   0x7
-unk984_load_files:	/* 0x5b984 */
-		.string "data/mspr-0.dat"
-		.fill   0xc
-		.long   m_spr_data
-		.fill   0xc
-		.string "data/mspr-0.tab"
-		.fill   0xc
-		.long   EXPORT_SYMBOL(m_sprites)
-		.long   EXPORT_SYMBOL(m_sprites_end)
-		.fill   0x8
-		.string "data/mfnt-0.dat"
-		.fill   0xc
-		.long   m_font_data
-		.fill   0xc
-		.string "data/mfnt-0.tab"
-		.fill   0xc
-		.long   m_font
-		.long   m_font_end
-		.fill   0x8
-		.string "data/mlogos.dat"
-		.fill   0xc
-		.long   m_logos
-		.fill   0xc
-		.string "data/col01.dat"
-		.fill   0xd
-		.long   h_col
-		.fill   0xc
-		.ascii  "\x2a"
-		.fill   0x1b
-		.long   map_buf
-		.fill   0x4
-		.ascii  "\xa0\x4c\x01"
-		.fill   0x5
-		.string "data/mselect.pal"
-		.fill   0xb
-		.long   m_select_pal
-		.fill   0x38
+
 GLOBAL (sound_bank_files1)	/* 0x5bb10 */
 		.string "sound/sound-1.dat"
 		.fill   0xa
@@ -85398,7 +85363,7 @@ data_60a7c:
 		.fill   0x20
 data_60a9c:
 		.fill   0x4
-m_select_pal:	/* 0x60aa0 */
+GLOBAL (m_select_pal)	/* 0x60aa0 */
 		.fill   0x4
 GLOBAL (selected_team)	/* 0x60aa4 */
 		.ascii  "\x00"
@@ -85420,7 +85385,7 @@ DestinationX:	/* 0x60ab8 */
 		.fill   0x4
 data_60abc:
 		.fill   0x4
-h_col:	/* 0x60ac0 */
+GLOBAL (h_col)	/* 0x60ac0 */
 		.fill   0x8
 data_60ac8:
 		.fill   0x10
@@ -85582,19 +85547,19 @@ brief_text:	/* 0x60c28 */
 		.fill   0xfa0
 GLOBAL (m_sprites_end)	/* 0x61bc8 */
 		.fill   0x4
-m_font_data:	/* 0x61bcc */
+GLOBAL (m_font_data)	/* 0x61bcc */
 		.fill   0x4
-m_spr_data:	/* 0x61bd0 */
+GLOBAL (m_spr_data)	/* 0x61bd0 */
 		.fill   0x4
-m_font_end:	/* 0x61bd4 */
+GLOBAL (m_font_end)	/* 0x61bd4 */
 		.fill   0x4
-m_font:	/* 0x61bd8 */
+GLOBAL (m_font)	/* 0x61bd8 */
 		.fill   0x4
 data_61bdc:
 		.ascii  "\x00\x00"
 data_61bde:
 		.ascii  "\x00\x00"
-m_logos:	/* 0x61be0 */
+GLOBAL (m_logos)	/* 0x61be0 */
 		.ascii  "\x00\x00"
 data_61be2:
 		.ascii  "\x00\x00"

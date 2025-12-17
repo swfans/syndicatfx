@@ -50,6 +50,14 @@ extern ushort level__Seed;
 extern struct CPObjective level__CPObjectives[128];
 extern char language_3str[4];
 
+extern struct TbSprite *m_sprites;
+extern struct TbSprite *m_sprites_end;
+extern struct TbSprite *m_font;
+extern struct TbSprite *m_font_end;
+extern ubyte *m_logos;
+extern ubyte *h_col;
+extern ubyte *map_buf;
+extern ubyte *m_select_pal;
 
 const char *GetDirectoryUser(void);
 const char *GetDirectoryHdd(void);
